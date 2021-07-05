@@ -1,0 +1,120 @@
+#!/bin/sh
+ # / _| ___  __| | ___  _ __ __ _   ___| |__  
+# | |_ / _ \/ _` |/ _ \| '__/ _` | / __| '_ \ 
+# |  _|  __/ (_| | (_) | | | (_| |_\__ \ | | |
+# |_|  \___|\__,_|\___/|_|  \__,_(_)___/_| |_|
+
+read -s -p "Enter Password for sudo: " sudoPW
+
+# RPM fusion
+echo $sudoPW | sudo -S dnf install -y \
+  https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
+echo $sudoPW | sudo -S dnf install -y \
+  https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+
+# dnf
+echo $sudoPW | sudo -S dnf install -y \
+    alacritty \
+    zsh \
+    ranger \
+    neovim \
+    tmux \
+    neofetch \
+    deja-dup \
+    translate-shell \
+    googler \
+    gnome-tweaks \
+    tldr \
+    mpg123 \
+    thunderbird \
+    geary \
+    util-linux-user \ # for chsh
+    fzf \
+    ripgrep \
+    highlight \
+    htop \
+    conda \
+    f33-backgrounds-gnome \
+    foliate \
+    gtypist \
+    ffmpeg \
+    community-mysql-server \
+    kitty \
+    golang \
+    pandoc \
+    cool-retro-term \
+    myman \
+    openttd \
+    poetry \
+    ledger
+
+# mysqld
+echo $sudoPW | sudo -S systemctl start mysqld
+echo $sudoPW | sudo -S systemctl enable mysqld
+
+# flatpak
+echo $sudoPW | sudo -S flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+echo $sudoPW | sudo -S flatpak install flathub com.calibre_ebook.calibre -y
+echo $sudoPW | sudo -S flatpak install flathub com.spotify.Client -y
+
+# ranger
+ranger --copy-config=all
+cp $HOME/myconf/others/rc.conf $HOME/.config/ranger/ --remove-destination
+git clone https://github.com/alexanderjeurissen/ranger_devicons ~/.config/ranger/plugins/ranger_devicons
+echo "default_linemode devicons" >> $HOME/.config/ranger/rc.conf
+
+# copy and move config files
+cp -r $HOME/myconf/config/. $HOME/.config/
+cp -r $HOME/myconf/dotfiles/. $HOME/
+cp -r $HOME/myconf/others/coc/. $HOME/.config/coc/ -f
+
+# ohmyzsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+git clone https://github.com/esc/conda-zsh-completion ~/.oh-my-zsh/custom/plugins/conda-zsh-completion
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+echo $sudoPW | sudo -S wget -nc -P /usr/share/fonts/MesloLGS-NF https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf 
+echo $sudoPW | sudo -S wget -nc -P /usr/share/fonts/MesloLGS-NF https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold.ttf
+echo $sudoPW | sudo -S wget -nc -P /usr/share/fonts/MesloLGS-NF https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Italic.ttf
+echo $sudoPW | sudo -S wget -nc -P /usr/share/fonts/MesloLGS-NF https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf
+echo $sudoPW | sudo -S wget -nc -P /usr/share/fonts/MesloLGS-NF https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf
+echo $sudoPW | sudo -S fc-cache -v
+cp $HOME/myconf/others/tmux.plugin.zsh $HOME/.oh-my-zsh/plugins/tmux/ --remove-destination
+
+# fnm
+# zsh -> curl -fsSL https://fnm.vercel.app/install | bash -s -- --skip-shell
+curl -fsSL https://fnm.vercel.app/install | bash
+source ~/.bashrc
+fnm install --lts
+
+# npm
+npm install -g yarn
+npm install -g prettier
+npm install -g how-2
+npm install -g wikit
+npm install -g speed-test
+
+# rbenv
+curl -fsSL https://github.com/rbenv/rbenv-installer/raw/HEAD/bin/rbenv-installer | bash
+
+# Oh-My-Zsh poetry
+mkdir $ZSH_CUSTOM/plugins/poetry
+poetry completions zsh > $ZSH_CUSTOM/plugins/poetry/_poetry
+
+# pip
+pip install howdoi
+pip install mycli
+pip install ricksay
+pip install pynvim
+pip install vimwiki-markdown # markdown2HTML
+
+# go get
+go get github.com/miguelmota/cointop
+
+# upgrade
+echo $sudoPW | sudo -S dnf upgrade -y
+echo $sudoPW | sudo -S dnf autoremove -y
+
+# change hostname
+echo $sudoPW | sudo -S hostname Batcomputer
