@@ -6,7 +6,7 @@
            #   |___/                               
 
 # nvim & its coc-snippets
-cp -r $HOME/.config/nvim $HOME/myconf/config/. -f
+cp -r $HOME/.config/nvim/lv-config.lua $HOME/myconf/others/. -f
 cp -r $HOME/.config/coc/ultisnips $HOME/myconf/others/coc/ -f
 
 # zsh & history & tmux 
