@@ -5,9 +5,8 @@
 # |_| |_| |_|_|\__, |_|  \__,_|\__\___(_)___/_| |_|
            #   |___/                               
 
-# nvim & its coc-snippets
+# nvim
 cp -r $HOME/.config/nvim/lv-config.lua $HOME/myconf/others/. -f
-cp -r $HOME/.config/coc/ultisnips $HOME/myconf/others/coc/ -f
 
 # zsh & history & tmux 
 cp -r $HOME/.zshrc $HOME/myconf/dotfiles/ -f

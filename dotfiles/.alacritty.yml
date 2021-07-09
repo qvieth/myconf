@@ -8,8 +8,8 @@ env:
 # Font
 font:
   size: 14
-  normal:
-    family: "MesloLGS NF"
+  # normal:
+    # family: "Nerd Font"
 
 # Colorscheme my kitty
 # colors:

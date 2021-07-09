@@ -17,7 +17,6 @@ echo $sudoPW | sudo -S dnf install -y \
     zsh \
     alacritty \
     kitty \
-    golang \
     poetry \
     conda \
     neovim \
@@ -59,6 +58,7 @@ echo $sudoPW | sudo -S systemctl enable mysqld
 echo $sudoPW | sudo -S flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 echo $sudoPW | sudo -S flatpak install flathub com.calibre_ebook.calibre -y
 echo $sudoPW | sudo -S flatpak install flathub com.spotify.Client -y
+echo $sudoPW | sudo -S flatpak install flathub com.github.miguelmota.Cointop -y
 
 # ranger
 ranger --copy-config=all
@@ -69,7 +69,6 @@ echo "default_linemode devicons" >>$HOME/.config/ranger/rc.conf
 # copy and move config files
 cp -r $HOME/myconf/config/. $HOME/.config/
 cp -r $HOME/myconf/dotfiles/. $HOME/
-cp -r $HOME/myconf/others/coc/. $HOME/.config/coc/ -f
 
 # nerd font option 6 ad hoc curl download
 mkdir -p ~/.local/share/fonts
@@ -94,7 +93,6 @@ npm install -g yarn
 npm install -g prettier
 npm install -g how-2
 npm install -g wikit
-npm install -g speed-test
 
 # rbenv
 curl -fsSL https://github.com/rbenv/rbenv-installer/raw/HEAD/bin/rbenv-installer | bash
@@ -104,15 +102,11 @@ mkdir $ZSH_CUSTOM/plugins/poetry
 poetry completions zsh >$ZSH_CUSTOM/plugins/poetry/_poetry
 
 # pip
-pip install howdoi
 pip install mycli
 pip install ricksay
 pip install ranger-fm
 pip install pynvim           # for ranger to communicate with neovim terminal
 pip install vimwiki-markdown # markdown2HTML
-
-# go get
-go get github.com/miguelmota/cointop
 
 # upgrade
 echo $sudoPW | sudo -S dnf upgrade -y

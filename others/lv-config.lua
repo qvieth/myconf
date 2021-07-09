@@ -12,15 +12,16 @@ O.format_on_save = false
 O.colorscheme = "material"
 O.auto_close_tree = 1
 O.leader_key = "\\"
+O.hl_search = true
 
 -- TODO User Config for predefined plugins
 O.plugin.dashboard.active = true
--- O.plugin.colorizer.active = true
+O.plugin.colorizer.active = true
 -- O.plugin.zen.active = true
 -- O.plugin.ts_playground.active = true
--- O.plugin.ts_context_commentstring.active = true
+O.plugin.ts_context_commentstring.active = true
 -- O.plugin.ts_hintobjects.active = true
--- O.plugin.ts_autotag.active = true
+O.plugin.ts_autotag.active = true
 O.plugin.ts_rainbow.active = true
 -- O.plugin.ts_textobjects.active = true
 -- O.plugin.ts_textsubjects.active = true
@@ -32,7 +33,7 @@ O.plugin.symbol_outline.active = true
 -- O.plugin.dap_install.active = true
 O.plugin.lush.active = true
 -- O.plugin.diffview.active = true
--- O.plugin.floatterm.active = true
+O.plugin.floatterm.active = true
 -- O.plugin.trouble.active = true
 -- O.plugin.sanegx.active = true
 
@@ -54,7 +55,7 @@ O.dashboard.custom_header = {
 	"       ⠻⣿⣿⣿⣿⣶⣶⣾⣿⣿⣿⣿⣿⣿⣿⣿⡟⢀⣀⣤⣾⡿⠃     ",
 	"                                   ",
 }
--- O.dashboard.footer = {}
+-- O.dashboard.footer = {""}
 
 -- if you don't want all the parsers change this to a table of the ones you want
 O.treesitter.ensure_installed = "all"
@@ -77,9 +78,8 @@ O.user_plugins = {
 	"marko-cerovac/material.nvim",
 	"navarasu/onedark.nvim",
 	-- ESSENTIALS,
+  'kevinhwang91/rnvimr',
 	"tpope/vim-surround",
-	"romainl/vim-devdocs",
-	"voldikss/vim-floaterm",
 	{ "TimUntersberger/neogit", requires = "nvim-lua/plenary.nvim" },
 	-- CODING,
 	"mattn/emmet-vim",
@@ -106,10 +106,11 @@ O.user_plugins = {
 --==================================================================================================================================================================================== ============================================= =============================================
 -- MAPPINGS
 
--- Floaterm
-vim.api.nvim_set_keymap("n", "<F2>", [[:FloatermToggle<CR>]], { noremap = true, silent = true })
-vim.api.nvim_set_keymap("t", "<F2>", [[<C-\><C-n>:FloatermToggle<CR>]], { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<F3>", [[:FloatermNew ranger<CR>]], { noremap = true, silent = true })
+-- FTerm.nvim & rnvimr
+vim.api.nvim_set_keymap('n', '<F2>', [[<CMD>lua require("FTerm").toggle()<CR>]],{ noremap = true, silent = true })
+vim.api.nvim_set_keymap('t', '<F2>', [[<C-\><C-n><CMD>lua require("FTerm").toggle()<CR>]],{ noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<F3>", [[<CMD>RnvimrToggle<CR>]], { noremap = true, silent = true })
+vim.api.nvim_set_keymap("t", "<F3>", [[<C-\><C-n><CMD>RnvimrToggle<CR>]], { noremap = true, silent = true })
 
 -- Material colorscheme toggle
 vim.api.nvim_set_keymap(
@@ -178,7 +179,3 @@ vnoremap <S-u> y:call setreg('', TwiddleCase(@"), getregtype(''))<CR>gv""Pgv
 -- neogit
 local neogit = require("neogit")
 neogit.setup({})
-
--- WORK ON THIS LATER
--- vim.cmd("tunmap <Esc>")
--- vim.api.nvim_set_keymap("t", "<C-[>", [[<C-\><C-n>]], { noremap = true, silent = true })
