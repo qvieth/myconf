@@ -11,13 +11,13 @@ an executable
 O.format_on_save = false
 O.colorscheme = "material"
 O.auto_close_tree = 1
-O.leader_key = "\\"
+O.leader_key = [[\]]
 O.hl_search = true
+O.cmdheight=1
 
 -- TODO User Config for predefined plugins
 O.plugin.dashboard.active = true
 O.plugin.colorizer.active = true
--- O.plugin.zen.active = true
 -- O.plugin.ts_playground.active = true
 O.plugin.ts_context_commentstring.active = true
 -- O.plugin.ts_hintobjects.active = true
@@ -58,18 +58,18 @@ O.dashboard.custom_header = {
 -- O.dashboard.footer = {""}
 
 -- if you don't want all the parsers change this to a table of the ones you want
-O.treesitter.ensure_installed = "all"
+O.treesitter.ensure_installed = "maintained"
 O.treesitter.ignore_install = { "haskell" }
 O.treesitter.highlight.enabled = true
 
 -- python
--- O.python.linter = 'flake8'
+O.lang.python.linter = "pylint"
 O.lang.python.isort = true
 O.lang.python.diagnostics.virtual_text = true
 O.lang.python.analysis.use_library_code_types = true
 
 -- javascript
-O.lang.tsserver.linter = nil
+O.lang.tsserver.linter = "eslint"
 
 -- Additional Plugins
 O.user_plugins = {
@@ -78,7 +78,7 @@ O.user_plugins = {
 	"marko-cerovac/material.nvim",
 	"navarasu/onedark.nvim",
 	-- ESSENTIALS,
-  'kevinhwang91/rnvimr',
+	"kevinhwang91/rnvimr",
 	"tpope/vim-surround",
 	{ "TimUntersberger/neogit", requires = "nvim-lua/plenary.nvim" },
 	-- CODING,
@@ -107,8 +107,13 @@ O.user_plugins = {
 -- MAPPINGS
 
 -- FTerm.nvim & rnvimr
-vim.api.nvim_set_keymap('n', '<F2>', [[<CMD>lua require("FTerm").toggle()<CR>]],{ noremap = true, silent = true })
-vim.api.nvim_set_keymap('t', '<F2>', [[<C-\><C-n><CMD>lua require("FTerm").toggle()<CR>]],{ noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<F2>", [[<CMD>lua require("FTerm").toggle()<CR>]], { noremap = true, silent = true })
+vim.api.nvim_set_keymap(
+	"t",
+	"<F2>",
+	[[<C-\><C-n><CMD>lua require("FTerm").toggle()<CR>]],
+	{ noremap = true, silent = true }
+)
 vim.api.nvim_set_keymap("n", "<F3>", [[<CMD>RnvimrToggle<CR>]], { noremap = true, silent = true })
 vim.api.nvim_set_keymap("t", "<F3>", [[<C-\><C-n><CMD>RnvimrToggle<CR>]], { noremap = true, silent = true })
 
@@ -133,7 +138,7 @@ vim.api.nvim_set_keymap(
 -- =============================
 
 vim.g.material_style = [[darker]]
-vim.g.onedark_style = [[warm]]
+-- vim.g.onedark_style = [[warm]]
 vim.cmd([[colorscheme material]])
 
 -- vimwiki
@@ -152,14 +157,6 @@ vim.g.vimwiki_list = {
 	{ path = "~/mynote2/" },
 	{ path = "~/mytest/" },
 }
-
--- floaterm
-vim.g.floaterm_width = 0.6
-vim.g.floaterm_height = 0.7
-vim.g.floaterm_position = "topright"
-vim.g.floaterm_title = "nvim: $1/$2"
-vim.cmd("hi FloatermBorder guibg=none guifg=none")
-vim.cmd("hi Floaterm guibg=none guifg=none")
 
 -- ADD TITLECASE FUNCTION
 vim.cmd([[

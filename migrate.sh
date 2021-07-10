@@ -10,6 +10,7 @@ cp -r $HOME/.config/nvim/lv-config.lua $HOME/myconf/others/. -f
 
 # zsh & history & tmux 
 cp -r $HOME/.zshrc $HOME/myconf/dotfiles/ -f
+cp -r $HOME/.zfunc $HOME/myconf/dotfiles/ -f
 cp -r $HOME/.zprofile $HOME/myconf/dotfiles/ -f
 cp -r $HOME/.zsh_history $HOME/myconf/dotfiles/ -f
 cp -r $HOME/.p10k.zsh $HOME/myconf/dotfiles/ -f

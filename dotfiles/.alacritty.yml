@@ -8,8 +8,8 @@ env:
 # Font
 font:
   size: 14
-  # normal:
-    # family: "Nerd Font"
+  normal:
+    family: "Droid Sans Nerd Font Mono"
 
 # Colorscheme my kitty
 # colors:

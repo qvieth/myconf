@@ -130,6 +130,10 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# add completion
+fpath+=~/.zfunc
+autoload -U compinit && compinit
+
 # ==========DEFAULTS
 export BROWSER='w3m'
 export EDITOR='nvim'
