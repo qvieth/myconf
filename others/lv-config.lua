@@ -7,55 +7,23 @@ a global executable or a path to
 an executable
 ]]
 -- THESE ARE EXAMPLE CONFIGS FEEL FREE TO CHANGE TO WHATEVER YOU WANT
+
 -- general
-O.format_on_save = false
-O.colorscheme = "material"
-O.auto_close_tree = 1
-O.leader_key = [[\]]
-O.hl_search = true
-O.cmdheight=1
 
--- TODO User Config for predefined plugins
+O.format_on_save = true
+O.completion.autocomplete = true
+-- O.colorscheme = "spacegray"
+-- O.auto_close_tree = 0
+-- O.default_options.wrap = true
+O.default_options.timeoutlen = 100
+O.leader_key = " "
+
+-- TODO: User Config for predefined plugins
+-- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
 O.plugin.dashboard.active = true
-O.plugin.colorizer.active = true
--- O.plugin.ts_playground.active = true
-O.plugin.ts_context_commentstring.active = true
--- O.plugin.ts_hintobjects.active = true
-O.plugin.ts_autotag.active = true
-O.plugin.ts_rainbow.active = true
--- O.plugin.ts_textobjects.active = true
--- O.plugin.ts_textsubjects.active = true
--- O.plugin.telescope_fzy.active = true
--- O.plugin.telescope_project.active = true
-O.plugin.indent_line.active = true
-O.plugin.symbol_outline.active = true
--- O.plugin.debug.active = true
--- O.plugin.dap_install.active = true
-O.plugin.lush.active = true
--- O.plugin.diffview.active = true
-O.plugin.floatterm.active = true
--- O.plugin.trouble.active = true
--- O.plugin.sanegx.active = true
-
--- dashboard
-O.dashboard.custom_header = {
-	"                                   ",
-	"                                   ",
-	"                                   ",
-	"   ⣴⣶⣤⡤⠦⣤⣀⣤⠆     ⣈⣭⣿⣶⣿⣦⣼⣆          ",
-	"    ⠉⠻⢿⣿⠿⣿⣿⣶⣦⠤⠄⡠⢾⣿⣿⡿⠋⠉⠉⠻⣿⣿⡛⣦       ",
-	"          ⠈⢿⣿⣟⠦ ⣾⣿⣿⣷    ⠻⠿⢿⣿⣧⣄     ",
-	"           ⣸⣿⣿⢧ ⢻⠻⣿⣿⣷⣄⣀⠄⠢⣀⡀⠈⠙⠿⠄    ",
-	"          ⢠⣿⣿⣿⠈    ⣻⣿⣿⣿⣿⣿⣿⣿⣛⣳⣤⣀⣀   ",
-	"   ⢠⣧⣶⣥⡤⢄ ⣸⣿⣿⠘  ⢀⣴⣿⣿⡿⠛⣿⣿⣧⠈⢿⠿⠟⠛⠻⠿⠄  ",
-	"  ⣰⣿⣿⠛⠻⣿⣿⡦⢹⣿⣷   ⢊⣿⣿⡏  ⢸⣿⣿⡇ ⢀⣠⣄⣾⠄   ",
-	" ⣠⣿⠿⠛ ⢀⣿⣿⣷⠘⢿⣿⣦⡀ ⢸⢿⣿⣿⣄ ⣸⣿⣿⡇⣪⣿⡿⠿⣿⣷⡄  ",
-	" ⠙⠃   ⣼⣿⡟  ⠈⠻⣿⣿⣦⣌⡇⠻⣿⣿⣷⣿⣿⣿ ⣿⣿⡇ ⠛⠻⢷⣄ ",
-	"    ⢻⣿⣿⣄   ⠈⠻⣿⣿⣿⣷⣿⣿⣿⣿⣿⡟ ⠫⢿⣿⡆       ",
-	"       ⠻⣿⣿⣿⣿⣶⣶⣾⣿⣿⣿⣿⣿⣿⣿⣿⡟⢀⣀⣤⣾⡿⠃     ",
-	"                                   ",
-}
--- O.dashboard.footer = {""}
+O.plugin.terminal.active = true
+O.plugin.zen.active = false
+O.plugin.zen.window.height = 0.90
 
 -- if you don't want all the parsers change this to a table of the ones you want
 O.treesitter.ensure_installed = "maintained"
@@ -63,35 +31,55 @@ O.treesitter.ignore_install = { "haskell" }
 O.treesitter.highlight.enabled = true
 
 -- python
-O.lang.python.linter = "pylint"
+-- O.lang.python.linter = 'flake8'
 O.lang.python.isort = true
 O.lang.python.diagnostics.virtual_text = true
 O.lang.python.analysis.use_library_code_types = true
+-- to change default formatter from yapf to black
+O.lang.python.formatter.exe = "black"
+O.lang.python.formatter.args = { "-" }
+
+-- go
+-- to change default formatter from gofmt to goimports
+-- O.lang.formatter.go.exe = "goimports"
 
 -- javascript
-O.lang.tsserver.linter = "eslint"
+O.lang.tsserver.linter = nil
+
+-- rust
+-- O.lang.rust.formatter = {
+--   exe = "rustfmt",
+--   args = {"--emit=stdout", "--edition=2018"},
+-- }
+
+--LaTeX
+-- Options: https://github.com/latex-lsp/texlab/blob/master/docs/options.md
+O.lang.latex.active = true
+O.lang.latex.aux_directory = "."
+O.lang.latex.bibtex_formatter = "texlab"
+O.lang.latex.build.args = { "-pdf", "-interaction=nonstopmode", "-synctex=1", "%f" }
+O.lang.latex.build.executable = "latexmk"
+O.lang.latex.build.forward_search_after = false
+O.lang.latex.build.on_save = false
+O.lang.latex.chktex.on_edit = false
+O.lang.latex.chktex.on_open_and_save = false
+O.lang.latex.diagnostics_delay = 300
+O.lang.latex.formatter_line_length = 80
+O.lang.latex.forward_search.executable = "zathura"
+O.lang.latex.latex_formatter = "latexindent"
+O.lang.latex.latexindent.modify_line_breaks = false
+-- O.lang.latex.auto_save = false
+-- O.lang.latex.ignore_errors = { }
 
 -- Additional Plugins
-O.user_plugins = {
-	-- THEMES,
-	{ "npxbr/gruvbox.nvim", requires = "rktjmp/lush.nvim" },
-	"marko-cerovac/material.nvim",
-	"navarasu/onedark.nvim",
-	-- ESSENTIALS,
-	"kevinhwang91/rnvimr",
-	"tpope/vim-surround",
-	{ "TimUntersberger/neogit", requires = "nvim-lua/plenary.nvim" },
-	-- CODING,
-	"mattn/emmet-vim",
-	"honza/vim-snippets",
-	{ "dsznajder/vscode-es7-javascript-react-snippets", run = "yarn install --frozen-lockfile && yarn compile" },
-	{ "turbio/bracey.vim", run = "npm install --prefix server" },
-	-- MARKDOWN EDITING,
-	"vimwiki/vimwiki",
-	{ "iamcco/markdown-preview.nvim", run = "cd app && yarn install" },
-	"mzlogin/vim-markdown-toc",
-	"dpelle/vim-LanguageTool",
-}
+-- O.user_plugins = {
+--     {"folke/tokyonight.nvim"}, {
+--         "ray-x/lsp_signature.nvim",
+--         config = function() require"lsp_signature".on_attach() end,
+--         event = "InsertEnter"
+--     }
+-- }
+
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
 -- O.user_autocommands = {{ "BufWinEnter", "*", "echo \"hi again\""}}
 
@@ -103,45 +91,88 @@ O.user_plugins = {
 --     b = { "<cmd>echo 'second custom command'<cr>", "Description for b" },
 --   },
 -- }
---==================================================================================================================================================================================== ============================================= =============================================
--- MAPPINGS
 
--- FTerm.nvim & rnvimr
-vim.api.nvim_set_keymap("n", "<F2>", [[<CMD>lua require("FTerm").toggle()<CR>]], { noremap = true, silent = true })
-vim.api.nvim_set_keymap(
-	"t",
-	"<F2>",
-	[[<C-\><C-n><CMD>lua require("FTerm").toggle()<CR>]],
-	{ noremap = true, silent = true }
-)
-vim.api.nvim_set_keymap("n", "<F3>", [[<CMD>RnvimrToggle<CR>]], { noremap = true, silent = true })
-vim.api.nvim_set_keymap("t", "<F3>", [[<C-\><C-n><CMD>RnvimrToggle<CR>]], { noremap = true, silent = true })
+--qvieth============================================================================================================================================
 
--- Material colorscheme toggle
-vim.api.nvim_set_keymap(
-	"n",
-	"<Leader>ma",
-	[[:lua require('material.functions').toggle_style()<CR>]],
-	{ noremap = true, silent = true }
-)
+O.user_plugins = {
+	-- THEMES
+	"folke/tokyonight.nvim",
+	"marko-cerovac/material.nvim",
+	-- ESSENTIALS,
+	{
+		"tzachar/compe-tabnine",
+		run = "./install.sh",
+		requires = "hrsh7th/nvim-compe",
+		after = "nvim-compe",
+	},
+	"simrat39/symbols-outline.nvim",
+	"kevinhwang91/rnvimr",
+	"tpope/vim-surround",
+	-- CODING,
+	-- { "prettier/vim-prettier", run = "yarn install" },
+	"mattn/emmet-vim",
+	"honza/vim-snippets",
+	"lukas-reineke/indent-blankline.nvim",
+	{ "dsznajder/vscode-es7-javascript-react-snippets", run = "yarn install --frozen-lockfile && yarn compile" },
+	{ "turbio/bracey.vim", run = "npm install --prefix server" },
+	-- MARKDOWN EDITING,
+	"vimwiki/vimwiki",
+	{ "iamcco/markdown-preview.nvim", run = "cd app && yarn install" },
+	"mzlogin/vim-markdown-toc",
+	"dpelle/vim-LanguageTool",
+}
 
---==================================================================================================================================================================================== ============================================= =============================================
--- OPTIONS
+--============================================================================================================================================
+--LV
+O.plugin.dashboard.custom_header = {
+	"     ▄▄▄▄▄███████████████████▄▄▄▄▄         ",
+	"   ▄██████████▀▀▀▀▀▀▀▀▀▀██████▀████▄       ",
+	"  █▀████████▄             ▀▀████ ▀██▄      ",
+	" █▄▄██████████████████▄▄▄         ▄██▀     ",
+	"  ▀█████████████████████████▄    ▄██▀      ",
+	"    ▀████▀▀▀▀▀▀▀▀▀▀▀▀█████████▄▄██▀        ",
+	"      ▀███▄              ▀██████▀          ",
+	"        ▀██████▄        ▄████▀             ",
+	"           ▀█████▄▄▄▄▄▄▄███▀               ",
+	"             ▀████▀▀▀████▀                 ",
+	"               ▀███▄███▀                   ",
+	"                  ▀█▀                      ",
+}
+O.colorscheme = "material"
+O.completion.source.tabnine = true -- <<< tabnine
+O.default_options.cmdheight = 1
 
--- ========== OPTIONS ==========
--- o - global options          =
--- wo - window options         =
--- bo - buffer options         =
--- ========== VARIABLES ========
--- g - global variables        =
--- b - buffer variables        =
--- =============================
+--MAPPINGS
+local map = vim.api.nvim_set_keymap
+local opt = { noremap = true, silent = true }
 
-vim.g.material_style = [[darker]]
--- vim.g.onedark_style = [[warm]]
-vim.cmd([[colorscheme material]])
+--Double Esc
+map("t", "<Esc><Esc>", [[<C-\><C-n>]], opt)
 
--- vimwiki
+--ToggleTerm
+map("n", "<F2>", [[<CMD>ToggleTerm<CR>]], opt)
+map("t", "<F2>", [[<C-\><C-n><CMD>ToggleTerm<CR>]], opt)
+
+--Rnvimr
+map("n", "<F3>", [[<CMD>RnvimrToggle<CR>]], opt)
+map("t", "<F3>", [[<C-\><C-n><CMD>RnvimrToggle<CR>]], opt)
+
+--=============================================================================================================================================
+--==== OPTIONS & VARIABLES ====
+--o - global options          =
+--wo - window options         =
+--bo - buffer options         =
+--g - global variables        =
+--b - buffer variables        =
+--=============================
+
+vim.g.material_style = "darker" -- deep ocean, oceanic, palenight, lighter, darker
+vim.g.tokyonight_style = "storm" -- storm, day, night
+
+-- indent-blankline.nvim
+vim.g.indent_blankline_char_list = { "┊", "│", "¦" }
+
+--vimwiki
 vim.g.vimwiki_toc_header_level = 2
 vim.g.vimwiki_list = {
 	{
@@ -158,7 +189,7 @@ vim.g.vimwiki_list = {
 	{ path = "~/mytest/" },
 }
 
--- ADD TITLECASE FUNCTION
+--ADD TITLECASE FUNCTION
 vim.cmd([[
 function! TwiddleCase(str)
   if a:str ==# toupper(a:str)
@@ -172,7 +203,3 @@ function! TwiddleCase(str)
 endfunction
 vnoremap <S-u> y:call setreg('', TwiddleCase(@"), getregtype(''))<CR>gv""Pgv
 ]])
-
--- neogit
-local neogit = require("neogit")
-neogit.setup({})

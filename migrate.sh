@@ -1,14 +1,14 @@
 #!/bin/sh
- # _ __ ___ (_) __ _ _ __ __ _| |_ ___   ___| |__  
-# | '_ ` _ \| |/ _` | '__/ _` | __/ _ \ / __| '_ \ 
+#  _ __ ___ (_) __ _ _ __ __ _| |_ ___   ___| |__
+# | '_ ` _ \| |/ _` | '__/ _` | __/ _ \ / __| '_ \
 # | | | | | | | (_| | | | (_| | ||  __/_\__ \ | | |
 # |_| |_| |_|_|\__, |_|  \__,_|\__\___(_)___/_| |_|
-           #   |___/                               
+#              |___/
 
 # nvim
 cp -r $HOME/.config/nvim/lv-config.lua $HOME/myconf/others/. -f
 
-# zsh & history & tmux 
+# zsh & history & tmux
 cp -r $HOME/.zshrc $HOME/myconf/dotfiles/ -f
 cp -r $HOME/.zfunc $HOME/myconf/dotfiles/ -f
 cp -r $HOME/.zprofile $HOME/myconf/dotfiles/ -f

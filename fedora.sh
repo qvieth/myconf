@@ -8,43 +8,43 @@ read -s -p "Enter Password for sudo: " sudoPW
 
 # RPM fusion
 echo $sudoPW | sudo -S dnf install -y \
-    https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
+	https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
 echo $sudoPW | sudo -S dnf install -y \
-    https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+	https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
 # dnf
 echo $sudoPW | sudo -S dnf install -y \
-    zsh \
-    alacritty \
-    kitty \
-    poetry \
-    conda \
-    neovim \
-    tmux \
-    deja-dup \
-    tldr \
-    translate-shell \
-    googler \
-    gnome-tweaks \
-    thunderbird \
-    geary \
-    util-linux-user \
-    fzf \
-    ripgrep \
-    highlight \
-    htop \
-    foliate \
-    mpg123 \
-    ffmpeg \
-    community-mysql-server \
-    pandoc \
-    neofetch \
-    f33-backgrounds-gnome \
-    cool-retro-term \
-    gtypist \
-    myman \
-    openttd \
-    ledger
+	zsh \
+	alacritty \
+	kitty \
+	poetry \
+	conda \
+	neovim \
+	tmux \
+	deja-dup \
+	tldr \
+	translate-shell \
+	googler \
+	gnome-tweaks \
+	thunderbird \
+	geary \
+	util-linux-user \
+	fzf \
+	ripgrep \
+	highlight \
+	htop \
+	foliate \
+	mpg123 \
+	ffmpeg \
+	community-mysql-server \
+	pandoc \
+	neofetch \
+	f33-backgrounds-gnome \
+	cool-retro-term \
+	gtypist \
+	myman \
+	openttd \
+	ledger
 
 # neovim & lunarvim
 bash <(curl -s https://raw.githubusercontent.com/ChristianChiarulli/lunarvim/stable/utils/installer/install.sh)
