@@ -48,7 +48,8 @@ echo $sudoPW | sudo -S dnf install -y \
 
 # neovim & lunarvim
 bash <(curl -s https://raw.githubusercontent.com/ChristianChiarulli/lunarvim/stable/utils/installer/install.sh)
-cp -r $HOME/myconf/others/lv-config.lua/. $HOME/.config/nvim/ -f
+cp -r $HOME/myconf/others/nvim/lv-config.lua $HOME/.config/nvim/ -f
+cp -r $HOME/myconf/others/nvim/UltiSnips $HOME/.config/nvim/ -f
 
 # mysqld
 echo $sudoPW | sudo -S systemctl start mysqld

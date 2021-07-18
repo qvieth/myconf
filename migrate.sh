@@ -6,7 +6,8 @@
 #              |___/
 
 # nvim
-cp -r $HOME/.config/nvim/lv-config.lua $HOME/myconf/others/. -f
+cp -r $HOME/.config/nvim/lv-config.lua $HOME/myconf/others/nvim/. -f
+cp -r $HOME/.config/nvim/UltiSnips $HOME/myconf/others/nvim/. -f
 
 # zsh & history & tmux
 cp -r $HOME/.zshrc $HOME/myconf/dotfiles/ -f
