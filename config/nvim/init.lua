@@ -1,7 +1,7 @@
 -- ======================================================================================================================================================================================================
 -- OPTIONS && VARIABLES ->  o - global options | wo - window options | bo - buffer options | g - global variables | b - buffer variables   
 
-vim.cmd [[colorscheme desert]]
+vim.cmd [[colorscheme gruvbox]]
 vim.cmd [[filetype plugin indent on]]
 vim.o.clipboard = vim.o.clipboard..[[unnamedplus]]
 vim.o.background = [[dark]]
@@ -89,6 +89,7 @@ return require('packer').startup(
     function()
         use 'wbthomason/packer.nvim'
         -- THEMES
+        use 'christianchiarulli/nvcode-color-schemes.vim'
         -- ESSENTIALS
         use {'nvim-telescope/telescope.nvim',requires={{'nvim-lua/popup.nvim'},{'nvim-lua/plenary.nvim'}}}
         -- use {'glacambre/firenvim', run = function() vim.fn['firenvim#install'](0) end}
@@ -100,6 +101,6 @@ return require('packer').startup(
         use 'vimwiki/vimwiki'
         use {'iamcco/markdown-preview.nvim',run='cd app && yarn install'}
         use 'mzlogin/vim-markdown-toc'
-        use "jbyuki/venn.nvim"
+        use 'jbyuki/venn.nvim'
     end
 )

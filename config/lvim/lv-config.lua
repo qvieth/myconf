@@ -156,8 +156,9 @@ O.user_plugins = {
 	{ "pbrisbin/vim-colors-off", opt = true },
 	{ "pgdouyon/vim-yin-yang", opt = true },
 	{ "cideM/yui", opt = true },
+    { "christianchiarulli/nvcode-color-schemes.vim",opt = true },
 
-	-- ==============================ESSENTIALS,
+	-- ==============================CODING
 	{
 		"tzachar/compe-tabnine",
 		run = "./install.sh",
@@ -165,7 +166,6 @@ O.user_plugins = {
 		after = "nvim-compe",
 	},
 	{ "kevinhwang91/rnvimr", event = "BufWinEnter" },
-	-- ==============================CODING,
 	{ "simrat39/symbols-outline.nvim", cmd = "SymbolsOutline" },
 	{ "tpope/vim-surround", event = "BufRead" },
 	{ "tpope/vim-commentary", event = "BufRead" },

@@ -69,13 +69,13 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
-  firenvim = {
-    loaded = true,
-    path = "/home/qvieth/.local/share/nvim/site/pack/packer/start/firenvim"
-  },
   ["markdown-preview.nvim"] = {
     loaded = true,
     path = "/home/qvieth/.local/share/nvim/site/pack/packer/start/markdown-preview.nvim"
+  },
+  ["nvcode-color-schemes.vim"] = {
+    loaded = true,
+    path = "/home/qvieth/.local/share/nvim/site/pack/packer/start/nvcode-color-schemes.vim"
   },
   ["packer.nvim"] = {
     loaded = true,
@@ -100,10 +100,8 @@ _G.packer_plugins = {
     path = "/home/qvieth/.local/share/nvim/site/pack/packer/start/telescope.nvim"
   },
   ["venn.nvim"] = {
-    commands = { "VBox" },
-    loaded = false,
-    needs_bufread = false,
-    path = "/home/qvieth/.local/share/nvim/site/pack/packer/opt/venn.nvim"
+    loaded = true,
+    path = "/home/qvieth/.local/share/nvim/site/pack/packer/start/venn.nvim"
   },
   ["vim-commentary"] = {
     loaded = true,
@@ -131,9 +129,6 @@ time([[Defining packer_plugins]], false)
 
 -- Command lazy-loads
 time([[Defining lazy-load commands]], true)
-if vim.fn.exists(":VBox") ~= 2 then
-vim.cmd [[command! -nargs=* -range -bang -complete=file VBox lua require("packer.load")({'venn.nvim'}, { cmd = "VBox", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args> }, _G.packer_plugins)]]
-end
 if vim.fn.exists(":SnipRun") ~= 2 then
 vim.cmd [[command! -nargs=* -range -bang -complete=file SnipRun lua require("packer.load")({'sniprun'}, { cmd = "SnipRun", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args> }, _G.packer_plugins)]]
 end
