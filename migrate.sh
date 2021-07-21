@@ -5,9 +5,11 @@
 # |_| |_| |_|_|\__, |_|  \__,_|\__\___(_)___/_| |_|
 #              |___/
 
+# lvim
+cp -r $HOME/.config/lvim/ $HOME/myconf/config/ -f
+
 # nvim
-cp -r $HOME/.config/nvim/lv-config.lua $HOME/myconf/others/nvim/. -f
-cp -r $HOME/.config/nvim/UltiSnips $HOME/myconf/others/nvim/. -f
+cp -r $HOME/.config/nvim/ $HOME/myconf/config/ -f
 
 # zsh & history & tmux
 cp -r $HOME/.zshrc $HOME/myconf/dotfiles/ -f

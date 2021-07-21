@@ -1,6 +1,3 @@
----@diagnostic disable: trailing-space
----@diagnostic disable-next-line: trailing-space
----@diagnostic disable: undefined-global
 -- Packer Bootstraping
 local execute = vim.api.nvim_command
 local fn = vim.fn

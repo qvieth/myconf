@@ -46,11 +46,6 @@ echo $sudoPW | sudo -S dnf install -y \
 	openttd \
 	ledger
 
-# neovim & lunarvim
-bash <(curl -s https://raw.githubusercontent.com/ChristianChiarulli/lunarvim/stable/utils/installer/install.sh)
-cp -r $HOME/myconf/others/nvim/lv-config.lua $HOME/.config/nvim/ -f
-cp -r $HOME/myconf/others/nvim/UltiSnips $HOME/.config/nvim/ -f
-
 # mysqld
 echo $sudoPW | sudo -S systemctl start mysqld
 echo $sudoPW | sudo -S systemctl enable mysqld
@@ -67,9 +62,9 @@ cp $HOME/myconf/others/rc.conf $HOME/.config/ranger/ --remove-destination
 git clone https://github.com/alexanderjeurissen/ranger_devicons ~/.config/ranger/plugins/ranger_devicons
 echo "default_linemode devicons" >>$HOME/.config/ranger/rc.conf
 
-# copy and move config files
-cp -r $HOME/myconf/config/. $HOME/.config/
+# $HOME && $HOME/.config/
 cp -r $HOME/myconf/dotfiles/. $HOME/
+cp -r $HOME/myconf/config/. $HOME/.config/
 
 # nerd font option 6 ad hoc curl download
 mkdir -p ~/.local/share/fonts

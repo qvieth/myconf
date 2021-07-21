@@ -14,9 +14,27 @@ O.format_on_save = true
 O.lint_on_save = true
 O.completion.autocomplete = true
 O.colorscheme = "spacegray"
-O.default_options.wrap = false
+O.default_options.wrap = true
 O.default_options.timeoutlen = 100
-O.leader_key = " "
+-- keymappings
+O.keys.leader_key = "space"
+-- overwrite the key-mappings provided by LunarVim for any mode, or leave it empty to keep them
+-- O.keys.normal_mode = {
+--   Page down/up
+--   {'[d', '<PageUp>'},
+--   {']d', '<PageDown>'},
+--
+--   Navigate buffers
+--   {'<Tab>', ':bnext<CR>'},
+--   {'<S-Tab>', ':bprevious<CR>'},
+-- }
+-- if you just want to augment the existing ones then use the utility function
+-- require("lv-utils").add_keymap_insert_mode({ silent = true }, {
+-- { "<C-s>", ":w<cr>" },
+-- { "<C-c>", "<ESC>" },
+-- })
+-- you can also use the native vim way directly
+-- vim.api.nvim_set_keymap("i", "<C-Space>", "compe#complete()", { noremap = true, silent = true, expr = true })
 
 -- TODO: User Config for predefined plugins
 -- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
@@ -32,15 +50,26 @@ O.treesitter.ensure_installed = "maintained"
 O.treesitter.ignore_install = { "haskell" }
 O.treesitter.highlight.enabled = true
 
+-- generic LSP settings
+-- you can set a custom on_attach function that will be used for all the language servers
+-- See <https://github.com/neovim/nvim-lspconfig#keybindings-and-completion>
+-- O.lsp.on_attach_callback = function(client, bufnr)
+--   local function buf_set_option(...)
+--     vim.api.nvim_buf_set_option(bufnr, ...)
+--   end
+--   --Enable completion triggered by <c-x><c-o>
+--   buf_set_option("omnifunc", "v:lua.vim.lsp.omnifunc")
+-- end
+
 -- python
 O.lang.python.diagnostics.virtual_text = true
 O.lang.python.analysis.use_library_code_types = true
 -- To change default formatter from yapf to black
-O.lang.python.formatter.exe = "black"
-O.lang.python.formatter.args = { "-" }
+-- O.lang.python.formatter.exe = "black"
+-- O.lang.python.formatter.args = {"-"}
 -- To change enabled linters
 -- https://github.com/mfussenegger/nvim-lint#available-linters
-O.lang.python.linters = { "flake8", "pylint", "mypy", ... }
+-- O.lang.python.linters = { "flake8", "pylint", "mypy", ... }
 
 -- go
 -- To change default formatter from gofmt to goimports
@@ -79,6 +108,26 @@ O.lang.latex.latexindent.modify_line_breaks = false
 -- O.lang.latex.auto_save = false
 -- O.lang.latex.ignore_errors = { }
 
+-- Additional Plugins
+-- O.user_plugins = {
+--     {"folke/tokyonight.nvim"}, {
+--         "ray-x/lsp_signature.nvim",
+--         config = function() require"lsp_signature".on_attach() end,
+--         event = "InsertEnter"
+--     }
+-- }
+
+-- Autocommands (https://neovim.io/doc/user/autocmd.html)
+-- O.user_autocommands = {{ "BufWinEnter", "*", "echo \"hi again\""}}
+
+-- Additional Leader bindings for WhichKey
+-- O.user_which_key = {
+--   A = {
+--     name = "+Custom Leader Keys",
+--     a = { "<cmd>echo 'first custom command'<cr>", "Description for a" },
+--     b = { "<cmd>echo 'second custom command'<cr>", "Description for b" },
+--   },
+-- }
 --QVIETH============================================================================================================================================
 
 -- Additional Plugins
@@ -145,7 +194,6 @@ O.user_plugins = {
 			vim.g.indent_blankline_bufname_exclude = { "*.md", ".*.txt" }
 		end,
 	},
-	{ "prettier/vim-prettier", run = "yarn install", ft = fe },
 	{
 		"SirVer/ultisnips",
 		config = function()
@@ -162,49 +210,7 @@ O.user_plugins = {
 		ft = fe,
 	},
 	{ "turbio/bracey.vim", run = "npm install --prefix server", cmd = "Bracey" },
-	-- ==============================EDITING,
-	{
-		"vimwiki/vimwiki",
-		config = function()
-			vim.g.vimwiki_toc_header_level = 2
-			vim.g.vimwiki_list = {
-				{
-					path = "~/mynote",
-					template_path = "~/vimwiki/templates/",
-					template_default = "default",
-					syntax = "markdown",
-					ext = ".md",
-					path_html = "~/mynote_site_html/",
-					custom_wiki2html = "vimwiki_markdown",
-					template_ext = ".tpl",
-				},
-				{ path = "~/mynote2/" },
-				{ path = "~/mytest/" },
-			}
-		end,
-	},
-	{ "jbyuki/venn.nvim", cmd = "VBox" },
-	{ "iamcco/markdown-preview.nvim", run = "cd app && yarn install", ft = "markdown" },
-	{ "mzlogin/vim-markdown-toc", ft = "markdown" },
 }
--- Additional Leader bindings for WhichKey
-O.user_which_key = {
-	w = {
-		name = "Vimwiki",
-		w = { [[<Plug>VimwikiIndex]], "Vimwiki Wiki Index Page" },
-		i = { [[<Plug>VimwikiDiaryIndex]], "Vimwiki Diary Index Page" },
-		s = { [[<Plug>VimwikiUISelect]], "Vimwiki Index Select" },
-	},
-	v = {
-		name = "VirtualEdit",
-		a = { mode = "n", [[:set ve=all | set cursorcolumn<CR>]], "Virtualedit all" },
-		d = { mode = "n", [[:set ve=""<CR>]], "Virtualedit default(off)" },
-	},
-	d = { mode = "v", [[:VBox<CR>]], "Draw" },
-}
--- Autocommands (https://neovim.io/doc/user/autocmd.html)
--- O.user_autocommands = { { "BufWinEnter", "*", "pwd" } }
-
 --============================================================================================================================================
 --============================================================================================================================================
 --LV
@@ -233,47 +239,26 @@ O.completion.source.tabnine = true -- <<< tabnine
 O.completion.source.ultisnips = true
 -- O.lang.emmet.active = true
 
---=============================================================================================================================================
+--============================================================================================================================================
 --OPTIONS & VARIABLES | o - global options | wo - window options | bo - buffer options | g - global variables | b - buffer variables
-
---ADD TITLECASE FUNCTION AND VMAP TO U
-vim.cmd([[
-function! TwiddleCase(str)
-  if a:str ==# toupper(a:str)
-    let result = tolower(a:str)
-  elseif a:str ==# tolower(a:str)
-    let result = substitute(a:str,'\(\<\w\+\>\)', '\u\1', 'g')
-  else
-    let result = toupper(a:str)
-  endif
-  return result
-endfunction
-vnoremap u y:call setreg('', TwiddleCase(@"), getregtype(''))<CR>gv""Pgv
-]])
 
 --============================================================================================================================================
 --MAPPINGS
 
-local map = vim.api.nvim_set_keymap
-
 --DOUBLE ESC
-map("t", "<Esc><Esc>", [[<C-\><C-n>]], { noremap = true, silent = true })
+vim.api.nvim_set_keymap("t", "<Esc><Esc>", [[<C-\><C-n>]], { noremap = true, silent = true })
 
 --NVIMTREE
-map("n", "<F1>", [[<CMD>NvimTreeToggle<CR>]], { noremap = true, silent = true })
-map("t", "<F1>", [[<C-\><C-n><CMD>NvimTreeToggle<CR>]], { noremap = true, silent = true })
-map("i", "<F1>", [[<Esc><CMD>NvimTreeToggle<CR>]], { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<F1>", [[<CMD>NvimTreeToggle<CR>]], { noremap = true, silent = true })
+vim.api.nvim_set_keymap("t", "<F1>", [[<C-\><C-n><CMD>NvimTreeToggle<CR>]], { noremap = true, silent = true })
+vim.api.nvim_set_keymap("i", "<F1>", [[<Esc><CMD>NvimTreeToggle<CR>]], { noremap = true, silent = true })
 
 --TOGGLETERM
-map("n", "<F2>", [[<CMD>ToggleTerm<CR>]], { noremap = true, silent = true })
-map("i", "<F2>", [[<Esc><CMD>ToggleTerm<CR>]], { noremap = true, silent = true })
-map("t", "<F2>", [[<C-\><C-n><CMD>ToggleTerm<CR>]], { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<F2>", [[<CMD>ToggleTerm<CR>]], { noremap = true, silent = true })
+vim.api.nvim_set_keymap("i", "<F2>", [[<Esc><CMD>ToggleTerm<CR>]], { noremap = true, silent = true })
+vim.api.nvim_set_keymap("t", "<F2>", [[<C-\><C-n><CMD>ToggleTerm<CR>]], { noremap = true, silent = true })
 
 --RNVIMR
-map("n", "<F3>", [[<CMD>RnvimrToggle<CR>]], { noremap = true, silent = true })
-map("i", "<F3>", [[<Esc><CMD>RnvimrToggle<CR>]], { noremap = true, silent = true })
-map("t", "<F3>", [[<C-\><C-n><CMD>RnvimrToggle<CR>]], { noremap = true, silent = true })
-
---swap v and <C-v>
-map("n", "v", [[<C-v>]], { noremap = true, silent = true })
-map("n", "<C-v>", [[v]], { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<F3>", [[<CMD>RnvimrToggle<CR>]], { noremap = true, silent = true })
+vim.api.nvim_set_keymap("i", "<F3>", [[<Esc><CMD>RnvimrToggle<CR>]], { noremap = true, silent = true })
+vim.api.nvim_set_keymap("t", "<F3>", [[<C-\><C-n><CMD>RnvimrToggle<CR>]], { noremap = true, silent = true })
