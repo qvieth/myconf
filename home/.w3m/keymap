@@ -1,0 +1,73 @@
+## vimium-like w3m keymap
+## by qvieth
+## Av Pag        : M-[6~
+## Ctrl          : C-, ^
+## Delete        : DEL, ^?
+## Down          : DOWN, ^[[B
+## Enter         : C-j  RET(pendant confirm)
+## Escape        : ESC-, M-, ^[
+## Left          : LEFT, ^[[D
+## Re Pag        : M-[5~
+## Right         : RIGHT, ^[[C
+## Shift+Tab     : ^[[Z
+## Space         : SPC, ' '
+## Tab           : TAB, ^i, ^I
+## Up            : UP, ^[[A
+## UNMAP j KEY => keymap j NULL
+
+# WINDOW===========================================================
+
+keymap :        COMMAND                                                          
+keymap ?        HELP					                                         
+keymap m        MENU                                                             
+## tab
+keymap t        TAB_GOTO https://www=google=com/en
+keymap C-t      TAB_GOTO https://duckduckgo=com/lite/
+keymap yt       NEW_TAB						
+keymap J        NEXT_TAB					                            
+keymap K        PREV_TAB					                            
+keymap x        CLOSE_TAB
+keymap C-w      CLOSE_TAB
+# urls
+keymap o        GOTO
+keymap O        TAB_GOTO                                                            
+keymap f        GOTO_LINK			                                                
+keymap F        TAB_LINK			                                                
+keymap C-j      PEEK_LINK			                                                
+
+# BUFFER===========================================================
+
+keymap gh       HISTORY
+keymap gl       LIST
+keymap go       OPTIONS					                                         
+keymap gb       VIEW_BOOKMARK			                                         
+keymap C-d      ADD_BOOKMARK			                                         
+
+# download
+keymap s        PRINT
+keymap C-s      DOWNLOAD
+
+# navigation                                                                                 
+## history navigation                                                                         
+keymap L        NEXT				                                                         
+keymap H        PREV				                                                         
+## pager-like scrolling                                                                       
+keymap k        DOWN                                                                         
+keymap j        UP                                                                           
+keymap gg       BEGIN				                                                         
+keymap G        END					                                                         
+keymap d        NEXT_HALF_PAGE                                                               
+keymap u        PREV_HALF_PAGE                                                               
+## cursor                                                                          
+keymap 0        LINE_BEGIN				                                           
+keymap $        LINE_END				                                           
+keymap w        NEXT_WORD
+keymap b        PREV_WORD
+keymap RIGHT    MOVE_RIGHT1
+keymap LEFT     MOVE_LEFT1
+keymap DOWN     MOVE_DOWN1
+keymap UP       MOVE_UP1
+## search
+keymap /        ISEARCH				                                                         
+keymap n        SEARCH_NEXT			                                                         
+keymap N        SEARCH_PREV			                                                         

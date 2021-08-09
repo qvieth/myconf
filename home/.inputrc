@@ -1,0 +1,7 @@
+set editing-mode vi
+set keymap vi-insert
+"\f": clear-screen
+set show-mode-in-prompt on
+
+# Reduce the delay between pressing escape and the cursor change
+set keyseq-timeout 0

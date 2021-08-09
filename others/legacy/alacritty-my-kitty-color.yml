@@ -1,0 +1,39 @@
+window:
+  dimensions:
+    columns: 70
+    lines: 30
+env:
+  TERM: xterm-256color
+
+# Font
+font:
+  size: 14
+
+# Colorscheme my kitty
+colors:
+  primary:
+    foreground: '#424242' #pencil
+    background: '#FAF7EE'
+
+  cursor:
+    cursor:     '#cccccc'
+    text:       '#64526F'
+  normal:
+    black:      '#FAF7EE'
+    red:        '#DF201C'
+    green:      '#29A0AD'
+    yellow:     '#DB742E'
+    blue:       '#3980C2'
+    magenta:    '#2C9473'
+    cyan:       '#6B3062'
+    white:      '#64526F'
+
+  bright:
+    black:      '#9F93A1'
+    red:        '#DF201C'
+    green:      '#29A0AD'
+    yellow:     '#DB742E'
+    blue:       '#3980C2'
+    magenta:    '#2C9473'
+    cyan:       '#6B3062'
+    white:      '#64526F'

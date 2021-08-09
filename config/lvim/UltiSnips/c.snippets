@@ -1,0 +1,80 @@
+# A valid snippet should starts with:
+#
+#		snippet trigger_word [ "description" [ options ] ]
+#
+# and end with:
+#
+#		endsnippet
+#
+# Snippet options:
+#
+#		b - Beginning of line.
+#		i - In-word expansion.
+#		w - Word boundary.
+#		r - Regular expression
+#		e - Custom context snippet
+#		A - Snippet will be triggered automatically, when condition matches.
+#
+# Basic example:
+#
+#		snippet emitter "emitter properties" b
+#		private readonly ${1} = new Emitter<$2>()
+#		public readonly ${1/^_(.*)/$1/}: Event<$2> = this.$1.event
+#		endsnippet
+#
+# Online reference: https://github.com/SirVer/ultisnips/blob/master/doc/UltiSnips.txt
+
+snippet basicio "basic-io with getchar and putchar"
+/* basic io */
+int c;
+while ((c = getchar()) != EOF) {
+	putchar(c);
+}
+endsnippet
+	
+snippet copilot "array counting program"
+#include <stdbool.h>
+#include <stdio.h>
+
+int main(int argc, char *argv[]) {
+  /* basic io */
+  int c, bc, nc, tc, o;
+  bc = nc = tc = o = 0;
+  int darray[10] = {0};
+  while ((c = getchar()) != EOF) {
+
+    /* condition */
+    switch (c) {
+    default:
+      if (c >= '0' && c <= '9') {
+        darray[c - '0']++;
+      } else {
+        o++;
+      }
+
+      break;
+    case ' ':
+      bc++;
+      break;
+    case '\n':
+      nc++;
+      break;
+    case '\t':
+      tc++;
+      break;
+    }
+  }
+
+  printf("\n");
+  printf("-- OUTPUT -- \n");
+  printf("digits          : ");
+  int i;
+  for (i = 0; i < 10; ++i) {
+    printf("%d ", darray[i]);
+  }
+  printf("\nnew lines count : %d\n", nc);
+  printf("new tabs count  : %d\n", tc);
+  printf("new blank count : %d\n", bc);
+  printf("others          : %d\n", o);
+}
+endsnippet

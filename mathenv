@@ -1,0 +1,14 @@
+#!/bin/sh
+# script for creating conda computation environment
+
+# BEFORE RUN THIS SCRIPT, DO :
+# conda create -n mathenv -y
+# conda activate mathenv
+
+conda install seaborn -y                     # seaborn = mathplotlib + numpy + scipy + pandas
+conda install -c conda-forge jupyterlab -y   # jupyterlab = ipython + jupyter
+conda install -c conda-forge scikit-learn -y # scikit-learn
+
+# ipython vi mode
+ipython profile create
+cp $HOME/myconf/others/ipython_config.py $HOME/.ipython/profile_default/ipython_config.py --remove-destination

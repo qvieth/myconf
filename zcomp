@@ -1,0 +1,10 @@
+#!/bin/sh
+# missing zsh-completions
+
+# cht.sh
+mkdir -p $HOME/.oh-my-zsh/custom/plugins/cht 
+curl https://cheat.sh/:zsh > $HOME/.oh-my-zsh/custom/plugins/cht/_cht
+
+# bitwarden
+mkdir -p $HOME/.oh-my-zsh/custom/plugins/bw 
+bw completion --shell zsh > $HOME/.oh-my-zsh/custom/plugins/bw/_bw

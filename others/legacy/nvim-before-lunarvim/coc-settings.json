@@ -1,0 +1,13 @@
+[
+	{
+		"explorer.icon.enableNerdfont": true,
+		"explorer.file.showHiddenFiles": true
+	},
+	{
+		"coc.source.emoji.filetypes": null,
+		"coc.source.emoji.triggerCharacters": [":"]
+	},
+	{
+		"emmet.includeLanguages": { "javascript": "javascriptreact" }
+	}
+]

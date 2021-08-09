@@ -1,0 +1,24 @@
+#!/bin/sh
+
+# Audio
+dconf write /org/gnome/desktop/sound/allow-volume-above-100-percent true
+
+# Esc
+dconf write /org/gnome/desktop/input-sources/xkb-options "@as []"
+dconf write /org/gnome/desktop/input-sources/xkb-options "['caps:escape']"
+# dconf write /org/gnome/desktop/input-sources/xkb-options "['caps:swapescape']"
+
+# topbar
+dconf write /org/gnome/desktop/interface/show-battery-percentage true
+dconf write /org/gnome/desktop/interface/clock-show-weekday true
+
+# settings
+dconf write /org/gnome/settings-daemon/plugins/color/night-light-enabled true
+dconf write /org/gnome/desktop/peripherals/touchpad/tap-to-click true
+dconf write /org/gnome/desktop/interface/clock-format "'12h'"
+dconf write /org/gtk/settings/file-chooser/clock-format "'12h'"
+
+# repeat keys
+dconf write /org/gnome/desktop/peripherals/keyboard/repeat true
+dconf write /org/gnome/desktop/peripherals/keyboard/delay "uint32 200"
+dconf write /org/gnome/desktop/peripherals/keyboard/repeat-interval "uint32 20"
