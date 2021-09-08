@@ -13,29 +13,29 @@ alias S='echo $sudoPW | sudo -S'
 S pacman -Syu  --noconfirm
 
 # install
-S pacman -S --noconfirm    \
-    alacritty              \
-    bottom                 \
-    dictd                  \
-    figlet                 \
-    foliate                \
-    fzf                    \
-    kitty                  \
-    ledger                 \
-    mariadb                \
-    neofetch               \
-    neovim                 \
-    pandoc                 \
-    poetry                 \
-    ripgrep                \
-    task                   \
-    timew                  \
-    tldr                   \
-    tmux                   \
-    translate-shell        \
-    vlc                    \
-    w3m                    \
-    yay                    \
+S pacman -S --noconfirm \
+  alacritty              \
+  bottom                 \
+  dictd                  \
+  figlet                 \
+  foliate                \
+  fzf                    \
+  kitty                  \
+  ledger                 \
+  mariadb                \
+  neofetch               \
+  neovim                 \
+  pandoc                 \
+  poetry                 \
+  ripgrep                \
+  task                   \
+  timew                  \
+  tldr                   \
+  tmux                   \
+  translate-shell        \
+  vlc                    \
+  w3m                    \
+  yay                    \
 
 # currently missing packages
 # googler                \
@@ -50,7 +50,7 @@ S systemctl enable mariadb.service
 # flatpak
 S flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 S flatpak install -y \
-    flathub com.calibre_ebook.calibre     \
+  flathub com.calibre_ebook.calibre     \
 
 # source
 source $HOME/myconf/extra-pip

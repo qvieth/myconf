@@ -1,11 +1,11 @@
 #!/bin/sh
-                                           
+
 # pip install \
 pip install --upgrade \
-    mycli            \
-    pynvim           \
-    pytube           \
-    ranger-fm        \
-    ricksay          \
-    vimwiki-markdown \
-    wisdom-tree      \
+  mycli            \
+  pynvim           \
+  pytube           \
+  ranger-fm        \
+  ricksay          \
+  vimwiki-markdown \
+  wisdom-tree      \

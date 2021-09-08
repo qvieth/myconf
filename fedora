@@ -16,41 +16,41 @@ S dnf -y copr enable atim/bottom
 
 # dnf install
 S dnf -y install \
-    alacritty              \
-    bottom                 \
-    community-mysql-server \
-    conda                  \
-    dictd                  \
-    direnv                 \
-    f33-backgrounds-gnome  \
-    ffmpeg                 \
-    foliate                \
-    fzf                    \
-    geary                  \
-    gnome-tweaks           \
-    googler                \
-    highlight              \
-    kitty                  \
-    ledger                 \
-    mpg123                 \
-    neofetch               \
-    neovim                 \
-    pandoc                 \
-    poetry                 \
-    ripgrep                \
-    task                   \
-    timew                  \
-    tldr                   \
-    tmux                   \
-    translate-shell        \
-    util-linux-user        \
-    vlc                    \
-    zsh                    \
+  alacritty              \
+  bottom                 \
+  community-mysql-server \
+  conda                  \
+  dictd                  \
+  direnv                 \
+  f33-backgrounds-gnome  \
+  ffmpeg                 \
+  foliate                \
+  fzf                    \
+  geary                  \
+  gnome-tweaks           \
+  googler                \
+  highlight              \
+  kitty                  \
+  ledger                 \
+  mpg123                 \
+  neofetch               \
+  neovim                 \
+  pandoc                 \
+  poetry                 \
+  ripgrep                \
+  task                   \
+  timew                  \
+  tldr                   \
+  tmux                   \
+  translate-shell        \
+  util-linux-user        \
+  vlc                    \
+  zsh                    \
 
 # flatpak
 S flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 S flatpak install -y \
-    flathub com.calibre_ebook.calibre     \
+  flathub com.calibre_ebook.calibre     \
 
 # source
 source $HOME/myconf/extra-pip

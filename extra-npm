@@ -1,20 +1,22 @@
 #!/bin/sh
 
 # fnm
-curl -fsSL https://fnm.vercel.app/install | bash
-if [ -n "$ZSH_VERSION" ]; then
+if ! command -v fnm &> /dev/null ; then
+  curl -fsSL https://fnm.vercel.app/install | bash
+  if [ -n "$ZSH_VERSION" ]; then
     source $HOME/.zshrc;
-elif [ -n "$BASH_VERSION" ]; then
+  elif [ -n "$BASH_VERSION" ]; then
     source $HOME/.bashrc;
+  fi
+  fnm install --lts
 fi
-fnm install --lts
 
 # npm
 npm install -g \
-    @bitwarden/cli   \
-    alacritty-themes \
-    how-2            \
-    npm              \
-    prettier         \
-    wikit            \
-    yarn             \
+  @bitwarden/cli   \
+  alacritty-themes \
+  how-2            \
+  npm              \
+  prettier         \
+  wikit            \
+  yarn             \

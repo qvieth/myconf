@@ -26,6 +26,8 @@ M.indent_blankline = function()
 		"neogitstatus",
 		"NvimTree",
 		"Trouble",
+		"vimwiki",
+		"markdown",
 	}
 	vim.g.indentLine_enabled = 1
 	vim.g.indent_blankline_char = "▏"

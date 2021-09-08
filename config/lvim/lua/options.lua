@@ -35,8 +35,8 @@ vim.o.cmdheight = 1
 vim.o.timeoutlen = 250
 
 lvim.colorscheme = vim.g.colors_name
-lvim.builtin.compe.source.tabnine = true
-lvim.builtin.compe.source.ultisnips = true
+-- lvim.builtin.cmp.source.tabnine = true
+-- lvim.builtin.cmp.source.ultisnips = true
 lvim.builtin.treesitter.rainbow.enable = true
 
 -- vimwiki
