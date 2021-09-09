@@ -48,12 +48,7 @@ lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 -- end
 
 -- set a formatter if you want to override the default lsp one (if it exists)
--- lvim.lang.python.formatters = {
---   {
---     exe = "black",
---     args = {}
---   }
--- }
+-- lvim.lang.python.formatters = { { exe = "black", args = {} } }
 -- set an additional linter
 -- lvim.lang.python.linters = {
 --   {
@@ -64,6 +59,4 @@ lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 --
 
 --QVIETH============================================================================================================================================
-require("plugins/extra")
-require("mappings")
-require("options")
+require("init")

@@ -1,12 +1,18 @@
 -- OPTIONS
 
-lvim.lang.lua.formatters = {
-	{
-		exe = "stylua",
-		args = {},
-	},
-}
+function DefaultState()
+	vim.cmd("colo gruvbox")
+	vim.cmd("noh")
+	vim.cmd([[mapclear <buffer>]])
+	vim.o.virtualedit = ""
+	vim.o.relativenumber = false
+	vim.o.cursorcolumn = false
+end
+DefaultState()
+vim.o.cmdheight = 1
+vim.o.timeoutlen = 250
 
+-- LVIM
 lvim.builtin.dashboard.custom_header = {
 	"     ▄▄▄▄▄███████████████████▄▄▄▄▄         ",
 	"   ▄██████████▀▀▀▀▀▀▀▀▀▀██████▀████▄       ",
@@ -21,25 +27,14 @@ lvim.builtin.dashboard.custom_header = {
 	"               ▀███▄███▀                   ",
 	"                  ▀█▀                      ",
 }
-
-function DefaultState()
-	vim.cmd("colo gruvbox")
-	vim.cmd("noh")
-	vim.cmd([[mapclear <buffer>]])
-	vim.o.virtualedit = ""
-	vim.o.relativenumber = false
-	vim.o.cursorcolumn = false
-end
-DefaultState()
-vim.o.cmdheight = 1
-vim.o.timeoutlen = 250
-
 lvim.colorscheme = vim.g.colors_name
 -- lvim.builtin.cmp.source.tabnine = true
 -- lvim.builtin.cmp.source.ultisnips = true
+lvim.builtin.treesitter.autotag.enable = true
 lvim.builtin.treesitter.rainbow.enable = true
+lvim.autocommands._markdown = {}
 
--- vimwiki
+-- VIMWIKI
 vim.g.vimwiki_global_ext = 0
 vim.g.vimwiki_list = {
 	{
@@ -77,12 +72,9 @@ vim.g.vimwiki_list = {
 	{ path = "~/mywiki/" },
 }
 
--- vim-pencil
+-- VIM-PENCIL
 vim.cmd([[
 let g:pencil#wrapModeDefault = 'hard' 
 let g:pencil#autoformat = 0 
 let g:pencil#textwidth = 74
 ]])
-
--- Autocommands (https://neovim.io/doc/user/autocmd.html) | replace nil - { "BufWinEnter", "*.lua", "setlocal ts=8 sw=8" },
-lvim.autocommands._markdown = {}

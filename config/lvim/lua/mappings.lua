@@ -38,9 +38,9 @@ lvim.keys.normal_mode["<C-v>"] = ":lua toggle_venn()<CR>"
 
 -- M FOR MACROS
 lvim.keys.normal_mode["M"] = "q"
--- for now q stand for query(file,words,...)
+-- FOR NOW Q STAND FOR QUERY(FILE,WORDS,...)
 lvim.keys.normal_mode["q"] = "<Nop>"
 lvim.keys.normal_mode["qv"] = "<CMD>e~/v<CR>"
 
--- zenmode
+-- ZENMODE
 lvim.keys.normal_mode["<Space><Space>"] = "<CMD>ZenMode<CR>"
