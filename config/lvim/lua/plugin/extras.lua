@@ -2,15 +2,12 @@
 lvim.plugins = {
 	--COLORSCHEMES===================================================================================================
 	"ChristianChiarulli/nvcode-color-schemes.vim",
-	"pbrisbin/vim-colors-off",
-	"pgdouyon/vim-yin-yang",
-	"cideM/yui",
-	-- "LunarVim/Colorschemes",
+	"pbrisbin/vim-colors-off", -- "pgdouyon/vim-yin-yang", "cideM/yui",
 	--ESSENTIALS=====================================================================================================
 	"arthurxavierx/vim-caser",
 	{ "nacro90/numb.nvim", event = "BufRead", config = require("plugin.configs.numb") },
 	{ "junegunn/vim-easy-align", config = require("plugin.configs.vim-easy-align") },
-	{ "kevinhwang91/rnvimr", config = require("plugin.configs.rnvimr") },
+	{ "kevinhwang91/rnvimr", cmd = "RnvimrToggle", config = require("plugin.configs.rnvimr") },
 	{ "tpope/vim-surround", keys = { "c", "d", "y" } },
 	{ "tpope/vim-repeat" },
 	{ "wfxr/minimap.vim", run = "brew install code-minimap", config = require("plugin.configs.minimap") },
@@ -19,13 +16,14 @@ lvim.plugins = {
 	-- { "folke/twilight.nvim", config = require("plugin.configs.twilight") },
 	--CODING-GENERAL=================================================================================================
 	"p00f/nvim-ts-rainbow",
-	{ "SirVer/ultisnips", config = require("plugin.configs.ultisnips") },
+	{ "tzachar/cmp-tabnine", run = "./install.sh", config = require("plugin.configs.cmp-tabnine") },
+	-- { "SirVer/ultisnips", config = require("plugin.configs.ultisnips") },
 	{ "honza/vim-snippets", event = "InsertEnter" },
-	{ "simrat39/symbols-outline.nvim", config = require("plugin.configs.symbols-outline") },
+	{ "simrat39/symbols-outline.nvim", cmd = "SymbolsOutline", config = require("plugin.configs.symbols-outline") },
 	{ "michaelb/sniprun", run = "bash install.sh", cmd = "SnipRun" },
 	{ "lukas-reineke/indent-blankline.nvim", event = "BufRead", setup = require("plugin.configs.indent-blankline") },
 	--CODING-FE======================================================================================================
-	{ "mattn/emmet-vim", event = "InsertEnter" },
+	{ "mattn/emmet-vim", event = "InsertEnter", ft = { "html", "javascript", "javascriptreact" } },
 	{ "windwp/nvim-ts-autotag" },
 	{ "turbio/bracey.vim", run = "npm install --prefix server", cmd = "Bracey" },
 	{ "norcalli/nvim-colorizer.lua", config = require("plugin.configs.colorizer") },
@@ -33,11 +31,11 @@ lvim.plugins = {
 		"dsznajder/vscode-es7-javascript-react-snippets",
 		run = "yarn install --frozen-lockfile && yarn compile",
 		event = "InsertEnter",
+		ft = { "html", "javascript", "javascriptreact" },
 	},
 	--WRITING========================================================================================================
 	"vimwiki/vimwiki",
 	{ "iamcco/markdown-preview.nvim", run = "cd app && yarn install", cmd = "MarkdownPreview" },
-	{ "mzlogin/vim-markdown-toc", ft = "markdown" },
 	{ "jbyuki/venn.nvim", cmd = "VBox" },
 	{ "rhysd/vim-grammarous", cmd = "GrammarousCheck" },
 	{ "preservim/vim-pencil", ft = "markdown" },
