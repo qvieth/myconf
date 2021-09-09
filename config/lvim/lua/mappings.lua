@@ -4,10 +4,13 @@
 lvim.keys.term_mode["<Esc><Esc>"] = "<C-\\><C-n>"
 lvim.keys.normal_mode["<Esc><Esc>"] = "<CMD>lua DefaultState()<CR>"
 
+-- TOGGLETERM
+lvim.builtin.terminal.open_mapping = "<F2>"
+
 -- RNVIMR
-lvim.keys.normal_mode["<F1>"] = "<CMD>RnvimrToggle<CR>"
-lvim.keys.insert_mode["<F1>"] = "<Esc><CMD>RnvimrToggle<CR>"
-lvim.keys.term_mode["<F1>"] = "<C-\\><C-n><CMD>RnvimrToggle<CR>"
+lvim.keys.normal_mode["<F3>"] = "<CMD>RnvimrToggle<CR>"
+lvim.keys.insert_mode["<F3>"] = "<Esc><CMD>RnvimrToggle<CR>"
+lvim.keys.term_mode["<F3>"] = "<C-\\><C-n><CMD>RnvimrToggle<CR>"
 
 -- VENN.NVIM
 lvim.keys.normal_mode["v"] = "<C-v>"
@@ -25,7 +28,7 @@ function _G.toggle_venn()
 		vim.api.nvim_buf_set_keymap(0, "n", "L", "<C-v>l:VBox<CR>", { noremap = true })
 		vim.api.nvim_buf_set_keymap(0, "n", "H", "<C-v>h:VBox<CR>", { noremap = true })
 		-- visual change
-		vim.cmd("colorscheme nord")
+		vim.cmd("colo nord")
 		vim.o.cursorcolumn = true
 		vim.o.relativenumber = true
 	else

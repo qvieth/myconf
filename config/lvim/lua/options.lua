@@ -9,6 +9,7 @@ function DefaultState()
 	vim.o.cursorcolumn = false
 end
 DefaultState()
+
 vim.o.cmdheight = 1
 vim.o.timeoutlen = 250
 

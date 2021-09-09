@@ -4,10 +4,15 @@
 vim.api.nvim_set_keymap("t", "<Esc><Esc>", "<C-\\><C-n>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<Esc><Esc>", "<CMD>lua DefaultState()<CR>", { noremap = true, silent = true })
 
+-- TOGGLETERM
+vim.api.nvim_set_keymap("n", "<F2>", "<CMD>ToggleTerm<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("i", "<F2>", "<Esc><CMD>ToggleTerm<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("t", "<F2>", "<C-\\><C-n><CMD>ToggleTerm<CR>", { noremap = true, silent = true })
+
 -- RNVIMR
-vim.api.nvim_set_keymap("n", "<F1>", "<CMD>RnvimrToggle<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("i", "<F1>", "<Esc><CMD>RnvimrToggle<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("t", "<F1>", "<C-\\><C-n><CMD>RnvimrToggle<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<F3>", "<CMD>RnvimrToggle<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("i", "<F3>", "<Esc><CMD>RnvimrToggle<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("t", "<F3>", "<C-\\><C-n><CMD>RnvimrToggle<CR>", { noremap = true, silent = true })
 
 -- VENN.NVIM
 vim.api.nvim_set_keymap("n", "v", "<C-v>", { noremap = true, silent = true })
