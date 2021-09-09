@@ -1,4 +1,4 @@
-require("plugin.extra")
+require("plugin.extras")
 require("mappings")
 require("languages")
 require("options")
