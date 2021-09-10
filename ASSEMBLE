@@ -10,7 +10,8 @@ cp -f -r -t $HOME/myconf/config/ \
     $HOME/.config/bottom/ \
     $HOME/.config/kitty/  \
     $HOME/.config/lvim/   \
-    $HOME/.config/nvim/   \
+
+    # $HOME/.config/nvim/   \
 
 # home
 cp -f -r -t $HOME/myconf/home/ \
