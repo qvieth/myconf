@@ -1,4 +1,5 @@
 -- EXTRA PLUGINS
+
 lvim.plugins = {
 	--COLORSCHEMES===================================================================================================
 	"ChristianChiarulli/nvcode-color-schemes.vim",

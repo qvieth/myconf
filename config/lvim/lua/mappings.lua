@@ -4,6 +4,11 @@
 lvim.keys.term_mode["<Esc><Esc>"] = "<C-\\><C-n>"
 lvim.keys.normal_mode["<Esc><Esc>"] = "<CMD>lua DefaultState()<CR>"
 
+-- NVIMTREE
+lvim.keys.normal_mode["<F1>"] = "<CMD>NvimTreeToggle<CR>"
+lvim.keys.insert_mode["<F1>"] = "<Esc><CMD>NvimTreeToggle<CR>"
+lvim.keys.term_mode["<F1>"] = "<C-\\><C-n><CMD>NvimTreeToggle<CR>"
+
 -- TOGGLETERM
 lvim.builtin.terminal.open_mapping = "<F2>"
 
@@ -47,3 +52,6 @@ lvim.keys.normal_mode["qv"] = "<CMD>e~/v<CR>"
 
 -- ZENMODE
 lvim.keys.normal_mode["<Space><Space>"] = "<CMD>ZenMode<CR>"
+
+-- WINDOW ZOOM
+lvim.keys.normal_mode["<C-w>z"] = "<C-w>|<C-w>_"

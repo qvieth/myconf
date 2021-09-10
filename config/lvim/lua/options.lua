@@ -29,8 +29,6 @@ lvim.builtin.dashboard.custom_header = {
 	"                  ▀█▀                      ",
 }
 lvim.colorscheme = vim.g.colors_name
--- lvim.builtin.cmp.source.tabnine = true
--- lvim.builtin.cmp.source.ultisnips = true
 lvim.builtin.treesitter.autotag.enable = true
 lvim.builtin.treesitter.rainbow.enable = true
 lvim.autocommands._markdown = {}
