@@ -10,6 +10,7 @@ function DefaultState()
 end
 DefaultState()
 
+vim.o.guicursor = ""
 vim.o.cmdheight = 1
 vim.o.timeoutlen = 250
 
