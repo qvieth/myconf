@@ -35,17 +35,12 @@ lvim.plugins = {
 		ft = { "html", "javascript", "javascriptreact" },
 	},
 	--WRITING========================================================================================================
-	"vimwiki/vimwiki",
+	{ "vimwiki/vimwiki", config = require("plugin.configs.vimwiki") },
+	{ "preservim/vim-pencil", ft = "markdown", config = require("plugin.configs.vim-pencil") },
+	{ "reedes/vim-litecorrect", config = require("plugin.configs.vim-litecorrect") },
 	{ "iamcco/markdown-preview.nvim", run = "cd app && yarn install", cmd = "MarkdownPreview" },
 	{ "jbyuki/venn.nvim", cmd = "VBox" },
 	{ "rhysd/vim-grammarous", cmd = "GrammarousCheck" },
-	{ "preservim/vim-pencil", ft = "markdown" },
 	{ "reedes/vim-wordy", ft = "markdown" },
 	{ "npxbr/glow.nvim", cmd = "Glow" },
-	{
-		"reedes/vim-litecorrect",
-		config = vim.cmd(
-			[[ augroup litecorrect autocmd! | autocmd FileType markdown,mkd call litecorrect#init() | autocmd FileType textile call litecorrect#init() | augroup END ]]
-		),
-	},
 }
