@@ -5,7 +5,7 @@ lvim.plugins = {
 	"ChristianChiarulli/nvcode-color-schemes.vim",
 	"pbrisbin/vim-colors-off", -- "pgdouyon/vim-yin-yang", "cideM/yui",
 	--ESSENTIALS=====================================================================================================
-	{ "arthurxavierx/vim-caser", keys = { "v", "g" } },
+	{ "arthurxavierx/vim-caser", keys = "g" },
 	{ "nacro90/numb.nvim", event = "BufRead", config = require("plugin.configs.numb") },
 	{ "junegunn/vim-easy-align", config = require("plugin.configs.vim-easy-align") },
 	{ "kevinhwang91/rnvimr", cmd = "RnvimrToggle", config = require("plugin.configs.rnvimr") },
@@ -17,8 +17,9 @@ lvim.plugins = {
 	-- { "folke/twilight.nvim", config = require("plugin.configs.twilight") },
 	--CODING-GENERAL=================================================================================================
 	"p00f/nvim-ts-rainbow",
+	{ "SirVer/ultisnips", config = require("plugin.configs.ultisnips") },
+	{ "quangnguyen30192/cmp-nvim-ultisnips", after = "nvim-cmp" },
 	{ "tzachar/cmp-tabnine", run = "./install.sh", config = require("plugin.configs.cmp-tabnine") },
-	-- { "SirVer/ultisnips", config = require("plugin.configs.ultisnips") },
 	{ "honza/vim-snippets", event = "InsertEnter" },
 	{ "simrat39/symbols-outline.nvim", cmd = "SymbolsOutline", config = require("plugin.configs.symbols-outline") },
 	{ "michaelb/sniprun", run = "bash install.sh", cmd = "SnipRun" },
