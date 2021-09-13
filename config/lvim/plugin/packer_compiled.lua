@@ -200,8 +200,9 @@ _G.packer_plugins = {
   },
   ["nvim-colorizer.lua"] = {
     config = { "\27LJ\2\2í\1\0\0\5\0\6\0\f6\0\0\0006\1\1\0'\2\2\0B\0\3\3\14\0\0\0X\2\1ÄK\0\1\0009\2\3\0015\3\4\0005\4\5\0B\2\3\1K\0\1\0\1\0\a\vRRGGBB\2\vhsl_fn\2\rRRGGBBAA\2\bcss\2\vrgb_fn\2\bRGB\2\vcss_fn\2\1\2\0\0\6*\nsetup\14colorizer\frequire\npcall\0" },
-    loaded = true,
-    path = "/home/qvieth/.local/share/lunarvim/site/pack/packer/start/nvim-colorizer.lua"
+    loaded = false,
+    needs_bufread = false,
+    path = "/home/qvieth/.local/share/lunarvim/site/pack/packer/opt/nvim-colorizer.lua"
   },
   ["nvim-comment"] = {
     config = { "\27LJ\2\2:\0\0\2\0\3\0\0066\0\0\0'\1\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\17core.comment\frequire\0" },
@@ -230,8 +231,9 @@ _G.packer_plugins = {
     path = "/home/qvieth/.local/share/lunarvim/site/pack/packer/start/nvim-treesitter"
   },
   ["nvim-ts-autotag"] = {
-    loaded = true,
-    path = "/home/qvieth/.local/share/lunarvim/site/pack/packer/start/nvim-ts-autotag"
+    loaded = false,
+    needs_bufread = false,
+    path = "/home/qvieth/.local/share/lunarvim/site/pack/packer/opt/nvim-ts-autotag"
   },
   ["nvim-ts-rainbow"] = {
     loaded = true,
@@ -291,14 +293,15 @@ _G.packer_plugins = {
   },
   ["venn.nvim"] = {
     commands = { "VBox" },
-    config = { "\27LJ\2\0023\0\0\2\0\2\0\0046\0\0\0'\1\1\0B\0\2\1K\0\1\0\24plugin.configs.venn\frequire\0" },
     loaded = false,
     needs_bufread = false,
     path = "/home/qvieth/.local/share/lunarvim/site/pack/packer/opt/venn.nvim"
   },
   ["vim-caser"] = {
-    loaded = true,
-    path = "/home/qvieth/.local/share/lunarvim/site/pack/packer/start/vim-caser"
+    keys = { { "", "v" }, { "", "g" } },
+    loaded = false,
+    needs_bufread = false,
+    path = "/home/qvieth/.local/share/lunarvim/site/pack/packer/opt/vim-caser"
   },
   ["vim-colors-off"] = {
     loaded = true,
@@ -317,14 +320,20 @@ _G.packer_plugins = {
   },
   ["vim-litecorrect"] = {
     config = { "\27LJ\2\2«\1\0\0\2\0\3\0\0056\0\0\0009\0\1\0'\1\2\0B\0\2\1K\0\1\0ß\1  augroup litecorrect\n    autocmd!\n    autocmd FileType markdown,mkd call litecorrect#init()\n    autocmd FileType textile call litecorrect#init()\n  augroup END\n  \bcmd\bvim\0" },
-    loaded = true,
-    path = "/home/qvieth/.local/share/lunarvim/site/pack/packer/start/vim-litecorrect"
+    loaded = false,
+    needs_bufread = false,
+    path = "/home/qvieth/.local/share/lunarvim/site/pack/packer/opt/vim-litecorrect"
   },
   ["vim-pencil"] = {
     config = { "\27LJ\2\2ä\1\0\0\2\0\3\0\0056\0\0\0009\0\1\0'\1\2\0B\0\2\1K\0\1\0k  let g:pencil#wrapModeDefault = 'hard'\n  let g:pencil#autoformat = 0\n  let g:pencil#textwidth = 74\n  \bcmd\bvim\0" },
     loaded = false,
     needs_bufread = false,
     path = "/home/qvieth/.local/share/lunarvim/site/pack/packer/opt/vim-pencil"
+  },
+  ["vim-prettier"] = {
+    loaded = false,
+    needs_bufread = true,
+    path = "/home/qvieth/.local/share/lunarvim/site/pack/packer/opt/vim-prettier"
   },
   ["vim-repeat"] = {
     loaded = true,
@@ -376,10 +385,6 @@ time([[Defining packer_plugins]], false)
 time([[Setup for indent-blankline.nvim]], true)
 try_loadstring("\27LJ\2\2‰\4\0\0\2\0\f\0\0256\0\0\0009\0\1\0005\1\3\0=\1\2\0006\0\0\0009\0\1\0005\1\5\0=\1\4\0006\0\0\0009\0\1\0)\1\1\0=\1\6\0006\0\0\0009\0\1\0'\1\b\0=\1\a\0006\0\0\0009\0\1\0+\1\2\0=\1\t\0006\0\0\0009\0\1\0005\1\v\0=\1\n\0K\0\1\0\1\21\0\0\nclass\vreturn\rfunction\vmethod\b^if\v^while\16jsx_element\t^for\f^object\v^table\nblock\14arguments\17if_statement\16else_clause\16jsx_element\29jsx_self_closing_element\18try_statement\17catch_clause\21import_statement\19operation_type&indent_blankline_context_patterns*indent_blankline_show_current_context\b‚ñè\26indent_blankline_char\23indentLine_enabled\1\n\0\0\thelp\rstartify\14dashboard\vpacker\17neogitstatus\rNvimTree\fTrouble\fvimwiki\rmarkdown&indent_blankline_filetype_exclude\1\3\0\0\rterminal\vnofile%indent_blankline_buftype_exclude\6g\bvim\0", "setup", "indent-blankline.nvim")
 time([[Setup for indent-blankline.nvim]], false)
--- Config for: nvim-colorizer.lua
-time([[Config for nvim-colorizer.lua]], true)
-try_loadstring("\27LJ\2\2í\1\0\0\5\0\6\0\f6\0\0\0006\1\1\0'\2\2\0B\0\3\3\14\0\0\0X\2\1ÄK\0\1\0009\2\3\0015\3\4\0005\4\5\0B\2\3\1K\0\1\0\1\0\a\vRRGGBB\2\vhsl_fn\2\rRRGGBBAA\2\bcss\2\vrgb_fn\2\bRGB\2\vcss_fn\2\1\2\0\0\6*\nsetup\14colorizer\frequire\npcall\0", "config", "nvim-colorizer.lua")
-time([[Config for nvim-colorizer.lua]], false)
 -- Config for: telescope.nvim
 time([[Config for telescope.nvim]], true)
 try_loadstring("\27LJ\2\2<\0\0\2\0\3\0\0066\0\0\0'\1\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\19core.telescope\frequire\0", "config", "telescope.nvim")
@@ -392,26 +397,22 @@ time([[Config for cmp-tabnine]], false)
 time([[Config for vim-easy-align]], true)
 try_loadstring("\27LJ\2\2§\1\0\0\5\0\t\0\0176\0\0\0009\0\1\0009\0\2\0'\1\3\0'\2\4\0'\3\5\0005\4\6\0B\0\5\0016\0\0\0009\0\1\0009\0\2\0'\1\a\0'\2\4\0'\3\5\0005\4\b\0B\0\5\1K\0\1\0\1\0\2\vsilent\1\fnoremap\1\6x\1\0\2\vsilent\1\fnoremap\1\22<Plug>(EasyAlign)\aga\6n\20nvim_set_keymap\bapi\bvim\0", "config", "vim-easy-align")
 time([[Config for vim-easy-align]], false)
--- Config for: vim-litecorrect
-time([[Config for vim-litecorrect]], true)
-try_loadstring("\27LJ\2\2«\1\0\0\2\0\3\0\0056\0\0\0009\0\1\0'\1\2\0B\0\2\1K\0\1\0ß\1  augroup litecorrect\n    autocmd!\n    autocmd FileType markdown,mkd call litecorrect#init()\n    autocmd FileType textile call litecorrect#init()\n  augroup END\n  \bcmd\bvim\0", "config", "vim-litecorrect")
-time([[Config for vim-litecorrect]], false)
--- Config for: nvim-cmp
-time([[Config for nvim-cmp]], true)
-try_loadstring("\27LJ\2\0026\0\0\2\0\3\0\0066\0\0\0'\1\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\rcore.cmp\frequire\0", "config", "nvim-cmp")
-time([[Config for nvim-cmp]], false)
 -- Config for: vimwiki
 time([[Config for vimwiki]], true)
 try_loadstring("\27LJ\2\2‚\5\0\0\3\0\n\0\0216\0\0\0009\0\1\0)\1\0\0=\1\2\0006\0\0\0009\0\1\0004\1\a\0005\2\4\0>\2\1\0015\2\5\0>\2\2\0015\2\6\0>\2\3\0015\2\a\0>\2\4\0015\2\b\0>\2\5\0015\2\t\0>\2\6\1=\1\3\0K\0\1\0\1\0\1\tpath\14~/mywiki/\1\0\1\tpath\16~/mysecret/\1\0\1\tpath\15~/mydraft/\1\0\b\21custom_wiki2html\21vimwiki_markdown\tpath\r~/myblog\21template_default\fdefault\vsyntax\rmarkdown\bext\b.md\14path_html\24~/mynote_site_html/\18template_path\25~/vimwiki/templates/\17template_ext\t.tpl\1\0\b\21custom_wiki2html\21vimwiki_markdown\tpath\16~/myarchive\21template_default\fdefault\vsyntax\rmarkdown\bext\b.md\14path_html\24~/mynote_site_html/\18template_path\25~/vimwiki/templates/\17template_ext\t.tpl\1\0\b\21custom_wiki2html\21vimwiki_markdown\tpath\r~/mynote\21template_default\fdefault\vsyntax\rmarkdown\bext\b.md\14path_html\24~/mynote_site_html/\18template_path\25~/vimwiki/templates/\17template_ext\t.tpl\17vimwiki_list\23vimwiki_global_ext\6g\bvim\0", "config", "vimwiki")
 time([[Config for vimwiki]], false)
--- Config for: nvim-tree.lua
-time([[Config for nvim-tree.lua]], true)
-try_loadstring("\27LJ\2\2;\0\0\2\0\3\0\0066\0\0\0'\1\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\18core.nvimtree\frequire\0", "config", "nvim-tree.lua")
-time([[Config for nvim-tree.lua]], false)
 -- Config for: lualine.nvim
 time([[Config for lualine.nvim]], true)
 try_loadstring("\27LJ\2\2:\0\0\2\0\3\0\0066\0\0\0'\1\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\17core.lualine\frequire\0", "config", "lualine.nvim")
 time([[Config for lualine.nvim]], false)
+-- Config for: nvim-tree.lua
+time([[Config for nvim-tree.lua]], true)
+try_loadstring("\27LJ\2\2;\0\0\2\0\3\0\0066\0\0\0'\1\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\18core.nvimtree\frequire\0", "config", "nvim-tree.lua")
+time([[Config for nvim-tree.lua]], false)
+-- Config for: minimap.vim
+time([[Config for minimap.vim]], true)
+try_loadstring("\27LJ\2\2ı\1\0\0\2\0\a\0\0176\0\0\0009\0\1\0)\1\n\0=\1\2\0006\0\0\0009\0\1\0)\1\1\0=\1\3\0006\0\0\0009\0\1\0)\1\1\0=\1\4\0006\0\0\0009\0\1\0005\1\6\0=\1\5\0K\0\1\0\1\v\0\0\5\fOutline\14dashboard\thelp\rmarkdown\vpacker\vrnvimr\fstarify\15toggleterm\fvimwiki\28minimap_close_filetypes!minimap_auto_start_win_enter\23minimap_auto_start\18minimap_width\6g\bvim\0", "config", "minimap.vim")
+time([[Config for minimap.vim]], false)
 -- Config for: project.nvim
 time([[Config for project.nvim]], true)
 try_loadstring("\27LJ\2\2:\0\0\2\0\3\0\0066\0\0\0'\1\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\17core.project\frequire\0", "config", "project.nvim")
@@ -420,10 +421,10 @@ time([[Config for project.nvim]], false)
 time([[Config for nvim-treesitter]], true)
 try_loadstring("\27LJ\2\2=\0\0\2\0\3\0\0066\0\0\0'\1\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\20core.treesitter\frequire\0", "config", "nvim-treesitter")
 time([[Config for nvim-treesitter]], false)
--- Config for: minimap.vim
-time([[Config for minimap.vim]], true)
-try_loadstring("\27LJ\2\2ı\1\0\0\2\0\a\0\0176\0\0\0009\0\1\0)\1\n\0=\1\2\0006\0\0\0009\0\1\0)\1\1\0=\1\3\0006\0\0\0009\0\1\0)\1\1\0=\1\4\0006\0\0\0009\0\1\0005\1\6\0=\1\5\0K\0\1\0\1\v\0\0\5\fOutline\14dashboard\thelp\rmarkdown\vpacker\vrnvimr\fstarify\15toggleterm\fvimwiki\28minimap_close_filetypes!minimap_auto_start_win_enter\23minimap_auto_start\18minimap_width\6g\bvim\0", "config", "minimap.vim")
-time([[Config for minimap.vim]], false)
+-- Config for: nvim-cmp
+time([[Config for nvim-cmp]], true)
+try_loadstring("\27LJ\2\0026\0\0\2\0\3\0\0066\0\0\0'\1\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\rcore.cmp\frequire\0", "config", "nvim-cmp")
+time([[Config for nvim-cmp]], false)
 -- Load plugins in order defined by `after`
 time([[Sequenced loading]], true)
 vim.cmd [[ packadd nvim-autopairs ]]
@@ -442,25 +443,28 @@ pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file SymbolsOutline lua
 pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file GrammarousCheck lua require("packer.load")({'vim-grammarous'}, { cmd = "GrammarousCheck", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args> }, _G.packer_plugins)]])
 pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file ZenMode lua require("packer.load")({'zen-mode.nvim'}, { cmd = "ZenMode", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args> }, _G.packer_plugins)]])
 pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file SnipRun lua require("packer.load")({'sniprun'}, { cmd = "SnipRun", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args> }, _G.packer_plugins)]])
-pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file Glow lua require("packer.load")({'glow.nvim'}, { cmd = "Glow", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args> }, _G.packer_plugins)]])
 pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file Bracey lua require("packer.load")({'bracey.vim'}, { cmd = "Bracey", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args> }, _G.packer_plugins)]])
+pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file Glow lua require("packer.load")({'glow.nvim'}, { cmd = "Glow", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args> }, _G.packer_plugins)]])
 time([[Defining lazy-load commands]], false)
 
 -- Keymap lazy-loads
 time([[Defining lazy-load keymaps]], true)
-vim.cmd [[noremap <silent> c <cmd>lua require("packer.load")({'vim-surround'}, { keys = "c", prefix = "" }, _G.packer_plugins)<cr>]]
-vim.cmd [[noremap <silent> y <cmd>lua require("packer.load")({'vim-surround'}, { keys = "y", prefix = "" }, _G.packer_plugins)<cr>]]
 vim.cmd [[noremap <silent> d <cmd>lua require("packer.load")({'vim-surround'}, { keys = "d", prefix = "" }, _G.packer_plugins)<cr>]]
+vim.cmd [[noremap <silent> v <cmd>lua require("packer.load")({'vim-caser'}, { keys = "v", prefix = "" }, _G.packer_plugins)<cr>]]
+vim.cmd [[noremap <silent> g <cmd>lua require("packer.load")({'vim-caser'}, { keys = "g", prefix = "" }, _G.packer_plugins)<cr>]]
+vim.cmd [[noremap <silent> y <cmd>lua require("packer.load")({'vim-surround'}, { keys = "y", prefix = "" }, _G.packer_plugins)<cr>]]
+vim.cmd [[noremap <silent> c <cmd>lua require("packer.load")({'vim-surround'}, { keys = "c", prefix = "" }, _G.packer_plugins)<cr>]]
 time([[Defining lazy-load keymaps]], false)
 
 vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Filetype lazy-loads
 time([[Defining lazy-load filetype autocommands]], true)
-vim.cmd [[au FileType markdown ++once lua require("packer.load")({'vim-pencil', 'vim-wordy'}, { ft = "markdown" }, _G.packer_plugins)]]
-vim.cmd [[au FileType javascriptreact ++once lua require("packer.load")({'vscode-es7-javascript-react-snippets', 'emmet-vim'}, { ft = "javascriptreact" }, _G.packer_plugins)]]
-vim.cmd [[au FileType javascript ++once lua require("packer.load")({'vscode-es7-javascript-react-snippets', 'emmet-vim'}, { ft = "javascript" }, _G.packer_plugins)]]
-vim.cmd [[au FileType html ++once lua require("packer.load")({'vscode-es7-javascript-react-snippets', 'emmet-vim'}, { ft = "html" }, _G.packer_plugins)]]
+vim.cmd [[au FileType markdown ++once lua require("packer.load")({'vim-litecorrect', 'vim-prettier', 'vim-wordy', 'vim-pencil'}, { ft = "markdown" }, _G.packer_plugins)]]
+vim.cmd [[au FileType javascriptreact ++once lua require("packer.load")({'vscode-es7-javascript-react-snippets', 'emmet-vim', 'nvim-ts-autotag'}, { ft = "javascriptreact" }, _G.packer_plugins)]]
+vim.cmd [[au FileType css ++once lua require("packer.load")({'nvim-colorizer.lua'}, { ft = "css" }, _G.packer_plugins)]]
+vim.cmd [[au FileType javascript ++once lua require("packer.load")({'vscode-es7-javascript-react-snippets', 'nvim-colorizer.lua', 'emmet-vim', 'nvim-ts-autotag'}, { ft = "javascript" }, _G.packer_plugins)]]
+vim.cmd [[au FileType html ++once lua require("packer.load")({'vscode-es7-javascript-react-snippets', 'nvim-colorizer.lua', 'emmet-vim', 'nvim-ts-autotag'}, { ft = "html" }, _G.packer_plugins)]]
 time([[Defining lazy-load filetype autocommands]], false)
   -- Event lazy-loads
 time([[Defining lazy-load event autocommands]], true)
@@ -470,6 +474,56 @@ vim.cmd [[au BufRead * ++once lua require("packer.load")({'gitsigns.nvim', 'nvim
 vim.cmd [[au WinScrolled * ++once lua require("packer.load")({'neoscroll.nvim'}, { event = "WinScrolled *" }, _G.packer_plugins)]]
 vim.cmd [[au InsertEnter * ++once lua require("packer.load")({'vscode-es7-javascript-react-snippets', 'vim-snippets', 'emmet-vim'}, { event = "InsertEnter *" }, _G.packer_plugins)]]
 time([[Defining lazy-load event autocommands]], false)
+vim.cmd("augroup END")
+vim.cmd [[augroup filetypedetect]]
+time([[Sourcing ftdetect script at: /home/qvieth/.local/share/lunarvim/site/pack/packer/opt/vim-prettier/ftdetect/css.vim]], true)
+vim.cmd [[source /home/qvieth/.local/share/lunarvim/site/pack/packer/opt/vim-prettier/ftdetect/css.vim]]
+time([[Sourcing ftdetect script at: /home/qvieth/.local/share/lunarvim/site/pack/packer/opt/vim-prettier/ftdetect/css.vim]], false)
+time([[Sourcing ftdetect script at: /home/qvieth/.local/share/lunarvim/site/pack/packer/opt/vim-prettier/ftdetect/graphql.vim]], true)
+vim.cmd [[source /home/qvieth/.local/share/lunarvim/site/pack/packer/opt/vim-prettier/ftdetect/graphql.vim]]
+time([[Sourcing ftdetect script at: /home/qvieth/.local/share/lunarvim/site/pack/packer/opt/vim-prettier/ftdetect/graphql.vim]], false)
+time([[Sourcing ftdetect script at: /home/qvieth/.local/share/lunarvim/site/pack/packer/opt/vim-prettier/ftdetect/html.vim]], true)
+vim.cmd [[source /home/qvieth/.local/share/lunarvim/site/pack/packer/opt/vim-prettier/ftdetect/html.vim]]
+time([[Sourcing ftdetect script at: /home/qvieth/.local/share/lunarvim/site/pack/packer/opt/vim-prettier/ftdetect/html.vim]], false)
+time([[Sourcing ftdetect script at: /home/qvieth/.local/share/lunarvim/site/pack/packer/opt/vim-prettier/ftdetect/javascript.vim]], true)
+vim.cmd [[source /home/qvieth/.local/share/lunarvim/site/pack/packer/opt/vim-prettier/ftdetect/javascript.vim]]
+time([[Sourcing ftdetect script at: /home/qvieth/.local/share/lunarvim/site/pack/packer/opt/vim-prettier/ftdetect/javascript.vim]], false)
+time([[Sourcing ftdetect script at: /home/qvieth/.local/share/lunarvim/site/pack/packer/opt/vim-prettier/ftdetect/json.vim]], true)
+vim.cmd [[source /home/qvieth/.local/share/lunarvim/site/pack/packer/opt/vim-prettier/ftdetect/json.vim]]
+time([[Sourcing ftdetect script at: /home/qvieth/.local/share/lunarvim/site/pack/packer/opt/vim-prettier/ftdetect/json.vim]], false)
+time([[Sourcing ftdetect script at: /home/qvieth/.local/share/lunarvim/site/pack/packer/opt/vim-prettier/ftdetect/less.vim]], true)
+vim.cmd [[source /home/qvieth/.local/share/lunarvim/site/pack/packer/opt/vim-prettier/ftdetect/less.vim]]
+time([[Sourcing ftdetect script at: /home/qvieth/.local/share/lunarvim/site/pack/packer/opt/vim-prettier/ftdetect/less.vim]], false)
+time([[Sourcing ftdetect script at: /home/qvieth/.local/share/lunarvim/site/pack/packer/opt/vim-prettier/ftdetect/lua.vim]], true)
+vim.cmd [[source /home/qvieth/.local/share/lunarvim/site/pack/packer/opt/vim-prettier/ftdetect/lua.vim]]
+time([[Sourcing ftdetect script at: /home/qvieth/.local/share/lunarvim/site/pack/packer/opt/vim-prettier/ftdetect/lua.vim]], false)
+time([[Sourcing ftdetect script at: /home/qvieth/.local/share/lunarvim/site/pack/packer/opt/vim-prettier/ftdetect/markdown.vim]], true)
+vim.cmd [[source /home/qvieth/.local/share/lunarvim/site/pack/packer/opt/vim-prettier/ftdetect/markdown.vim]]
+time([[Sourcing ftdetect script at: /home/qvieth/.local/share/lunarvim/site/pack/packer/opt/vim-prettier/ftdetect/markdown.vim]], false)
+time([[Sourcing ftdetect script at: /home/qvieth/.local/share/lunarvim/site/pack/packer/opt/vim-prettier/ftdetect/php.vim]], true)
+vim.cmd [[source /home/qvieth/.local/share/lunarvim/site/pack/packer/opt/vim-prettier/ftdetect/php.vim]]
+time([[Sourcing ftdetect script at: /home/qvieth/.local/share/lunarvim/site/pack/packer/opt/vim-prettier/ftdetect/php.vim]], false)
+time([[Sourcing ftdetect script at: /home/qvieth/.local/share/lunarvim/site/pack/packer/opt/vim-prettier/ftdetect/ruby.vim]], true)
+vim.cmd [[source /home/qvieth/.local/share/lunarvim/site/pack/packer/opt/vim-prettier/ftdetect/ruby.vim]]
+time([[Sourcing ftdetect script at: /home/qvieth/.local/share/lunarvim/site/pack/packer/opt/vim-prettier/ftdetect/ruby.vim]], false)
+time([[Sourcing ftdetect script at: /home/qvieth/.local/share/lunarvim/site/pack/packer/opt/vim-prettier/ftdetect/scss.vim]], true)
+vim.cmd [[source /home/qvieth/.local/share/lunarvim/site/pack/packer/opt/vim-prettier/ftdetect/scss.vim]]
+time([[Sourcing ftdetect script at: /home/qvieth/.local/share/lunarvim/site/pack/packer/opt/vim-prettier/ftdetect/scss.vim]], false)
+time([[Sourcing ftdetect script at: /home/qvieth/.local/share/lunarvim/site/pack/packer/opt/vim-prettier/ftdetect/svelte.vim]], true)
+vim.cmd [[source /home/qvieth/.local/share/lunarvim/site/pack/packer/opt/vim-prettier/ftdetect/svelte.vim]]
+time([[Sourcing ftdetect script at: /home/qvieth/.local/share/lunarvim/site/pack/packer/opt/vim-prettier/ftdetect/svelte.vim]], false)
+time([[Sourcing ftdetect script at: /home/qvieth/.local/share/lunarvim/site/pack/packer/opt/vim-prettier/ftdetect/typescript.vim]], true)
+vim.cmd [[source /home/qvieth/.local/share/lunarvim/site/pack/packer/opt/vim-prettier/ftdetect/typescript.vim]]
+time([[Sourcing ftdetect script at: /home/qvieth/.local/share/lunarvim/site/pack/packer/opt/vim-prettier/ftdetect/typescript.vim]], false)
+time([[Sourcing ftdetect script at: /home/qvieth/.local/share/lunarvim/site/pack/packer/opt/vim-prettier/ftdetect/vue.vim]], true)
+vim.cmd [[source /home/qvieth/.local/share/lunarvim/site/pack/packer/opt/vim-prettier/ftdetect/vue.vim]]
+time([[Sourcing ftdetect script at: /home/qvieth/.local/share/lunarvim/site/pack/packer/opt/vim-prettier/ftdetect/vue.vim]], false)
+time([[Sourcing ftdetect script at: /home/qvieth/.local/share/lunarvim/site/pack/packer/opt/vim-prettier/ftdetect/xml.vim]], true)
+vim.cmd [[source /home/qvieth/.local/share/lunarvim/site/pack/packer/opt/vim-prettier/ftdetect/xml.vim]]
+time([[Sourcing ftdetect script at: /home/qvieth/.local/share/lunarvim/site/pack/packer/opt/vim-prettier/ftdetect/xml.vim]], false)
+time([[Sourcing ftdetect script at: /home/qvieth/.local/share/lunarvim/site/pack/packer/opt/vim-prettier/ftdetect/yaml.vim]], true)
+vim.cmd [[source /home/qvieth/.local/share/lunarvim/site/pack/packer/opt/vim-prettier/ftdetect/yaml.vim]]
+time([[Sourcing ftdetect script at: /home/qvieth/.local/share/lunarvim/site/pack/packer/opt/vim-prettier/ftdetect/yaml.vim]], false)
 vim.cmd("augroup END")
 if should_profile then save_profiles() end
 

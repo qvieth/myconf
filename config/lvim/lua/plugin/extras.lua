@@ -5,7 +5,7 @@ lvim.plugins = {
 	"ChristianChiarulli/nvcode-color-schemes.vim",
 	"pbrisbin/vim-colors-off", -- "pgdouyon/vim-yin-yang", "cideM/yui",
 	--ESSENTIALS=====================================================================================================
-	"arthurxavierx/vim-caser",
+	{ "arthurxavierx/vim-caser", keys = { "v", "g" } },
 	{ "nacro90/numb.nvim", event = "BufRead", config = require("plugin.configs.numb") },
 	{ "junegunn/vim-easy-align", config = require("plugin.configs.vim-easy-align") },
 	{ "kevinhwang91/rnvimr", cmd = "RnvimrToggle", config = require("plugin.configs.rnvimr") },
@@ -25,9 +25,9 @@ lvim.plugins = {
 	{ "lukas-reineke/indent-blankline.nvim", event = "BufRead", setup = require("plugin.configs.indent-blankline") },
 	--CODING-FE======================================================================================================
 	{ "mattn/emmet-vim", event = "InsertEnter", ft = { "html", "javascript", "javascriptreact" } },
-	{ "windwp/nvim-ts-autotag" },
+	{ "windwp/nvim-ts-autotag", ft = { "html", "javascript", "javascriptreact" } },
 	{ "turbio/bracey.vim", run = "npm install --prefix server", cmd = "Bracey" },
-	{ "norcalli/nvim-colorizer.lua", config = require("plugin.configs.colorizer") },
+	{ "norcalli/nvim-colorizer.lua", ft = { "html", "css", "javascript" }, config = require("plugin.configs.colorizer") },
 	{
 		"dsznajder/vscode-es7-javascript-react-snippets",
 		run = "yarn install --frozen-lockfile && yarn compile",
@@ -35,9 +35,10 @@ lvim.plugins = {
 		ft = { "html", "javascript", "javascriptreact" },
 	},
 	--WRITING========================================================================================================
+	{ "prettier/vim-prettier", run = "yarn install", ft = "markdown" },
 	{ "vimwiki/vimwiki", config = require("plugin.configs.vimwiki") },
 	{ "preservim/vim-pencil", ft = "markdown", config = require("plugin.configs.vim-pencil") },
-	{ "reedes/vim-litecorrect", config = require("plugin.configs.vim-litecorrect") },
+	{ "reedes/vim-litecorrect", ft = "markdown", config = require("plugin.configs.vim-litecorrect") },
 	{ "iamcco/markdown-preview.nvim", run = "cd app && yarn install", cmd = "MarkdownPreview" },
 	{ "jbyuki/venn.nvim", cmd = "VBox" },
 	{ "rhysd/vim-grammarous", cmd = "GrammarousCheck" },
