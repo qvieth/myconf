@@ -29,12 +29,7 @@ lvim.plugins = {
 	{ "windwp/nvim-ts-autotag", ft = { "html", "javascript", "javascriptreact" } },
 	{ "turbio/bracey.vim", run = "npm install --prefix server", cmd = "Bracey" },
 	{ "norcalli/nvim-colorizer.lua", ft = { "html", "css", "javascript" }, config = require("plugin.configs.colorizer") },
-	{
-		"dsznajder/vscode-es7-javascript-react-snippets",
-		run = "yarn install --frozen-lockfile && yarn compile",
-		event = "InsertEnter",
-		ft = { "html", "javascript", "javascriptreact" },
-	},
+	-- { "dsznajder/vscode-es7-javascript-react-snippets", run = "yarn install --frozen-lockfile && yarn compile", event = "InsertEnter", ft = { "html", "javascript", "javascriptreact" }, },
 	--WRITING========================================================================================================
 	{ "prettier/vim-prettier", run = "yarn install", ft = "markdown" },
 	{ "vimwiki/vimwiki", config = require("plugin.configs.vimwiki") },
