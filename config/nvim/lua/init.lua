@@ -1,3 +1,3 @@
+require("plugin.extras")
 require("mappings")
 require("options")
-require("plugin.extras")
