@@ -1,7 +1,0 @@
-[
-  { "diagnostic.displayByAle": true },
-  {
-    "coc.source.emoji.filetypes": null,
-    "coc.source.emoji.triggerCharacters": [":"]
-  }
-]
