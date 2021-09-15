@@ -14,7 +14,6 @@ lvim.plugins = {
 	{ "wfxr/minimap.vim", run = "brew install code-minimap", config = require("plugin.configs.minimap") },
 	{ "karb94/neoscroll.nvim", event = "WinScrolled", config = require("plugin.configs.neoscroll") },
 	{ "folke/zen-mode.nvim", cmd = "ZenMode", config = require("plugin.configs.zen-mode") },
-	-- { "folke/twilight.nvim", config = require("plugin.configs.twilight") },
 	--CODING-GENERAL=================================================================================================
 	"p00f/nvim-ts-rainbow",
 	{ "SirVer/ultisnips", config = require("plugin.configs.ultisnips") },

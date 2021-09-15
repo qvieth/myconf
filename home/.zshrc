@@ -137,11 +137,12 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # ALIASES============================================
-alias v='shuf -n 3 $HOME/v'
 alias c='cht.sh'
 alias g='googler -n 3'
 alias m='dict -d moby-thesaurus'
+alias n='nvim'
 alias t='trans :en -sp'
+alias v='shuf -n 3 $HOME/v'
 alias wa='sh $HOME/.wa'
 alias wi='wikit'
 
