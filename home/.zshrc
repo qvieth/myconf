@@ -96,6 +96,7 @@ plugins=(
   direnv
   fnm
   frontend-search
+  hugo
   pip
   taskwarrior
   tmux

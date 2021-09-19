@@ -12,6 +12,8 @@ end
 DefaultState()
 
 vim.cmd([[let mapleader='\']])
+vim.cmd("set nocompatible")
+vim.cmd("filetype plugin indent on")
 vim.o.background = "dark"
 vim.wo.wrap = false
 vim.o.cursorline = true
@@ -34,6 +36,4 @@ vim.o.hlsearch = true
 vim.o.hidden = true
 vim.o.termguicolors = true
 vim.o.guicursor = ""
-vim.cmd("set nocompatible")
-vim.cmd("filetype plugin indent on")
 vim.o.clipboard = vim.o.clipboard .. "unnamedplus"

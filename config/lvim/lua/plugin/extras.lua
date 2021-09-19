@@ -34,7 +34,7 @@ lvim.plugins = {
 	{ "vimwiki/vimwiki", config = require("plugin.configs.vimwiki") },
 	{ "preservim/vim-pencil", ft = "markdown", config = require("plugin.configs.vim-pencil"), cmd = "Pencil" },
 	{ "reedes/vim-litecorrect", ft = "markdown", config = require("plugin.configs.vim-litecorrect") },
-	{ "iamcco/markdown-preview.nvim", run = "cd app && yarn install", cmd = "MarkdownPreview" },
+	{ "iamcco/markdown-preview.nvim", run = "cd app && yarn install" },
 	{ "jbyuki/venn.nvim", cmd = "VBox" },
 	{ "rhysd/vim-grammarous", cmd = "GrammarousCheck" },
 	{ "reedes/vim-wordy", ft = "markdown", cmd = "WordyWordy" },

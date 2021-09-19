@@ -56,7 +56,6 @@ S flatpak install -y \
 source $HOME/myconf/extra-pip
 source $HOME/myconf/bootstrap # place after extra-pip
 source $HOME/myconf/extra-npm
-source $HOME/myconf/zcomp # place after extra-npm
 source $HOME/myconf/CHARGE
 source $HOME/myconf/dconf
 

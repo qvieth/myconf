@@ -27,7 +27,7 @@ vim.api.nvim_set_keymap("n", "qv", "<CMD>e~/v<CR>", { noremap = true, silent = t
 -- CLOSE(QUIT + BUFFER DELETE)
 vim.api.nvim_set_keymap("n", "<Space>c", ":w<CR>:bd<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<Space>w", ":w<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<Space>q", ":q!<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<Space>q", ":q<CR>", { noremap = true, silent = true })
 
 -- ZENMODE
 vim.api.nvim_set_keymap("n", "<Space><Space>", "<CMD>ZenMode<CR>", { noremap = true, silent = true })
