@@ -3,7 +3,7 @@
 function DefaultState()
 	vim.cmd("colo gruvbox")
 	vim.cmd("noh")
-	vim.cmd("mapclear <buffer>")
+	-- vim.cmd("mapclear <buffer>") -- this will also clear vimwiki keymap -> move into venn config
 	vim.o.virtualedit = ""
 	vim.o.relativenumber = false
 	vim.o.cursorcolumn = false

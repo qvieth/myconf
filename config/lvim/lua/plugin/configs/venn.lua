@@ -18,5 +18,6 @@ function _G.toggle_venn()
 	else
 		vim.b.venn_enabled = nil
 		DefaultState()
+		vim.cmd("mapclear <buffer>") -- this will also clear vimwiki keymap -> move into venn config
 	end
 end

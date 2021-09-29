@@ -23,6 +23,7 @@ vim.api.nvim_set_keymap("n", "<C-v>", ":lua toggle_venn()<CR>", { noremap = true
 vim.api.nvim_set_keymap("n", "M", "q", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "q", "<Nop>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "qv", "<CMD>e~/v<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "qb", "<CMD>e~/myblog/content/posts/<CR>", { noremap = true, silent = true })
 
 -- CLOSE(QUIT + BUFFER DELETE)
 vim.api.nvim_set_keymap("n", "<Space>c", ":w<CR>:bd<CR>", { noremap = true, silent = true })

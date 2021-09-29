@@ -152,7 +152,7 @@ _G.packer_plugins = {
   },
   ["vim-pencil"] = {
     commands = { "Pencil" },
-    config = { "\27LJ\2\2Š\1\0\0\2\0\3\0\0056\0\0\0009\0\1\0'\1\2\0B\0\2\1K\0\1\0k  let g:pencil#wrapModeDefault = 'hard'\n  let g:pencil#autoformat = 0\n  let g:pencil#textwidth = 74\n  \bcmd\bvim\0" },
+    config = { "\27LJ\2\2Š\1\0\0\2\0\3\0\0056\0\0\0009\0\1\0'\1\2\0B\0\2\1K\0\1\0k  let g:pencil#wrapModeDefault = 'soft'\n  let g:pencil#autoformat = 0\n  let g:pencil#textwidth = 74\n  \bcmd\bvim\0" },
     loaded = false,
     needs_bufread = false,
     path = "/home/qvieth/.local/share/nvim/site/pack/packer/opt/vim-pencil"

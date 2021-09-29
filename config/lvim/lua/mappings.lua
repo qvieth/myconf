@@ -25,7 +25,8 @@ lvim.keys.term_mode["<F3>"] = "<C-\\><C-n><CMD>RnvimrToggle<CR>"
 -- M FOR MACROS && Q FOR QUERY
 lvim.keys.normal_mode["M"] = "q"
 lvim.keys.normal_mode["q"] = "<Nop>"
-lvim.keys.normal_mode["qv"] = "<CMD>e~/v<CR>"
+lvim.keys.normal_mode["qv"] = "<CMD>e ~/v<CR>"
+lvim.keys.normal_mode["qb"] = "<CMD>e ~/myblog/content/posts/<CR>"
 
 -- ZENMODE
 lvim.keys.normal_mode["<Space><Space>"] = "<CMD>ZenMode<CR>"

@@ -8,6 +8,7 @@ local M = function()
 		"dashboard",
 		"help",
 		"markdown",
+		"netrw",
 		"packer",
 		"rnvimr",
 		"starify",

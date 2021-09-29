@@ -26,7 +26,7 @@ return require("packer").startup(function()
 	use({ "cideM/yui" })
 	--ESSENTIALS=============================================================================================================================
 	use("junegunn/fzf.vim")
-	use({ "hoob3rt/lualine.nvim", config = require("plugin.configs.lualine") })
+	use({ "shadmansaleh/lualine.nvim", config = require("plugin.configs.lualine") })
 	use("arthurxavierx/vim-caser")
 	use({ "folke/which-key.nvim", config = require("plugin.configs.which-key") })
 	use({ "akinsho/toggleterm.nvim", config = require("plugin.configs.toggleterm") })
