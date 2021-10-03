@@ -7,6 +7,7 @@ function DefaultState()
 	vim.o.virtualedit = ""
 	vim.o.relativenumber = false
 	vim.o.cursorcolumn = false
+	vim.o.cursorline = false
 end
 DefaultState()
 

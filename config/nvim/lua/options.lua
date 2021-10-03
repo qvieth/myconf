@@ -2,23 +2,26 @@
 
 -- function for reuse with double Esc in mappings
 function DefaultState()
-	vim.cmd("colo gruvbox")
+	vim.cmd("colo yang")
 	vim.cmd("noh")
 	-- vim.cmd([[mapclear <buffer>]]) -- this will also clear vimwiki keymap -> move into venn config
 	vim.o.virtualedit = ""
 	vim.o.relativenumber = false
 	vim.o.cursorcolumn = false
+	vim.o.cursorline = false
+	vim.o.number = false
 end
 DefaultState()
 
 vim.cmd([[let mapleader='\']])
 vim.cmd("set nocompatible")
 vim.cmd("filetype plugin indent on")
-vim.o.background = "dark"
+vim.o.background = "light"
 vim.wo.wrap = false
-vim.o.cursorline = true
-vim.o.number = true
-vim.o.ruler = true
+
+vim.o.laststatus = 0
+vim.o.ruler = false
+vim.o.showcmd = false
 
 vim.o.wildignorecase = true
 vim.o.ignorecase = true

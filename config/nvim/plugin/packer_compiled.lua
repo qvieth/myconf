@@ -69,41 +69,9 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
-  ale = {
-    config = { "\27LJ\2\2\v\0\0\1\0\0\0\1K\0\1\0\0" },
-    loaded = true,
-    path = "/home/qvieth/.local/share/nvim/site/pack/packer/start/ale"
-  },
   firenvim = {
     loaded = true,
     path = "/home/qvieth/.local/share/nvim/site/pack/packer/start/firenvim"
-  },
-  ["fzf.vim"] = {
-    loaded = true,
-    path = "/home/qvieth/.local/share/nvim/site/pack/packer/start/fzf.vim"
-  },
-  ["glow.nvim"] = {
-    commands = { "Glow" },
-    loaded = false,
-    needs_bufread = false,
-    path = "/home/qvieth/.local/share/nvim/site/pack/packer/opt/glow.nvim"
-  },
-  ["lualine.nvim"] = {
-    config = { "\27LJ\2\2ô\1\0\0\6\0\v\0\0206\0\0\0006\1\1\0'\2\2\0B\0\3\3\14\0\0\0X\2\1ÄK\0\1\0006\2\1\0'\3\2\0B\2\2\0029\2\3\0025\3\t\0005\4\a\0006\5\4\0009\5\5\0059\5\6\5=\5\b\4=\4\n\3B\2\2\1K\0\1\0\foptions\1\0\0\ntheme\1\0\0\16colors_name\6g\bvim\nsetup\flualine\frequire\npcall\0" },
-    loaded = true,
-    path = "/home/qvieth/.local/share/nvim/site/pack/packer/start/lualine.nvim"
-  },
-  ["markdown-preview.nvim"] = {
-    loaded = true,
-    path = "/home/qvieth/.local/share/nvim/site/pack/packer/start/markdown-preview.nvim"
-  },
-  ["nvcode-color-schemes.vim"] = {
-    loaded = true,
-    path = "/home/qvieth/.local/share/nvim/site/pack/packer/start/nvcode-color-schemes.vim"
-  },
-  ["nvim-web-devicons"] = {
-    loaded = true,
-    path = "/home/qvieth/.local/share/nvim/site/pack/packer/start/nvim-web-devicons"
   },
   ["packer.nvim"] = {
     loaded = true,
@@ -130,37 +98,12 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/qvieth/.local/share/nvim/site/pack/packer/start/vim-caser"
   },
-  ["vim-colors-off"] = {
-    loaded = true,
-    path = "/home/qvieth/.local/share/nvim/site/pack/packer/start/vim-colors-off"
-  },
-  ["vim-grammarous"] = {
-    commands = { "GrammarousCheck" },
-    loaded = false,
-    needs_bufread = false,
-    path = "/home/qvieth/.local/share/nvim/site/pack/packer/opt/vim-grammarous"
-  },
-  ["vim-litecorrect"] = {
-    config = { "\27LJ\2\2«\1\0\0\2\0\3\0\0056\0\0\0009\0\1\0'\1\2\0B\0\2\1K\0\1\0ß\1  augroup litecorrect\n    autocmd!\n    autocmd FileType markdown,mkd call litecorrect#init()\n    autocmd FileType textile call litecorrect#init()\n  augroup END\n  \bcmd\bvim\0" },
-    loaded = true,
-    path = "/home/qvieth/.local/share/nvim/site/pack/packer/start/vim-litecorrect"
-  },
-  ["vim-markdown-toc"] = {
-    loaded = false,
-    needs_bufread = true,
-    path = "/home/qvieth/.local/share/nvim/site/pack/packer/opt/vim-markdown-toc"
-  },
   ["vim-pencil"] = {
     commands = { "Pencil" },
     config = { "\27LJ\2\2ä\1\0\0\2\0\3\0\0056\0\0\0009\0\1\0'\1\2\0B\0\2\1K\0\1\0k  let g:pencil#wrapModeDefault = 'soft'\n  let g:pencil#autoformat = 0\n  let g:pencil#textwidth = 74\n  \bcmd\bvim\0" },
     loaded = false,
     needs_bufread = false,
     path = "/home/qvieth/.local/share/nvim/site/pack/packer/opt/vim-pencil"
-  },
-  ["vim-prettier"] = {
-    loaded = false,
-    needs_bufread = true,
-    path = "/home/qvieth/.local/share/nvim/site/pack/packer/opt/vim-prettier"
   },
   ["vim-wordy"] = {
     commands = { "WordyWordy" },
@@ -172,20 +115,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/qvieth/.local/share/nvim/site/pack/packer/start/vim-yin-yang"
   },
-  vimwiki = {
-    config = { "\27LJ\2\2‚\5\0\0\3\0\n\0\0216\0\0\0009\0\1\0)\1\0\0=\1\2\0006\0\0\0009\0\1\0004\1\a\0005\2\4\0>\2\1\0015\2\5\0>\2\2\0015\2\6\0>\2\3\0015\2\a\0>\2\4\0015\2\b\0>\2\5\0015\2\t\0>\2\6\1=\1\3\0K\0\1\0\1\0\1\tpath\14~/mywiki/\1\0\1\tpath\16~/mysecret/\1\0\1\tpath\15~/mydraft/\1\0\b\21custom_wiki2html\21vimwiki_markdown\bext\b.md\14path_html\24~/mynote_site_html/\tpath\r~/myblog\21template_default\fdefault\vsyntax\rmarkdown\18template_path\25~/vimwiki/templates/\17template_ext\t.tpl\1\0\b\21custom_wiki2html\21vimwiki_markdown\bext\b.md\14path_html\24~/mynote_site_html/\tpath\16~/myarchive\21template_default\fdefault\vsyntax\rmarkdown\18template_path\25~/vimwiki/templates/\17template_ext\t.tpl\1\0\b\21custom_wiki2html\21vimwiki_markdown\bext\b.md\14path_html\24~/mynote_site_html/\tpath\r~/mynote\21template_default\fdefault\vsyntax\rmarkdown\18template_path\25~/vimwiki/templates/\17template_ext\t.tpl\17vimwiki_list\23vimwiki_global_ext\6g\bvim\0" },
-    loaded = true,
-    path = "/home/qvieth/.local/share/nvim/site/pack/packer/start/vimwiki"
-  },
-  ["which-key.nvim"] = {
-    config = { "\27LJ\2\2;\0\0\2\0\3\0\a6\0\0\0'\1\1\0B\0\2\0029\0\2\0004\1\0\0B\0\2\1K\0\1\0\nsetup\14which-key\frequire\0" },
-    loaded = true,
-    path = "/home/qvieth/.local/share/nvim/site/pack/packer/start/which-key.nvim"
-  },
-  yui = {
-    loaded = true,
-    path = "/home/qvieth/.local/share/nvim/site/pack/packer/start/yui"
-  },
   ["zen-mode.nvim"] = {
     commands = { "ZenMode" },
     config = { "\27LJ\2\2©\2\0\0\6\0\17\0\0236\0\0\0006\1\1\0'\2\2\0B\0\3\3\14\0\0\0X\2\1ÄK\0\1\0009\2\3\0015\3\a\0005\4\4\0005\5\5\0=\5\6\4=\4\b\0035\4\n\0005\5\t\0=\5\v\0045\5\f\0=\5\r\0045\5\14\0=\5\15\4=\4\16\3B\2\2\1K\0\1\0\fplugins\rtwilight\1\0\1\fenabled\2\ttmux\1\0\1\fenabled\1\rgitsigns\1\0\0\1\0\1\fenabled\1\vwindow\1\0\0\foptions\1\0\3\15signcolumn\ano\vnumber\1\19relativenumber\1\1\0\2\nwidth\4ö≥ÊÃ\tô≥¶ˇ\3\rbackdrop\4√Î£·\5èÖ∑ˇ\3\nsetup\rzen-mode\frequire\npcall\0" },
@@ -196,101 +125,26 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: lualine.nvim
-time([[Config for lualine.nvim]], true)
-try_loadstring("\27LJ\2\2ô\1\0\0\6\0\v\0\0206\0\0\0006\1\1\0'\2\2\0B\0\3\3\14\0\0\0X\2\1ÄK\0\1\0006\2\1\0'\3\2\0B\2\2\0029\2\3\0025\3\t\0005\4\a\0006\5\4\0009\5\5\0059\5\6\5=\5\b\4=\4\n\3B\2\2\1K\0\1\0\foptions\1\0\0\ntheme\1\0\0\16colors_name\6g\bvim\nsetup\flualine\frequire\npcall\0", "config", "lualine.nvim")
-time([[Config for lualine.nvim]], false)
 -- Config for: toggleterm.nvim
 time([[Config for toggleterm.nvim]], true)
 try_loadstring("\27LJ\2\2ô\1\0\0\4\0\5\0\0146\0\0\0006\1\1\0'\2\2\0B\0\3\3\14\0\0\0X\2\1ÄK\0\1\0006\2\1\0'\3\2\0B\2\2\0029\2\3\0025\3\4\0B\2\2\1K\0\1\0\1\0\4\14direction\nfloat\17persist_size\1\tsize\3\t\17open_mapping\n<c-t>\nsetup\15toggleterm\frequire\npcall\0", "config", "toggleterm.nvim")
 time([[Config for toggleterm.nvim]], false)
--- Config for: vimwiki
-time([[Config for vimwiki]], true)
-try_loadstring("\27LJ\2\2‚\5\0\0\3\0\n\0\0216\0\0\0009\0\1\0)\1\0\0=\1\2\0006\0\0\0009\0\1\0004\1\a\0005\2\4\0>\2\1\0015\2\5\0>\2\2\0015\2\6\0>\2\3\0015\2\a\0>\2\4\0015\2\b\0>\2\5\0015\2\t\0>\2\6\1=\1\3\0K\0\1\0\1\0\1\tpath\14~/mywiki/\1\0\1\tpath\16~/mysecret/\1\0\1\tpath\15~/mydraft/\1\0\b\21custom_wiki2html\21vimwiki_markdown\bext\b.md\14path_html\24~/mynote_site_html/\tpath\r~/myblog\21template_default\fdefault\vsyntax\rmarkdown\18template_path\25~/vimwiki/templates/\17template_ext\t.tpl\1\0\b\21custom_wiki2html\21vimwiki_markdown\bext\b.md\14path_html\24~/mynote_site_html/\tpath\16~/myarchive\21template_default\fdefault\vsyntax\rmarkdown\18template_path\25~/vimwiki/templates/\17template_ext\t.tpl\1\0\b\21custom_wiki2html\21vimwiki_markdown\bext\b.md\14path_html\24~/mynote_site_html/\tpath\r~/mynote\21template_default\fdefault\vsyntax\rmarkdown\18template_path\25~/vimwiki/templates/\17template_ext\t.tpl\17vimwiki_list\23vimwiki_global_ext\6g\bvim\0", "config", "vimwiki")
-time([[Config for vimwiki]], false)
--- Config for: which-key.nvim
-time([[Config for which-key.nvim]], true)
-try_loadstring("\27LJ\2\2;\0\0\2\0\3\0\a6\0\0\0'\1\1\0B\0\2\0029\0\2\0004\1\0\0B\0\2\1K\0\1\0\nsetup\14which-key\frequire\0", "config", "which-key.nvim")
-time([[Config for which-key.nvim]], false)
--- Config for: ale
-time([[Config for ale]], true)
-try_loadstring("\27LJ\2\2\v\0\0\1\0\0\0\1K\0\1\0\0", "config", "ale")
-time([[Config for ale]], false)
--- Config for: vim-litecorrect
-time([[Config for vim-litecorrect]], true)
-try_loadstring("\27LJ\2\2«\1\0\0\2\0\3\0\0056\0\0\0009\0\1\0'\1\2\0B\0\2\1K\0\1\0ß\1  augroup litecorrect\n    autocmd!\n    autocmd FileType markdown,mkd call litecorrect#init()\n    autocmd FileType textile call litecorrect#init()\n  augroup END\n  \bcmd\bvim\0", "config", "vim-litecorrect")
-time([[Config for vim-litecorrect]], false)
 
 -- Command lazy-loads
 time([[Defining lazy-load commands]], true)
+pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file RnvimrToggle lua require("packer.load")({'rnvimr'}, { cmd = "RnvimrToggle", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args> }, _G.packer_plugins)]])
+pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file VBox lua require("packer.load")({'venn.nvim'}, { cmd = "VBox", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args> }, _G.packer_plugins)]])
 pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file WordyWordy lua require("packer.load")({'vim-wordy'}, { cmd = "WordyWordy", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args> }, _G.packer_plugins)]])
 pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file ZenMode lua require("packer.load")({'zen-mode.nvim'}, { cmd = "ZenMode", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args> }, _G.packer_plugins)]])
-pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file GrammarousCheck lua require("packer.load")({'vim-grammarous'}, { cmd = "GrammarousCheck", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args> }, _G.packer_plugins)]])
 pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file Pencil lua require("packer.load")({'vim-pencil'}, { cmd = "Pencil", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args> }, _G.packer_plugins)]])
-pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file VBox lua require("packer.load")({'venn.nvim'}, { cmd = "VBox", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args> }, _G.packer_plugins)]])
-pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file Glow lua require("packer.load")({'glow.nvim'}, { cmd = "Glow", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args> }, _G.packer_plugins)]])
-pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file RnvimrToggle lua require("packer.load")({'rnvimr'}, { cmd = "RnvimrToggle", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args> }, _G.packer_plugins)]])
 time([[Defining lazy-load commands]], false)
 
 vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Filetype lazy-loads
 time([[Defining lazy-load filetype autocommands]], true)
-vim.cmd [[au FileType markdown ++once lua require("packer.load")({'vim-markdown-toc', 'vim-prettier', 'vim-wordy'}, { ft = "markdown" }, _G.packer_plugins)]]
+vim.cmd [[au FileType markdown ++once lua require("packer.load")({'vim-wordy'}, { ft = "markdown" }, _G.packer_plugins)]]
 time([[Defining lazy-load filetype autocommands]], false)
-vim.cmd("augroup END")
-vim.cmd [[augroup filetypedetect]]
-time([[Sourcing ftdetect script at: /home/qvieth/.local/share/nvim/site/pack/packer/opt/vim-markdown-toc/ftdetect/markdown.vim]], true)
-vim.cmd [[source /home/qvieth/.local/share/nvim/site/pack/packer/opt/vim-markdown-toc/ftdetect/markdown.vim]]
-time([[Sourcing ftdetect script at: /home/qvieth/.local/share/nvim/site/pack/packer/opt/vim-markdown-toc/ftdetect/markdown.vim]], false)
-time([[Sourcing ftdetect script at: /home/qvieth/.local/share/nvim/site/pack/packer/opt/vim-prettier/ftdetect/css.vim]], true)
-vim.cmd [[source /home/qvieth/.local/share/nvim/site/pack/packer/opt/vim-prettier/ftdetect/css.vim]]
-time([[Sourcing ftdetect script at: /home/qvieth/.local/share/nvim/site/pack/packer/opt/vim-prettier/ftdetect/css.vim]], false)
-time([[Sourcing ftdetect script at: /home/qvieth/.local/share/nvim/site/pack/packer/opt/vim-prettier/ftdetect/graphql.vim]], true)
-vim.cmd [[source /home/qvieth/.local/share/nvim/site/pack/packer/opt/vim-prettier/ftdetect/graphql.vim]]
-time([[Sourcing ftdetect script at: /home/qvieth/.local/share/nvim/site/pack/packer/opt/vim-prettier/ftdetect/graphql.vim]], false)
-time([[Sourcing ftdetect script at: /home/qvieth/.local/share/nvim/site/pack/packer/opt/vim-prettier/ftdetect/html.vim]], true)
-vim.cmd [[source /home/qvieth/.local/share/nvim/site/pack/packer/opt/vim-prettier/ftdetect/html.vim]]
-time([[Sourcing ftdetect script at: /home/qvieth/.local/share/nvim/site/pack/packer/opt/vim-prettier/ftdetect/html.vim]], false)
-time([[Sourcing ftdetect script at: /home/qvieth/.local/share/nvim/site/pack/packer/opt/vim-prettier/ftdetect/javascript.vim]], true)
-vim.cmd [[source /home/qvieth/.local/share/nvim/site/pack/packer/opt/vim-prettier/ftdetect/javascript.vim]]
-time([[Sourcing ftdetect script at: /home/qvieth/.local/share/nvim/site/pack/packer/opt/vim-prettier/ftdetect/javascript.vim]], false)
-time([[Sourcing ftdetect script at: /home/qvieth/.local/share/nvim/site/pack/packer/opt/vim-prettier/ftdetect/json.vim]], true)
-vim.cmd [[source /home/qvieth/.local/share/nvim/site/pack/packer/opt/vim-prettier/ftdetect/json.vim]]
-time([[Sourcing ftdetect script at: /home/qvieth/.local/share/nvim/site/pack/packer/opt/vim-prettier/ftdetect/json.vim]], false)
-time([[Sourcing ftdetect script at: /home/qvieth/.local/share/nvim/site/pack/packer/opt/vim-prettier/ftdetect/less.vim]], true)
-vim.cmd [[source /home/qvieth/.local/share/nvim/site/pack/packer/opt/vim-prettier/ftdetect/less.vim]]
-time([[Sourcing ftdetect script at: /home/qvieth/.local/share/nvim/site/pack/packer/opt/vim-prettier/ftdetect/less.vim]], false)
-time([[Sourcing ftdetect script at: /home/qvieth/.local/share/nvim/site/pack/packer/opt/vim-prettier/ftdetect/lua.vim]], true)
-vim.cmd [[source /home/qvieth/.local/share/nvim/site/pack/packer/opt/vim-prettier/ftdetect/lua.vim]]
-time([[Sourcing ftdetect script at: /home/qvieth/.local/share/nvim/site/pack/packer/opt/vim-prettier/ftdetect/lua.vim]], false)
-time([[Sourcing ftdetect script at: /home/qvieth/.local/share/nvim/site/pack/packer/opt/vim-prettier/ftdetect/markdown.vim]], true)
-vim.cmd [[source /home/qvieth/.local/share/nvim/site/pack/packer/opt/vim-prettier/ftdetect/markdown.vim]]
-time([[Sourcing ftdetect script at: /home/qvieth/.local/share/nvim/site/pack/packer/opt/vim-prettier/ftdetect/markdown.vim]], false)
-time([[Sourcing ftdetect script at: /home/qvieth/.local/share/nvim/site/pack/packer/opt/vim-prettier/ftdetect/php.vim]], true)
-vim.cmd [[source /home/qvieth/.local/share/nvim/site/pack/packer/opt/vim-prettier/ftdetect/php.vim]]
-time([[Sourcing ftdetect script at: /home/qvieth/.local/share/nvim/site/pack/packer/opt/vim-prettier/ftdetect/php.vim]], false)
-time([[Sourcing ftdetect script at: /home/qvieth/.local/share/nvim/site/pack/packer/opt/vim-prettier/ftdetect/ruby.vim]], true)
-vim.cmd [[source /home/qvieth/.local/share/nvim/site/pack/packer/opt/vim-prettier/ftdetect/ruby.vim]]
-time([[Sourcing ftdetect script at: /home/qvieth/.local/share/nvim/site/pack/packer/opt/vim-prettier/ftdetect/ruby.vim]], false)
-time([[Sourcing ftdetect script at: /home/qvieth/.local/share/nvim/site/pack/packer/opt/vim-prettier/ftdetect/scss.vim]], true)
-vim.cmd [[source /home/qvieth/.local/share/nvim/site/pack/packer/opt/vim-prettier/ftdetect/scss.vim]]
-time([[Sourcing ftdetect script at: /home/qvieth/.local/share/nvim/site/pack/packer/opt/vim-prettier/ftdetect/scss.vim]], false)
-time([[Sourcing ftdetect script at: /home/qvieth/.local/share/nvim/site/pack/packer/opt/vim-prettier/ftdetect/svelte.vim]], true)
-vim.cmd [[source /home/qvieth/.local/share/nvim/site/pack/packer/opt/vim-prettier/ftdetect/svelte.vim]]
-time([[Sourcing ftdetect script at: /home/qvieth/.local/share/nvim/site/pack/packer/opt/vim-prettier/ftdetect/svelte.vim]], false)
-time([[Sourcing ftdetect script at: /home/qvieth/.local/share/nvim/site/pack/packer/opt/vim-prettier/ftdetect/typescript.vim]], true)
-vim.cmd [[source /home/qvieth/.local/share/nvim/site/pack/packer/opt/vim-prettier/ftdetect/typescript.vim]]
-time([[Sourcing ftdetect script at: /home/qvieth/.local/share/nvim/site/pack/packer/opt/vim-prettier/ftdetect/typescript.vim]], false)
-time([[Sourcing ftdetect script at: /home/qvieth/.local/share/nvim/site/pack/packer/opt/vim-prettier/ftdetect/vue.vim]], true)
-vim.cmd [[source /home/qvieth/.local/share/nvim/site/pack/packer/opt/vim-prettier/ftdetect/vue.vim]]
-time([[Sourcing ftdetect script at: /home/qvieth/.local/share/nvim/site/pack/packer/opt/vim-prettier/ftdetect/vue.vim]], false)
-time([[Sourcing ftdetect script at: /home/qvieth/.local/share/nvim/site/pack/packer/opt/vim-prettier/ftdetect/xml.vim]], true)
-vim.cmd [[source /home/qvieth/.local/share/nvim/site/pack/packer/opt/vim-prettier/ftdetect/xml.vim]]
-time([[Sourcing ftdetect script at: /home/qvieth/.local/share/nvim/site/pack/packer/opt/vim-prettier/ftdetect/xml.vim]], false)
-time([[Sourcing ftdetect script at: /home/qvieth/.local/share/nvim/site/pack/packer/opt/vim-prettier/ftdetect/yaml.vim]], true)
-vim.cmd [[source /home/qvieth/.local/share/nvim/site/pack/packer/opt/vim-prettier/ftdetect/yaml.vim]]
-time([[Sourcing ftdetect script at: /home/qvieth/.local/share/nvim/site/pack/packer/opt/vim-prettier/ftdetect/yaml.vim]], false)
 vim.cmd("augroup END")
 if should_profile then save_profiles() end
 

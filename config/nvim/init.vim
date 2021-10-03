@@ -25,7 +25,7 @@ let g:firenvim_config = {
 
 if exists('g:started_by_firenvim') && g:started_by_firenvim
     " general options
-    set laststatus=0 noruler noshowcmd
-    colorscheme yang
+    " set laststatus=0 noruler noshowcmd
+    " colorscheme yang
     set guifont=monospace:h16
 endif

@@ -14,6 +14,7 @@ function _G.toggle_venn()
 		-- visual change
 		vim.cmd("colo nord")
 		vim.o.cursorcolumn = true
+		vim.o.cursorline = true
 		vim.o.relativenumber = true
 	else
 		vim.b.venn_enabled = nil

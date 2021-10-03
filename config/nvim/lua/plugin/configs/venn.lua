@@ -12,8 +12,9 @@ function _G.toggle_venn()
 		vim.api.nvim_buf_set_keymap(0, "n", "L", "<C-v>l:VBox<CR>", { noremap = true })
 		vim.api.nvim_buf_set_keymap(0, "n", "H", "<C-v>h:VBox<CR>", { noremap = true })
 		-- visual change
-		vim.cmd("colo nord")
+		vim.cmd("colo yin")
 		vim.o.cursorcolumn = true
+		vim.o.cursorline = true
 		vim.o.relativenumber = true
 	else
 		vim.b.venn_enabled = nil
