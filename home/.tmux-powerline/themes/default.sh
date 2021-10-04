@@ -25,26 +25,27 @@ TMUX_POWERLINE_DEFAULT_RIGHTSIDE_SEPARATOR=${TMUX_POWERLINE_DEFAULT_RIGHTSIDE_SE
 
 if [ -z $TMUX_POWERLINE_LEFT_STATUS_SEGMENTS ]; then
 	TMUX_POWERLINE_LEFT_STATUS_SEGMENTS=(
-		"hostname 2 0" \
-		"battery 2 0" \
-		"vcs_modified 9 255" \
-		"tmux_session_info 2 0" \
+		# "hostname 2 0" \
+		# "battery 2 0" \
+		# "tmux_session_info 2 0" \
 		#"ifstat 30 255" \
 		#"ifstat_sys 30 255" \
 		# "lan_ip 24 255 ${TMUX_POWERLINE_SEPARATOR_RIGHT_THIN}" \
 		# "wan_ip 24 255" \
-		# "vcs_branch 2 0" \
-		# "vcs_compare 60 255" \
-		# "vcs_staged 64 255" \
-		# "vcs_others 245 0" \
+		# "vcs_branch 73 0" \
+		"vcs_branch 2 0" \
+		"vcs_modified 9 255" \
+		"vcs_staged 72 255" \
+		"vcs_compare 60 255" \
+		"vcs_others 245 0" \
+		"pwd 2 0" \
 	)
 fi
 
 if [ -z $TMUX_POWERLINE_RIGHT_STATUS_SEGMENTS ]; then
 	TMUX_POWERLINE_RIGHT_STATUS_SEGMENTS=(
 		#"earthquake 3 0" \
-		# "pwd 2 0" \
-		"macos_notification_count 29 255" \
+		# "macos_notification_count 29 255" \
 		# "mailcount 9 255" \
 		# "now_playing 234 37" \
 		# "cpu 240 136" \
@@ -53,9 +54,9 @@ if [ -z $TMUX_POWERLINE_RIGHT_STATUS_SEGMENTS ]; then
 		# "weather 37 255" \
 		# "rainbarf 0 ${TMUX_POWERLINE_DEFAULT_FOREGROUND_COLOR}" \
 		# "xkb_layout 125 117" \
-		"date_day 2 0" \
-		"date 2 0 ${TMUX_POWERLINE_SEPARATOR_LEFT_THIN}" \
-		"time 2 0 ${TMUX_POWERLINE_SEPARATOR_LEFT_THIN}" \
+		# "date_day 2 0" \
+		# "date 2 0 ${TMUX_POWERLINE_SEPARATOR_LEFT_THIN}" \
+		# "time 2 0 ${TMUX_POWERLINE_SEPARATOR_LEFT_THIN}" \
 		# "utc_time 235 136 ${TMUX_POWERLINE_SEPARATOR_LEFT_THIN}" \
 	)
 fi

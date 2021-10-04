@@ -1,4 +1,5 @@
 # My configuration
+
 This is mine. There are many like it, but this one is mine.
 
 This repository contains dotfiles, scripts, and plugins that personalize my Linux environment.
