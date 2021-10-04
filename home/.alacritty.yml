@@ -1,50 +1,39 @@
 window:
   dimensions:
-    columns: 73
+    columns: 71
     lines: 32
 env:
   TERM: xterm-256color
+
+# Font
 font:
   size: 14
+
+# Colorscheme my kitty
 colors:
   primary:
-    background: "#2c2c2c"
-    foreground: "#d6d6d6"
-    dim_foreground: "#dbdbdb"
-    bright_foreground: "#d9d9d9"
-    dim_background: "#202020"
-    bright_background: "#3a3a3a"
+    foreground: '#424242' #pencil
+    background: '#FAF7EE'
+
   cursor:
-    text: "#2c2c2c"
-    cursor: "#d9d9d9"
+    cursor:     '#cccccc'
+    text:       '#64526F'
   normal:
-    black: "#1c1c1c"
-    red: "#bc5653"
-    green: "#909d63"
-    yellow: "#ebc17a"
-    blue: "#7eaac7"
-    magenta: "#aa6292"
-    cyan: "#86d3ce"
-    white: "#cacaca"
+    black:      '#FAF7EE'
+    red:        '#DF201C'
+    green:      '#29A0AD'
+    yellow:     '#DB742E'
+    blue:       '#3980C2'
+    magenta:    '#2C9473'
+    cyan:       '#6B3062'
+    white:      '#64526F'
+
   bright:
-    black: "#636363"
-    red: "#bc5653"
-    green: "#909d63"
-    yellow: "#ebc17a"
-    blue: "#7eaac7"
-    magenta: "#aa6292"
-    cyan: "#86d3ce"
-    white: "#f7f7f7"
-  dim:
-    black: "#232323"
-    red: "#74423f"
-    green: "#5e6547"
-    yellow: "#8b7653"
-    blue: "#556b79"
-    magenta: "#6e4962"
-    cyan: "#5c8482"
-    white: "#828282"
-ae" cyan: "#95aec7"
-white: "#f3f4f5"
-62f5" magenta: "#ad2bee"
-cyan: "#1999b3"
+    black:      '#9F93A1'
+    red:        '#DF201C'
+    green:      '#29A0AD'
+    yellow:     '#DB742E'
+    blue:       '#3980C2'
+    magenta:    '#2C9473'
+    cyan:       '#6B3062'
+    white:      '#64526F'
