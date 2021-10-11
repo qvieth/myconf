@@ -1,4 +1,4 @@
 local M = function()
-	require("which-key").setup({})
+	vim.g.rnvimr_enable_picker = 1
 end
 return M
