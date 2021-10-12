@@ -144,9 +144,10 @@ alias m='dict -d moby-thesaurus'
 alias n='nvim'
 alias t='trans :en -sp'
 alias v='shuf -n 3 $HOME/v'
+alias p='git add .;git commit -m ${1:-update};git push'
 alias wa='sh $HOME/.wa'
 alias wi='wikit'
-alias zupdate='omz update && git -C ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k pull'
+alias updatezsh='omz update && git -C ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k pull'
 
 # DEFAULTS===========================================
 

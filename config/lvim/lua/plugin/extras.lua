@@ -31,12 +31,6 @@ lvim.plugins = {
 	--WRITING========================================================================================================
 	{ "prettier/vim-prettier", run = "yarn install", ft = "markdown" },
 	{ "vimwiki/vimwiki", config = require("plugin.configs.vimwiki") },
-	-- {
-	-- 	"michal-h21/vimwiki-sync",
-	-- 	config = function()
-	-- 		vim.g.vimwiki_list = { { path = "$HOME/mynote" } } -- vimwikisync
-	-- 	end,
-	-- },
 	{ "preservim/vim-pencil", ft = "markdown", config = require("plugin.configs.vim-pencil"), cmd = "Pencil" },
 	{ "reedes/vim-litecorrect", ft = "markdown", config = require("plugin.configs.vim-litecorrect") },
 	{ "iamcco/markdown-preview.nvim", run = "cd app && yarn install" },
