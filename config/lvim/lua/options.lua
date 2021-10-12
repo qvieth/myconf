@@ -34,4 +34,3 @@ lvim.colorscheme = vim.g.colors_name
 lvim.builtin.treesitter.autotag.enable = true
 lvim.builtin.treesitter.rainbow.enable = true
 lvim.builtin.cmp.sources[20] = { name = "ultisnips" }
-lvim.autocommands._markdown = {}

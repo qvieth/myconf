@@ -102,7 +102,7 @@ plugins=(
   tmux
   vi-mode
   web-search
-  yarn
+  # yarn
   zsh-autosuggestions
   zsh-syntax-highlighting
 )
@@ -146,6 +146,7 @@ alias t='trans :en -sp'
 alias v='shuf -n 3 $HOME/v'
 alias wa='sh $HOME/.wa'
 alias wi='wikit'
+alias zupdate='omz update && git -C ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k pull'
 
 # DEFAULTS===========================================
 
