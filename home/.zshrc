@@ -147,16 +147,19 @@ alias v='shuf -n 3 $HOME/v'
 alias p='git add .;git commit -m "quick push -> $(date)";git push'
 alias wa='sh $HOME/.wa'
 alias wi='wikit'
-alias updatezsh='omz update && git -C ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k pull'
+alias updatezsh='git -C ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k pull && omz update'
+timezsh() {
+# MEASURE-ZSH-LOADTIME===============================
+  shell=${1-$SHELL}
+  for i in $(seq 1 10); do time $shell -i -c exit; done
+}
 
 # DEFAULTS===========================================
-
 if command -v lvim &> /dev/null ; then
   export EDITOR='lvim'
 else
   export EDITOR='nvim'
 fi
-
 export BROWSER='w3m'
 export VIMCONFIG=$HOME/.config/nvim/
 
@@ -168,15 +171,7 @@ eval "`fnm env`"
 if [ $(command -v rlwrap) ] ; then
   alias node='NODE_NO_READLINE=1 rlwrap node'
 fi
-
-# KEYSEQUENCES-SET-TO-10MS===========================
-KEYTIMEOUT=1
-
-# MEASURE-ZSH-LOADTIME===============================
-timezsh() {
-  shell=${1-$SHELL}
-  for i in $(seq 1 10); do time $shell -i -c exit; done
-}
+KEYTIMEOUT=1 # KEYSEQUENCES-SET-TO-10MS
 
 # ==========ADD-YOUR-CONFIG-ABOVE-THIS-LINE=============================================
 # ======================================================================================

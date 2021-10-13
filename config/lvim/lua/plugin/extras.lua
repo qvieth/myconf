@@ -2,7 +2,9 @@
 lvim.plugins = {
 	--COLORSCHEMES===================================================================================================
 	"ChristianChiarulli/nvcode-color-schemes.vim",
-	"pbrisbin/vim-colors-off", -- "pgdouyon/vim-yin-yang", "cideM/yui",
+	"pbrisbin/vim-colors-off",
+	"pgdouyon/vim-yin-yang",
+	"cideM/yui",
 	--ESSENTIALS=====================================================================================================
 	{ "arthurxavierx/vim-caser", keys = "g" },
 	{ "nacro90/numb.nvim", event = "BufRead", config = require("plugin.configs.numb") },
