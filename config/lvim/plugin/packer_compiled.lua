@@ -281,6 +281,10 @@ _G.packer_plugins = {
     needs_bufread = false,
     path = "/home/qvieth/.local/share/lunarvim/site/pack/packer/opt/symbols-outline.nvim"
   },
+  ["telescope-fzf-native.nvim"] = {
+    loaded = true,
+    path = "/home/qvieth/.local/share/lunarvim/site/pack/packer/start/telescope-fzf-native.nvim"
+  },
   ["telescope.nvim"] = {
     config = { "\27LJ\2\2A\0\0\2\0\3\0\0066\0\0\0'\1\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\24lvim.core.telescope\frequire\0" },
     loaded = true,
@@ -408,10 +412,10 @@ time([[Config for cmp-tabnine]], false)
 time([[Config for vim-easy-align]], true)
 try_loadstring("\27LJ\2\2¤\1\0\0\5\0\t\0\0176\0\0\0009\0\1\0009\0\2\0'\1\3\0'\2\4\0'\3\5\0005\4\6\0B\0\5\0016\0\0\0009\0\1\0009\0\2\0'\1\a\0'\2\4\0'\3\5\0005\4\b\0B\0\5\1K\0\1\0\1\0\2\vsilent\1\fnoremap\1\6x\1\0\2\vsilent\1\fnoremap\1\22<Plug>(EasyAlign)\aga\6n\20nvim_set_keymap\bapi\bvim\0", "config", "vim-easy-align")
 time([[Config for vim-easy-align]], false)
--- Config for: minimap.vim
-time([[Config for minimap.vim]], true)
-try_loadstring("\27LJ\2\2û\1\0\0\2\0\a\0\0176\0\0\0009\0\1\0)\1\n\0=\1\2\0006\0\0\0009\0\1\0)\1\1\0=\1\3\0006\0\0\0009\0\1\0)\1\1\0=\1\4\0006\0\0\0009\0\1\0005\1\6\0=\1\5\0K\0\1\0\1\f\0\0\5\fOutline\14dashboard\thelp\rmarkdown\nnetrw\vpacker\vrnvimr\fstarify\15toggleterm\fvimwiki\28minimap_close_filetypes!minimap_auto_start_win_enter\23minimap_auto_start\18minimap_width\6g\bvim\0", "config", "minimap.vim")
-time([[Config for minimap.vim]], false)
+-- Config for: vimwiki
+time([[Config for vimwiki]], true)
+try_loadstring("\27LJ\2\2â\5\0\0\3\0\n\0\0216\0\0\0009\0\1\0)\1\0\0=\1\2\0006\0\0\0009\0\1\0004\1\a\0005\2\4\0>\2\1\0015\2\5\0>\2\2\0015\2\6\0>\2\3\0015\2\a\0>\2\4\0015\2\b\0>\2\5\0015\2\t\0>\2\6\1=\1\3\0K\0\1\0\1\0\1\tpath\14~/mywiki/\1\0\1\tpath\16~/mysecret/\1\0\1\tpath\15~/mydraft/\1\0\b\21custom_wiki2html\21vimwiki_markdown\tpath\r~/myblog\21template_default\fdefault\vsyntax\rmarkdown\bext\b.md\14path_html\24~/mynote_site_html/\18template_path\25~/vimwiki/templates/\17template_ext\t.tpl\1\0\b\21custom_wiki2html\21vimwiki_markdown\tpath\16~/myarchive\21template_default\fdefault\vsyntax\rmarkdown\bext\b.md\14path_html\24~/mynote_site_html/\18template_path\25~/vimwiki/templates/\17template_ext\t.tpl\1\0\b\21custom_wiki2html\21vimwiki_markdown\tpath\r~/mynote\21template_default\fdefault\vsyntax\rmarkdown\bext\b.md\14path_html\24~/mynote_site_html/\18template_path\25~/vimwiki/templates/\17template_ext\t.tpl\17vimwiki_list\23vimwiki_global_ext\6g\bvim\0", "config", "vimwiki")
+time([[Config for vimwiki]], false)
 -- Config for: nvim-cmp
 time([[Config for nvim-cmp]], true)
 try_loadstring("\27LJ\2\2;\0\0\2\0\3\0\0066\0\0\0'\1\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\18lvim.core.cmp\frequire\0", "config", "nvim-cmp")
@@ -420,18 +424,18 @@ time([[Config for nvim-cmp]], false)
 time([[Config for lualine.nvim]], true)
 try_loadstring("\27LJ\2\2?\0\0\2\0\3\0\0066\0\0\0'\1\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\22lvim.core.lualine\frequire\0", "config", "lualine.nvim")
 time([[Config for lualine.nvim]], false)
--- Config for: vimwiki
-time([[Config for vimwiki]], true)
-try_loadstring("\27LJ\2\2â\5\0\0\3\0\n\0\0216\0\0\0009\0\1\0)\1\0\0=\1\2\0006\0\0\0009\0\1\0004\1\a\0005\2\4\0>\2\1\0015\2\5\0>\2\2\0015\2\6\0>\2\3\0015\2\a\0>\2\4\0015\2\b\0>\2\5\0015\2\t\0>\2\6\1=\1\3\0K\0\1\0\1\0\1\tpath\14~/mywiki/\1\0\1\tpath\16~/mysecret/\1\0\1\tpath\15~/mydraft/\1\0\b\21custom_wiki2html\21vimwiki_markdown\tpath\r~/myblog\21template_default\fdefault\vsyntax\rmarkdown\bext\b.md\14path_html\24~/mynote_site_html/\18template_path\25~/vimwiki/templates/\17template_ext\t.tpl\1\0\b\21custom_wiki2html\21vimwiki_markdown\tpath\16~/myarchive\21template_default\fdefault\vsyntax\rmarkdown\bext\b.md\14path_html\24~/mynote_site_html/\18template_path\25~/vimwiki/templates/\17template_ext\t.tpl\1\0\b\21custom_wiki2html\21vimwiki_markdown\tpath\r~/mynote\21template_default\fdefault\vsyntax\rmarkdown\bext\b.md\14path_html\24~/mynote_site_html/\18template_path\25~/vimwiki/templates/\17template_ext\t.tpl\17vimwiki_list\23vimwiki_global_ext\6g\bvim\0", "config", "vimwiki")
-time([[Config for vimwiki]], false)
--- Config for: ultisnips
-time([[Config for ultisnips]], true)
-try_loadstring("\27LJ\2\2£\1\0\0\2\0\b\0\r6\0\0\0009\0\1\0'\1\3\0=\1\2\0006\0\0\0009\0\1\0'\1\5\0=\1\4\0006\0\0\0009\0\1\0'\1\a\0=\1\6\0K\0\1\0\n<C-k>!UltiSnipsJumpBackwardTrigger\n<C-j> UltiSnipsJumpForwardTrigger\n<C-s>\27UltiSnipsExpandTrigger\6g\bvim\0", "config", "ultisnips")
-time([[Config for ultisnips]], false)
 -- Config for: nvim-autopairs
 time([[Config for nvim-autopairs]], true)
 try_loadstring("\27LJ\2\2A\0\0\2\0\3\0\0066\0\0\0'\1\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\24lvim.core.autopairs\frequire\0", "config", "nvim-autopairs")
 time([[Config for nvim-autopairs]], false)
+-- Config for: ultisnips
+time([[Config for ultisnips]], true)
+try_loadstring("\27LJ\2\2£\1\0\0\2\0\b\0\r6\0\0\0009\0\1\0'\1\3\0=\1\2\0006\0\0\0009\0\1\0'\1\5\0=\1\4\0006\0\0\0009\0\1\0'\1\a\0=\1\6\0K\0\1\0\n<C-k>!UltiSnipsJumpBackwardTrigger\n<C-j> UltiSnipsJumpForwardTrigger\n<C-s>\27UltiSnipsExpandTrigger\6g\bvim\0", "config", "ultisnips")
+time([[Config for ultisnips]], false)
+-- Config for: minimap.vim
+time([[Config for minimap.vim]], true)
+try_loadstring("\27LJ\2\2û\1\0\0\2\0\a\0\0176\0\0\0009\0\1\0)\1\n\0=\1\2\0006\0\0\0009\0\1\0)\1\1\0=\1\3\0006\0\0\0009\0\1\0)\1\1\0=\1\4\0006\0\0\0009\0\1\0005\1\6\0=\1\5\0K\0\1\0\1\f\0\0\5\fOutline\14dashboard\thelp\rmarkdown\nnetrw\vpacker\vrnvimr\fstarify\15toggleterm\fvimwiki\28minimap_close_filetypes!minimap_auto_start_win_enter\23minimap_auto_start\18minimap_width\6g\bvim\0", "config", "minimap.vim")
+time([[Config for minimap.vim]], false)
 -- Config for: project.nvim
 time([[Config for project.nvim]], true)
 try_loadstring("\27LJ\2\2?\0\0\2\0\3\0\0066\0\0\0'\1\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\22lvim.core.project\frequire\0", "config", "project.nvim")
@@ -452,22 +456,22 @@ time([[Sequenced loading]], false)
 -- Command lazy-loads
 time([[Defining lazy-load commands]], true)
 pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file Pencil lua require("packer.load")({'vim-pencil'}, { cmd = "Pencil", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
-pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file VBox lua require("packer.load")({'venn.nvim'}, { cmd = "VBox", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
-pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file WordyWordy lua require("packer.load")({'vim-wordy'}, { cmd = "WordyWordy", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
 pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file RnvimrToggle lua require("packer.load")({'rnvimr'}, { cmd = "RnvimrToggle", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
+pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file WordyWordy lua require("packer.load")({'vim-wordy'}, { cmd = "WordyWordy", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
+pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file Bracey lua require("packer.load")({'bracey.vim'}, { cmd = "Bracey", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
 pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file SymbolsOutline lua require("packer.load")({'symbols-outline.nvim'}, { cmd = "SymbolsOutline", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
 pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file GrammarousCheck lua require("packer.load")({'vim-grammarous'}, { cmd = "GrammarousCheck", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
 pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file ZenMode lua require("packer.load")({'zen-mode.nvim'}, { cmd = "ZenMode", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
 pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file SnipRun lua require("packer.load")({'sniprun'}, { cmd = "SnipRun", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
-pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file Bracey lua require("packer.load")({'bracey.vim'}, { cmd = "Bracey", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
 pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file Glow lua require("packer.load")({'glow.nvim'}, { cmd = "Glow", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
+pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file VBox lua require("packer.load")({'venn.nvim'}, { cmd = "VBox", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
 time([[Defining lazy-load commands]], false)
 
 -- Keymap lazy-loads
 time([[Defining lazy-load keymaps]], true)
-vim.cmd [[noremap <silent> g <cmd>lua require("packer.load")({'vim-caser'}, { keys = "g", prefix = "" }, _G.packer_plugins)<cr>]]
-vim.cmd [[noremap <silent> d <cmd>lua require("packer.load")({'vim-surround'}, { keys = "d", prefix = "" }, _G.packer_plugins)<cr>]]
 vim.cmd [[noremap <silent> c <cmd>lua require("packer.load")({'vim-surround'}, { keys = "c", prefix = "" }, _G.packer_plugins)<cr>]]
+vim.cmd [[noremap <silent> d <cmd>lua require("packer.load")({'vim-surround'}, { keys = "d", prefix = "" }, _G.packer_plugins)<cr>]]
+vim.cmd [[noremap <silent> g <cmd>lua require("packer.load")({'vim-caser'}, { keys = "g", prefix = "" }, _G.packer_plugins)<cr>]]
 vim.cmd [[noremap <silent> y <cmd>lua require("packer.load")({'vim-surround'}, { keys = "y", prefix = "" }, _G.packer_plugins)<cr>]]
 time([[Defining lazy-load keymaps]], false)
 
@@ -475,7 +479,7 @@ vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Filetype lazy-loads
 time([[Defining lazy-load filetype autocommands]], true)
-vim.cmd [[au FileType markdown ++once lua require("packer.load")({'vim-litecorrect', 'vim-pencil', 'vim-prettier', 'vim-wordy'}, { ft = "markdown" }, _G.packer_plugins)]]
+vim.cmd [[au FileType markdown ++once lua require("packer.load")({'vim-litecorrect', 'vim-wordy', 'vim-prettier', 'vim-pencil'}, { ft = "markdown" }, _G.packer_plugins)]]
 vim.cmd [[au FileType javascriptreact ++once lua require("packer.load")({'emmet-vim', 'nvim-ts-autotag'}, { ft = "javascriptreact" }, _G.packer_plugins)]]
 vim.cmd [[au FileType css ++once lua require("packer.load")({'nvim-colorizer.lua'}, { ft = "css" }, _G.packer_plugins)]]
 vim.cmd [[au FileType javascript ++once lua require("packer.load")({'emmet-vim', 'nvim-ts-autotag', 'nvim-colorizer.lua'}, { ft = "javascript" }, _G.packer_plugins)]]
@@ -483,7 +487,7 @@ vim.cmd [[au FileType html ++once lua require("packer.load")({'emmet-vim', 'nvim
 time([[Defining lazy-load filetype autocommands]], false)
   -- Event lazy-loads
 time([[Defining lazy-load event autocommands]], true)
-vim.cmd [[au BufRead * ++once lua require("packer.load")({'Comment.nvim', 'gitsigns.nvim', 'indent-blankline.nvim', 'numb.nvim'}, { event = "BufRead *" }, _G.packer_plugins)]]
+vim.cmd [[au BufRead * ++once lua require("packer.load")({'Comment.nvim', 'gitsigns.nvim', 'numb.nvim', 'indent-blankline.nvim'}, { event = "BufRead *" }, _G.packer_plugins)]]
 vim.cmd [[au BufWinEnter * ++once lua require("packer.load")({'toggleterm.nvim', 'barbar.nvim', 'dashboard-nvim', 'which-key.nvim'}, { event = "BufWinEnter *" }, _G.packer_plugins)]]
 vim.cmd [[au WinScrolled * ++once lua require("packer.load")({'neoscroll.nvim'}, { event = "WinScrolled *" }, _G.packer_plugins)]]
 vim.cmd [[au InsertEnter * ++once lua require("packer.load")({'emmet-vim', 'vim-snippets'}, { event = "InsertEnter *" }, _G.packer_plugins)]]
