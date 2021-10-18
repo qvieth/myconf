@@ -106,6 +106,7 @@ plugins=(
   zsh-autosuggestions
   zsh-syntax-highlighting
 )
+FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 ZSH_AUTOSUGGEST_STRATEGY=(match_prev_cmd completion)
 : ${ZSH_TMUX_AUTOSTART:=true}
 : ${ZSH_TMUX_AUTOCONNECT:=false}
