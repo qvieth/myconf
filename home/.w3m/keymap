@@ -16,6 +16,7 @@
 ## UNMAP j KEY => keymap j NULL
 
 # WINDOW===========================================================
+keymap E        EXTERN                                                          
 
 keymap :        COMMAND                                                          
 keymap ?        HELP					                                         

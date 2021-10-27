@@ -102,6 +102,7 @@ plugins=(
   tmux
   vi-mode
   web-search
+  npm
   # yarn
   zsh-autosuggestions
   zsh-syntax-highlighting
