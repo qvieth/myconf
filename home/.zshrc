@@ -1,9 +1,9 @@
-#            _              
-#    _______| |__  _ __ ___ 
+#            _
+#    _______| |__  _ __ ___
 #   |_  / __| '_ \| '__/ __|
-#  _ / /\__ \ | | | | | (__ 
+#  _ / /\__ \ | | | | | (__
 # (_)___|___/_| |_|_|  \___|
-                          
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -90,22 +90,22 @@ COMPLETION_WAITING_DOTS="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  bw
-  cht
-  conda-zsh-completion
-  direnv
-  fnm
-  frontend-search
-  hugo
-  pip
-  taskwarrior
-  tmux
-  vi-mode
-  web-search
-  npm
-  # yarn
-  zsh-autosuggestions
-  zsh-syntax-highlighting
+	bw
+	cht
+	conda-zsh-completion
+	direnv
+	fnm
+	frontend-search
+	hugo
+	pip
+	taskwarrior
+	tmux
+	vi-mode
+	web-search
+	npm
+	# yarn
+	zsh-autosuggestions
+	zsh-syntax-highlighting
 )
 FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 ZSH_AUTOSUGGEST_STRATEGY=(match_prev_cmd completion)
@@ -150,28 +150,29 @@ alias p='git add .;git commit -m "quick push -> $(date)";git push'
 alias wa='sh $HOME/.wa'
 alias wi='wikit'
 alias updatezsh='git -C ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k pull && omz update'
+alias dnf='cat $HOME/sudopassword | sudo -S dnf -y'
 timezsh() {
-# MEASURE-ZSH-LOADTIME===============================
-  shell=${1-$SHELL}
-  for i in $(seq 1 10); do time $shell -i -c exit; done
+	# MEASURE-ZSH-LOADTIME===============================
+	shell=${1-$SHELL}
+	for i in $(seq 1 10); do time $shell -i -c exit; done
 }
 
 # DEFAULTS===========================================
-if command -v lvim &> /dev/null ; then
-  export EDITOR='lvim'
+if command -v lvim &>/dev/null; then
+	export EDITOR='lvim'
 else
-  export EDITOR='nvim'
+	export EDITOR='nvim'
 fi
 export BROWSER='w3m'
 export VIMCONFIG=$HOME/.config/nvim/
 
 # FNM================================================
 export PATH=/home/qvieth/.fnm:$PATH
-eval "`fnm env`"
+eval "$(fnm env)"
 
 # VIM-BINDING-IN-NODE================================
-if [ $(command -v rlwrap) ] ; then
-  alias node='NODE_NO_READLINE=1 rlwrap node'
+if [ $(command -v rlwrap) ]; then
+	alias node='NODE_NO_READLINE=1 rlwrap node'
 fi
 KEYTIMEOUT=1 # KEYSEQUENCES-SET-TO-10MS
 

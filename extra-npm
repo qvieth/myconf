@@ -15,6 +15,7 @@ fi
 npm install -g \
   @bitwarden/cli   \
   alacritty-themes \
+  fast-cli         \
   how-2            \
   npm              \
   prettier         \

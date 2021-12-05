@@ -1,0 +1,8 @@
+#!/bin/sh
+
+# fomatters
+brew install \
+	gh \
+	hugo \
+	shfmt \
+	stylua

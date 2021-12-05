@@ -1,0 +1,5 @@
+#!/bin/sh
+
+git clone https://github.com/qvieth/myarchive $HOME/myarchive
+git clone https://github.com/qvieth/myblog $HOME/myblog
+git clone https://github.com/qvieth/mynote $HOME/mynote

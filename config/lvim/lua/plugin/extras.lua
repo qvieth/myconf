@@ -2,6 +2,8 @@
 lvim.plugins = {
 	--COLORSCHEMES===================================================================================================
 	"ChristianChiarulli/nvcode-color-schemes.vim",
+  "EdenEast/nightfox.nvim",
+  "LunarVim/Colorschemes",
 	"pbrisbin/vim-colors-off",
 	"pgdouyon/vim-yin-yang",
 	"cideM/yui",
@@ -17,7 +19,7 @@ lvim.plugins = {
 	{ "folke/zen-mode.nvim", cmd = "ZenMode", config = require("plugin.configs.zen-mode") },
 	--CODING-GENERAL=================================================================================================
 	"p00f/nvim-ts-rainbow",
-	{ "SirVer/ultisnips", config = require("plugin.configs.ultisnips") },
+	-- { "SirVer/ultisnips", config = require("plugin.configs.ultisnips") },
 	{ "quangnguyen30192/cmp-nvim-ultisnips", after = "nvim-cmp" },
 	{ "tzachar/cmp-tabnine", run = "./install.sh", config = require("plugin.configs.cmp-tabnine") },
 	{ "honza/vim-snippets", event = "InsertEnter" },
