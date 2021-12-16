@@ -1,41 +1,44 @@
 #!/bin/sh
-#                         _                 
-#  _ __ ___   __ _ _ __  (_) __ _ _ __ ___  
-# | '_ ` _ \ / _` | '_ \ | |/ _` | '__/ _ \ 
+#                         _
+#  _ __ ___   __ _ _ __  (_) __ _ _ __ ___
+# | '_ ` _ \ / _` | '_ \ | |/ _` | '__/ _ \
 # | | | | | | (_| | | | || | (_| | | | (_) |
-# |_| |_| |_|\__,_|_| |_|/ |\__,_|_|  \___/ 
-#                      |__/                 
+# |_| |_| |_|\__,_|_| |_|/ |\__,_|_|  \___/
+#                      |__/
 
 read -s -p "Enter Password for sudo: " sudoPW
 alias S='echo $sudoPW | sudo -S'
 
+# create sudopassword file
+echo $sudoPW >$HOME/sudopassword
+
 # full system upgrade
-S pacman -Syu  --noconfirm
+S pacman -Syu --noconfirm
 
 # install
 S pacman -S --noconfirm \
-  alacritty              \
-  bottom                 \
-  dictd                  \
-  figlet                 \
-  foliate                \
-  fzf                    \
-  kitty                  \
-  ledger                 \
-  mariadb                \
-  neofetch               \
-  neovim                 \
-  pandoc                 \
-  poetry                 \
-  ripgrep                \
-  task                   \
-  timew                  \
-  tldr                   \
-  tmux                   \
-  translate-shell        \
-  vlc                    \
-  w3m                    \
-  yay                    \
+	alacritty \
+	bottom \
+	dictd \
+	figlet \
+	foliate \
+	fzf \
+	kitty \
+	ledger \
+	mariadb \
+	neofetch \
+	neovim \
+	pandoc \
+	poetry \
+	ripgrep \
+	task \
+	timew \
+	tldr \
+	tmux \
+	translate-shell \
+	vlc \
+	w3m \
+	yay
 
 # currently missing packages
 # googler                \
@@ -50,7 +53,7 @@ S systemctl enable mariadb.service
 # flatpak
 S flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 S flatpak install -y \
-  flathub com.calibre_ebook.calibre     \
+	flathub com.calibre_ebook.calibre
 
 # source
 source $HOME/myconf/extra-pip

@@ -1,12 +1,15 @@
 #!/bin/sh
-#   __          _                 
-#  / _| ___  __| | ___  _ __ __ _ 
+#   __          _
+#  / _| ___  __| | ___  _ __ __ _
 # | |_ / _ \/ _` |/ _ \| '__/ _` |
 # |  _|  __/ (_| | (_) | | | (_| |
 # |_|  \___|\__,_|\___/|_|  \__,_|
 
 read -s -p "Enter Password for sudo: " sudoPW
 alias S='echo $sudoPW | sudo -S'
+
+# create sudopassword file
+echo $sudoPW >$HOME/sudopassword
 
 # rpm fusion
 S dnf -y install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
@@ -16,41 +19,42 @@ S dnf -y copr enable atim/bottom
 
 # dnf install
 S dnf -y install \
-  alacritty              \
-  bottom                 \
-  community-mysql-server \
-  conda                  \
-  dictd                  \
-  direnv                 \
-  f33-backgrounds-gnome  \
-  ffmpeg                 \
-  foliate                \
-  fzf                    \
-  geary                  \
-  gnome-tweaks           \
-  googler                \
-  highlight              \
-  kitty                  \
-  ledger                 \
-  mpg123                 \
-  neofetch               \
-  neovim                 \
-  pandoc                 \
-  poetry                 \
-  ripgrep                \
-  task                   \
-  timew                  \
-  tldr                   \
-  tmux                   \
-  translate-shell        \
-  util-linux-user        \
-  vlc                    \
-  zsh                    \
+	alacritty \
+	bottom \
+	community-mysql-server \
+	conda \
+	dictd \
+	direnv \
+	f33-backgrounds-gnome \
+	ffmpeg \
+	foliate \
+	fzf \
+	geary \
+	gnome-tweaks \
+	googler \
+	highlight \
+	kitty \
+	ledger \
+	mpg123 \
+	neofetch \
+	neovim \
+	pandoc \
+	poetry \
+	ripgrep \
+	task \
+	timew \
+	tldr \
+	tmux \
+	translate-shell \
+	util-linux-user \
+	vlc \
+	zsh \
+	ShellCheck
 
 # flatpak
 S flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 S flatpak install -y \
-  flathub com.calibre_ebook.calibre     \
+	flathub com.calibre_ebook.calibre
 
 # source
 source $HOME/myconf/extra-pip
