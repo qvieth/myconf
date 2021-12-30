@@ -103,7 +103,7 @@ plugins=(
 	vi-mode
 	web-search
 	npm
-	# yarn
+	yarn
 	zsh-autosuggestions
 	zsh-syntax-highlighting
 )

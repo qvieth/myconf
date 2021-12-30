@@ -1,12 +1,11 @@
 -- EXTRA PLUGINS
 lvim.plugins = {
 	--COLORSCHEMES===================================================================================================
+	"rebelot/kanagawa.nvim",
 	"ChristianChiarulli/nvcode-color-schemes.vim",
-  "EdenEast/nightfox.nvim",
-  "LunarVim/Colorschemes",
+	"LunarVim/Colorschemes",
 	"pbrisbin/vim-colors-off",
-	"pgdouyon/vim-yin-yang",
-	"cideM/yui",
+	-- "pgdouyon/vim-yin-yang", "cideM/yui", "EdenEast/nightfox.nvim",
 	--ESSENTIALS=====================================================================================================
 	{ "arthurxavierx/vim-caser", keys = "g" },
 	{ "nacro90/numb.nvim", event = "BufRead", config = require("plugin.configs.numb") },
@@ -19,7 +18,7 @@ lvim.plugins = {
 	{ "folke/zen-mode.nvim", cmd = "ZenMode", config = require("plugin.configs.zen-mode") },
 	--CODING-GENERAL=================================================================================================
 	"p00f/nvim-ts-rainbow",
-	-- { "SirVer/ultisnips", config = require("plugin.configs.ultisnips") },
+	{ "SirVer/ultisnips", config = require("plugin.configs.ultisnips") },
 	{ "quangnguyen30192/cmp-nvim-ultisnips", after = "nvim-cmp" },
 	{ "tzachar/cmp-tabnine", run = "./install.sh", config = require("plugin.configs.cmp-tabnine") },
 	{ "honza/vim-snippets", event = "InsertEnter" },
@@ -30,7 +29,11 @@ lvim.plugins = {
 	{ "mattn/emmet-vim", event = "InsertEnter", ft = { "html", "javascript", "javascriptreact" } },
 	{ "windwp/nvim-ts-autotag", ft = { "html", "javascript", "javascriptreact" } },
 	{ "turbio/bracey.vim", run = "npm install --prefix server", cmd = "Bracey" },
-	{ "norcalli/nvim-colorizer.lua", ft = { "html", "css", "javascript" }, config = require("plugin.configs.colorizer") },
+	{
+		"norcalli/nvim-colorizer.lua",
+		ft = { "html", "css", "javascript" },
+		config = require("plugin.configs.colorizer"),
+	},
 	-- { "dsznajder/vscode-es7-javascript-react-snippets", run = "yarn install --frozen-lockfile && yarn compile", event = "InsertEnter", ft = { "html", "javascript", "javascriptreact" }, },
 	--WRITING========================================================================================================
 	{ "prettier/vim-prettier", run = "yarn install", ft = "markdown" },
