@@ -7,13 +7,13 @@ local M = function()
 		"Outline",
 		"dashboard",
 		"help",
-		"markdown",
+		-- "markdown",
 		"netrw",
 		"packer",
 		"rnvimr",
 		"starify",
 		"toggleterm",
-		"vimwiki",
+		-- "vimwiki",
 	}
 end
 return M

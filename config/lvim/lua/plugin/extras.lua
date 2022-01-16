@@ -2,8 +2,8 @@
 lvim.plugins = {
 	--COLORSCHEMES===================================================================================================
 	"rebelot/kanagawa.nvim",
-	"ChristianChiarulli/nvcode-color-schemes.vim",
-	"LunarVim/Colorschemes",
+	-- "ChristianChiarulli/nvcode-color-schemes.vim",
+	-- "LunarVim/Colorschemes",
 	"pbrisbin/vim-colors-off",
 	-- "pgdouyon/vim-yin-yang", "cideM/yui", "EdenEast/nightfox.nvim",
 	--ESSENTIALS=====================================================================================================
