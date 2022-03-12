@@ -1,5 +1,4 @@
 -- OPTIONS
-
 function DefaultState()
 	vim.cmd("colo kanagawa")
 	vim.cmd("noh")
