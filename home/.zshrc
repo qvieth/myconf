@@ -146,7 +146,7 @@ alias m='dict -d moby-thesaurus'
 alias n='nvim'
 alias t='trans :en -sp'
 alias tz='t :zh-TW -p'
-alias v='shuf -n 3 $HOME/v'
+# alias v='shuf -n 3 $HOME/v'
 alias p='git add .;git commit -m "quick push -> $(date)";git push'
 alias wa='sh $HOME/.wa'
 alias wi='wikit'
@@ -178,6 +178,7 @@ fi
 KEYTIMEOUT=1 # KEYSEQUENCES-SET-TO-10MS
 
 # ==========ADD-YOUR-CONFIG-ABOVE-THIS-LINE=============================================
+# shuf -n 1 $HOME/TOCFL.txt | t
 # ======================================================================================
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

@@ -1,33 +1,33 @@
 #!/bin/sh
-#     _    ____ ____  _____ __  __ ____  _     _____   _   _ 
+#     _    ____ ____  _____ __  __ ____  _     _____   _   _
 #    / \  / ___/ ___|| ____|  \/  | __ )| |   | ____| | | | |
 #   / _ \ \___ \___ \|  _| | |\/| |  _ \| |   |  _|   | | | |
 #  / ___ \ ___) |__) | |___| |  | | |_) | |___| |___  |_| |_|
 # /_/   \_\____/____/|_____|_|  |_|____/|_____|_____| (_) (_)
-                                                           
+
 # .config/
 cp -f -r -t $HOME/myconf/config/ \
-    $HOME/.config/bottom/ \
-    $HOME/.config/kitty/  \
-    $HOME/.config/lvim/   \
-    # $HOME/.config/nvim/   \
+	$HOME/.config/bottom/ \
+	$HOME/.config/kitty/ \
+	$HOME/.config/lvim/
+# $HOME/.config/nvim/   \
 
 # home
 cp -f -r -t $HOME/myconf/home/ \
-    $HOME/.alacritty.yml  \
-    $HOME/.cht.sh         \
-    $HOME/.editrc         \
-    $HOME/.inputrc        \
-    $HOME/.myclirc        \
-    $HOME/.p10k.zsh       \
-    $HOME/.tmux-powerline \
-    $HOME/.tmux.conf      \
-    $HOME/.wa             \
-    $HOME/.zprofile       \
-    $HOME/.zshrc          \
-    $HOME/v               \
-    $HOME/.zsh_history    \
+	$HOME/.alacritty.yml \
+	$HOME/.cht.sh \
+	$HOME/.editrc \
+	$HOME/.inputrc \
+	$HOME/.myclirc \
+	$HOME/.p10k.zsh \
+	$HOME/.tmux-powerline \
+	$HOME/.tmux.conf \
+	$HOME/.wa \
+	$HOME/.zprofile \
+	$HOME/.zsh_history \
+	$HOME/.zshrc \
+	$HOME/v
 
 # others
 cp -f -r -t $HOME/myconf/home/.w3m/ \
-    $HOME/.w3m/keymap \
+	$HOME/.w3m/keymap
