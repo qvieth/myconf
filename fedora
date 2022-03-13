@@ -47,6 +47,7 @@ S dnf -y install \
 	tmux \
 	translate-shell \
 	util-linux-user \
+	youtube-dl \
 	vlc \
 	zsh \
 	ShellCheck
