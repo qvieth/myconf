@@ -1,6 +1,6 @@
 -- OPTIONS
 function DefaultState()
-	vim.cmd("colo kanagawa")
+	vim.cmd("colo dawnfox")
 	vim.cmd("noh")
 	-- vim.cmd("mapclear <buffer>") -- this will also clear vimwiki keymap -> move into venn config
 	vim.o.virtualedit = ""
