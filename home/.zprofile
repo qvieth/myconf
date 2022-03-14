@@ -5,6 +5,7 @@ conda activate
 alias v='shuf -n1 "$HOME/v/$(
 	shuf -n1 -e \
 		vMyTOCFL \
+		vMyVocab \
 		vTOCFL_lv1 \
 )" | trans :en -sp'
 v 2>/dev/null || ricksay -c $(shuf -n1 -e Rick Rick Rick Morty Beth Jerry Summer)

@@ -9,6 +9,7 @@ lvim.plugins = {
 	-- "LunarVim/Colorschemes",
 	-- "pgdouyon/vim-yin-yang", "cideM/yui",
 	--ESSENTIALS=====================================================================================================
+	{ "rlue/vim-barbaric" },
 	{ "arthurxavierx/vim-caser", keys = "g" },
 	{ "nacro90/numb.nvim", event = "BufRead", config = require("plugin.configs.numb") },
 	{ "junegunn/vim-easy-align", config = require("plugin.configs.vim-easy-align") },
