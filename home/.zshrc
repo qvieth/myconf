@@ -146,17 +146,11 @@ alias m='dict -d moby-thesaurus'
 alias n='nvim'
 alias t='trans :en -sp'
 alias tz='t :zh-TW -p'
-# alias v='shuf -n 3 $HOME/v'
 alias p='git add .;git commit -m "quick push -> $(date)";git push'
 alias wa='sh $HOME/.wa'
 alias wi='wikit'
 alias updatezsh='git -C ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k pull && omz update'
 alias dnf='cat $HOME/sudopassword | sudo -S dnf -y'
-alias v='shuf -n1 "$HOME/v/$(
-	shuf -n1 -e \
-		vMyTOCFL \
-		vTOCFL_lv1 \
-)" | trans :en -sp'
 
 timezsh() {
 	# MEASURE-ZSH-LOADTIME===============================
