@@ -152,6 +152,12 @@ alias wa='sh $HOME/.wa'
 alias wi='wikit'
 alias updatezsh='git -C ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k pull && omz update'
 alias dnf='cat $HOME/sudopassword | sudo -S dnf -y'
+alias v='shuf -n1 "$HOME/v/$(
+	shuf -n1 -e \
+		vMyTOCFL \
+		vTOCFL_lv1 \
+)" | trans :en -sp'
+
 timezsh() {
 	# MEASURE-ZSH-LOADTIME===============================
 	shell=${1-$SHELL}
