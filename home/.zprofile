@@ -1,13 +1,20 @@
 conda activate
 
+alias rick= ricksay -c $(shuf -n1 -e Rick Rick Rick Morty Beth Jerry Summer)
+
 # random vocab at shell start
-# moved to zshrc (zprofile doesn't start in vim terminal)
-alias v='shuf -n1 "$HOME/v/$(
-	shuf -n1 -e \
-		vMyTOCFL \
-		vMyVocab \
+alias v='shuf -n1 "$HOME/v/$(shuf -n1 -e \
 		vTOCFL_lv1 \
-)" | trans :en -sp'
-v 2>/dev/null || ricksay -c $(shuf -n1 -e Rick Rick Rick Morty Beth Jerry Summer)
+)" | trans zh: :en -sp'
+alias vv='shuf -n1 "$HOME/mynote/v/$(shuf -n1 -e \
+		vMyTOCFL.md \
+		vMyVocab.md \
+)" | trans zh: :en -sp'
+
+if [ $((RANDOM % 2)) -eq 0 ]; then
+	v 2>/dev/null || rick
+else
+	vv 2>/dev/null || rick
+fi
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
