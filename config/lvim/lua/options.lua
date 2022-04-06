@@ -15,7 +15,9 @@ vim.o.cmdheight = 1
 vim.o.timeoutlen = 250
 
 -- LVIM
-lvim.builtin.dashboard.custom_header = {
+
+lvim.builtin.alpha.mode = "dashboard"
+lvim.builtin.alpha.dashboard.section.header.val = {
 	"     ▄▄▄▄▄███████████████████▄▄▄▄▄         ",
 	"   ▄██████████▀▀▀▀▀▀▀▀▀▀██████▀████▄       ",
 	"  █▀████████▄             ▀▀████ ▀██▄      ",

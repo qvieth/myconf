@@ -12,7 +12,7 @@ function _G.toggle_venn()
 		vim.api.nvim_buf_set_keymap(0, "n", "L", "<C-v>l:VBox<CR>", { noremap = true })
 		vim.api.nvim_buf_set_keymap(0, "n", "H", "<C-v>h:VBox<CR>", { noremap = true })
 		-- visual change
-		vim.cmd("colo onedarker")
+		vim.cmd("colo dayfox")
 		vim.o.cursorcolumn = true
 		vim.o.cursorline = true
 		vim.o.relativenumber = true
