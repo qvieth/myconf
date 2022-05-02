@@ -11,7 +11,6 @@ lvim.plugins = {
 	--ESSENTIALS=====================================================================================================
 	{ "rlue/vim-barbaric" },
 	{ "arthurxavierx/vim-caser", keys = "g" },
-	{ "nacro90/numb.nvim", event = "BufRead", config = require("plugin.configs.numb") },
 	{ "junegunn/vim-easy-align", config = require("plugin.configs.vim-easy-align") },
 	{ "kevinhwang91/rnvimr", cmd = "RnvimrToggle", config = require("plugin.configs.rnvimr") },
 	{ "tpope/vim-surround", keys = { "c", "d", "y" } },
