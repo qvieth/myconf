@@ -15,7 +15,7 @@ lvim.plugins = {
 	{ "kevinhwang91/rnvimr", cmd = "RnvimrToggle", config = require("plugin.configs.rnvimr") },
 	{ "tpope/vim-surround", keys = { "c", "d", "y" } },
 	{ "tpope/vim-repeat" },
-	{ "wfxr/minimap.vim", run = "brew install code-minimap", config = require("plugin.configs.minimap") },
+	-- { "wfxr/minimap.vim", run = "brew install code-minimap", config = require("plugin.configs.minimap") },
 	{ "karb94/neoscroll.nvim", event = "WinScrolled", config = require("plugin.configs.neoscroll") },
 	{ "folke/zen-mode.nvim", cmd = "ZenMode", config = require("plugin.configs.zen-mode") },
 	--CODING-GENERAL=================================================================================================
