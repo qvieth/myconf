@@ -1,13 +1,12 @@
 -- EXTRA PLUGINS
 lvim.plugins = {
 	--COLORSCHEMES===================================================================================================
+	"sainnhe/everforest",
+	"sainnhe/gruvbox-material",
+	"sainnhe/sonokai",
 	"rebelot/kanagawa.nvim",
-	"EdenEast/nightfox.nvim",
 	"pbrisbin/vim-colors-off",
-	-- "projekt0n/github-nvim-theme",
-	-- "ChristianChiarulli/nvcode-color-schemes.vim",
-	-- "LunarVim/Colorschemes",
-	-- "pgdouyon/vim-yin-yang", "cideM/yui",
+	"cideM/yui",
 	--ESSENTIALS=====================================================================================================
 	{ "rlue/vim-barbaric" },
 	{ "arthurxavierx/vim-caser", keys = "g" },
@@ -15,9 +14,9 @@ lvim.plugins = {
 	{ "kevinhwang91/rnvimr", cmd = "RnvimrToggle", config = require("plugin.configs.rnvimr") },
 	{ "tpope/vim-surround", keys = { "c", "d", "y" } },
 	{ "tpope/vim-repeat" },
-	-- { "wfxr/minimap.vim", run = "brew install code-minimap", config = require("plugin.configs.minimap") },
 	{ "karb94/neoscroll.nvim", event = "WinScrolled", config = require("plugin.configs.neoscroll") },
 	{ "folke/zen-mode.nvim", cmd = "ZenMode", config = require("plugin.configs.zen-mode") },
+	-- { "wfxr/minimap.vim", run = "brew install code-minimap", config = require("plugin.configs.minimap") },
 	--CODING-GENERAL=================================================================================================
 	"p00f/nvim-ts-rainbow",
 	{ "SirVer/ultisnips", config = require("plugin.configs.ultisnips") },
@@ -46,5 +45,4 @@ lvim.plugins = {
 	{ "jbyuki/venn.nvim", cmd = "VBox" },
 	{ "rhysd/vim-grammarous", cmd = "GrammarousCheck" },
 	{ "reedes/vim-wordy", ft = "markdown", cmd = "WordyWordy" },
-	{ "npxbr/glow.nvim", cmd = "Glow" },
 }
