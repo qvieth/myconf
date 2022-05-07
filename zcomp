@@ -2,13 +2,18 @@
 # missing zsh-completions
 
 # cht.sh
-mkdir -p $HOME/.oh-my-zsh/custom/plugins/cht 
-curl https://cheat.sh/:zsh > $HOME/.oh-my-zsh/custom/plugins/cht/_cht
+mkdir -p $HOME/.oh-my-zsh/custom/plugins/cht
+curl https://cheat.sh/:zsh >$HOME/.oh-my-zsh/custom/plugins/cht/_cht
 
 # bitwarden
-mkdir -p $HOME/.oh-my-zsh/custom/plugins/bw 
-bw completion --shell zsh > $HOME/.oh-my-zsh/custom/plugins/bw/_bw
+mkdir -p $HOME/.oh-my-zsh/custom/plugins/bw
+bw completion --shell zsh >$HOME/.oh-my-zsh/custom/plugins/bw/_bw
 
 # hugo
-mkdir -p $HOME/.oh-my-zsh/custom/plugins/hugo 
-hugo gen autocomplete --type zsh > $HOME/.oh-my-zsh/custom/plugins/hugo/_hugo
+mkdir -p $HOME/.oh-my-zsh/custom/plugins/hugo
+hugo gen autocomplete --type zsh >$HOME/.oh-my-zsh/custom/plugins/hugo/_hugo
+
+# poetry
+mkdir -p $HOME/.oh-my-zsh/custom/plugins/poetry
+poetry completions zsh >$HOME/.oh-my-zsh/custom/plugins/poetry/_poetry
+rm -rf $HOME/.oh-my-zsh/plugins/poetry # delete ohmyzsh default poetry plugin as it makes shell slower

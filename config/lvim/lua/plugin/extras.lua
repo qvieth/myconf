@@ -17,6 +17,8 @@ lvim.plugins = {
 	{ "karb94/neoscroll.nvim", event = "WinScrolled", config = require("plugin.configs.neoscroll") },
 	{ "folke/zen-mode.nvim", cmd = "ZenMode", config = require("plugin.configs.zen-mode") },
 	-- { "wfxr/minimap.vim", run = "brew install code-minimap", config = require("plugin.configs.minimap") },
+	--DATASCIENCE====================================================================================================
+	{ "goerz/jupytext.vim", run = "pip install jupytext" },
 	--CODING-GENERAL=================================================================================================
 	"p00f/nvim-ts-rainbow",
 	{ "SirVer/ultisnips", config = require("plugin.configs.ultisnips") },

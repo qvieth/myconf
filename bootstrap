@@ -2,9 +2,9 @@
 # RUN ONCE IS ENOUGH
 
 # cht.sh
-PATH_DIR="$HOME/bin"  # or another directory on your $PATH
+PATH_DIR="$HOME/bin" # or another directory on your $PATH
 mkdir -p "$PATH_DIR"
-curl https://cht.sh/:cht.sh > "$PATH_DIR/cht.sh"
+curl https://cht.sh/:cht.sh >"$PATH_DIR/cht.sh"
 chmod +x "$PATH_DIR/cht.sh"
 
 # ranger
@@ -12,7 +12,7 @@ rm -rf $HOME/.config/ranger
 ranger --copy-config=all
 cp $HOME/myconf/others/rc.conf $HOME/.config/ranger/ --remove-destination
 git clone https://github.com/alexanderjeurissen/ranger_devicons ~/.config/ranger/plugins/ranger_devicons
-echo "default_linemode devicons" >> $HOME/.config/ranger/rc.conf
+echo "default_linemode devicons" >>$HOME/.config/ranger/rc.conf
 
 # nerd font
 mkdir -p ~/.local/share/fonts
