@@ -2,7 +2,7 @@
 
 function DefaultState()
 	vim.cmd("colo gruvbox-material")
-	vim.o.background = "light"
+	vim.o.background = "dark"
 	vim.o.virtualedit = ""
 	vim.o.relativenumber = false
 	vim.o.cursorcolumn = false

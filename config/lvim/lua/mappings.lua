@@ -1,5 +1,12 @@
 -- MAPPINGS
 
+-- SELECT_ALL
+lvim.keys.normal_mode["<Space>a"] = "ggVG"
+
+-- SNIPRUN
+lvim.keys.normal_mode["<Space>o"] = "V:SnipRun<CR>"
+lvim.keys.visual_mode["<Space>o"] = ":SnipRun<CR>"
+
 -- TOGGLE BACKGROUND COLOR
 lvim.keys.normal_mode["<Space>bg"] = ":let &bg=(&bg=='light'?'dark':'light')<CR>"
 
@@ -20,6 +27,11 @@ lvim.keys.term_mode["<F1>"] = "<C-\\><C-n>:NvimTreeToggle<CR>"
 -- TOGGLETERM
 lvim.builtin.terminal.open_mapping = "<F2>"
 
+-- RNVIMR
+lvim.keys.normal_mode["<F3>"] = ":RnvimrToggle<CR>"
+lvim.keys.insert_mode["<F3>"] = "<Esc>:RnvimrToggle<CR>"
+lvim.keys.term_mode["<F3>"] = "<C-\\><C-n>:RnvimrToggle<CR>"
+
 -- AERIAL
 lvim.keys.normal_mode["<F4>"] = ":AerialToggle<CR>"
 lvim.keys.insert_mode["<F4>"] = "<Esc>:AerialToggle<CR>"
@@ -27,11 +39,6 @@ lvim.keys.insert_mode["<F4>"] = "<Esc>:AerialToggle<CR>"
 -- SYMBOLSOUTLINE
 lvim.keys.normal_mode["<F5>"] = ":SymbolsOutline<CR>"
 lvim.keys.insert_mode["<F5>"] = "<Esc>:SymbolsOutline<CR>"
-
--- RNVIMR
-lvim.keys.normal_mode["<F3>"] = ":RnvimrToggle<CR>"
-lvim.keys.insert_mode["<F3>"] = "<Esc>:RnvimrToggle<CR>"
-lvim.keys.term_mode["<F3>"] = "<C-\\><C-n>:RnvimrToggle<CR>"
 
 -- M FOR MACROS && Q FOR QUERY
 lvim.keys.normal_mode["M"] = "q"
