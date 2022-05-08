@@ -17,6 +17,14 @@ lvim.keys.term_mode["<F1>"] = "<C-\\><C-n>:NvimTreeToggle<CR>"
 -- TOGGLETERM
 lvim.builtin.terminal.open_mapping = "<F2>"
 
+-- AERIAL
+lvim.keys.normal_mode["<F4>"] = ":AerialToggle<CR>"
+lvim.keys.insert_mode["<F4>"] = "<Esc>:AerialToggle<CR>"
+
+-- SYMBOLSOUTLINE
+lvim.keys.normal_mode["<F5>"] = ":SymbolsOutline<CR>"
+lvim.keys.insert_mode["<F5>"] = "<Esc>:SymbolsOutline<CR>"
+
 -- RNVIMR
 lvim.keys.normal_mode["<F3>"] = ":RnvimrToggle<CR>"
 lvim.keys.insert_mode["<F3>"] = "<Esc>:RnvimrToggle<CR>"
@@ -33,3 +41,22 @@ lvim.keys.normal_mode["<Space><Space>"] = ":ZenMode<CR>"
 
 -- WINDOW ZOOM
 lvim.keys.normal_mode["<C-w>z"] = "<C-w>|<C-w>_"
+
+-- JUPYTER_ASCENDING.VIM
+lvim.keys.normal_mode["<Space>x"] = "<Plug>JupyterExecute"
+lvim.keys.normal_mode["<Space>X"] = "<Plug>JupyterExecuteAll"
+
+-- GOTO.PREVIEW
+-- in the config set default_mappings = true
+-- gp -> gpi, gpd, gpr, gP
+
+-- TROUBLE.NVIM
+lvim.builtin.which_key.mappings["t"] = {
+	name = "Trouble.nvim",
+	t = { "<cmd>TroubleToggle<cr>", "trouble" },
+	w = { "<cmd>TroubleToggle workspace_diagnostics<cr>", "workspace" },
+	d = { "<cmd>TroubleToggle document_diagnostics<cr>", "document" },
+	q = { "<cmd>TroubleToggle quickfix<cr>", "quickfix" },
+	l = { "<cmd>TroubleToggle loclist<cr>", "loclist" },
+	r = { "<cmd>TroubleToggle lsp_references<cr>", "references" },
+}

@@ -1,4 +1,5 @@
 -- EXTRA PLUGINS
+
 lvim.plugins = {
 	--COLORSCHEMES===================================================================================================
 	"sainnhe/everforest",
@@ -18,14 +19,19 @@ lvim.plugins = {
 	{ "folke/zen-mode.nvim", cmd = "ZenMode", config = require("plugin.configs.zen-mode") },
 	-- { "wfxr/minimap.vim", run = "brew install code-minimap", config = require("plugin.configs.minimap") },
 	--DATASCIENCE====================================================================================================
-	{ "goerz/jupytext.vim", run = "pip install jupytext" },
+	{ "goerz/jupytext.vim", run = "pip install jupytext", config = vim.cmd("let g:jupytext_fmt = 'py:percent'") },
+	{ "untitled-ai/jupyter_ascending.vim" },
 	--CODING-GENERAL=================================================================================================
 	"p00f/nvim-ts-rainbow",
+	{ "folke/trouble.nvim", cmd = "TroubleToggle" },
+	{ "rmagatti/goto-preview", config = require("goto-preview").setup({ default_mappings = true }) },
+	{ "ray-x/lsp_signature.nvim", config = require("lsp_signature").setup() },
 	{ "SirVer/ultisnips", config = require("plugin.configs.ultisnips") },
 	{ "quangnguyen30192/cmp-nvim-ultisnips", after = "nvim-cmp" },
 	{ "tzachar/cmp-tabnine", run = "./install.sh", config = require("plugin.configs.cmp-tabnine") },
 	{ "honza/vim-snippets", event = "InsertEnter" },
-	{ "simrat39/symbols-outline.nvim", cmd = "SymbolsOutline", config = require("plugin.configs.symbols-outline") },
+	{ "simrat39/symbols-outline.nvim" },
+	{ "stevearc/aerial.nvim", config = require("aerial").setup() },
 	{ "michaelb/sniprun", run = "bash install.sh", cmd = "SnipRun" },
 	{ "lukas-reineke/indent-blankline.nvim", event = "BufRead", setup = require("plugin.configs.indent-blankline") },
 	--CODING-FE======================================================================================================

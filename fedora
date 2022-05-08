@@ -9,10 +9,10 @@ read -s -p "Enter Password for sudo: " sudoPW
 alias S='echo $sudoPW | sudo -S'
 
 # create sudopassword file
-echo $sudoPW >$HOME/sudopassword
+echo "$sudoPW" >"$HOME"/sudopassword
 
 # rpm fusion
-S dnf -y install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+S dnf -y install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-"$(rpm -E %fedora)".noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-"$(rpm -E %fedora)".noarch.rpm
 
 # dnf copr
 S dnf -y copr enable atim/bottom
@@ -58,11 +58,11 @@ S flatpak install -y \
 	flathub com.calibre_ebook.calibre
 
 # source
-source $HOME/myconf/extra-pip
-source $HOME/myconf/bootstrap # place after extra-pip
-source $HOME/myconf/extra-npm
-source $HOME/myconf/CHARGE
-source $HOME/myconf/dconf
+source "$HOME"/myconf/extra-pip
+source "$HOME"/myconf/bootstrap # place after extra-pip
+source "$HOME"/myconf/extra-npm
+source "$HOME"/myconf/CHARGE
+source "$HOME"/myconf/dconf
 
 S dnf -y upgrade
 S dnf -y autoremove

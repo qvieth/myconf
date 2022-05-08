@@ -164,7 +164,7 @@ if command -v lvim &>/dev/null; then
 else
 	export EDITOR='nvim'
 fi
-export BROWSER='w3m'
+# export BROWSER='w3m'
 export VIMCONFIG=$HOME/.config/nvim/
 
 # FNM================================================
@@ -175,6 +175,7 @@ eval "$(fnm env)"
 if [ $(command -v rlwrap) ]; then
 	alias node='NODE_NO_READLINE=1 rlwrap node'
 fi
+
 KEYTIMEOUT=1 # KEYSEQUENCES-SET-TO-10MS
 
 # ==========ADD-YOUR-CONFIG-ABOVE-THIS-LINE=============================================

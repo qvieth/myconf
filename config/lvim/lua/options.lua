@@ -1,12 +1,13 @@
 -- OPTIONS
+
 function DefaultState()
-	vim.cmd("colo gruvbox-material")
-	vim.cmd("se bg=light")
-	vim.cmd("noh")
+	lvim.colorscheme = "gruvbox-material"
+	vim.o.background = "light"
 	vim.o.virtualedit = ""
 	vim.o.relativenumber = false
 	vim.o.cursorcolumn = false
 	vim.o.cursorline = false
+	vim.cmd("noh")
 end
 
 DefaultState()
@@ -15,8 +16,12 @@ vim.o.guicursor = ""
 vim.o.cmdheight = 1
 vim.o.timeoutlen = 250
 
--- LVIM
+-- LVIM-CORE-PLUGINS
 
+-- DAP
+lvim.builtin.dap.active = true
+
+-- ALPHA.NVIM
 lvim.builtin.alpha.mode = "dashboard"
 lvim.builtin.alpha.dashboard.section.header.val = {
 	"     ▄▄▄▄▄███████████████████▄▄▄▄▄         ",
@@ -32,9 +37,20 @@ lvim.builtin.alpha.dashboard.section.header.val = {
 	"               ▀███▄███▀                   ",
 	"                  ▀█▀                      ",
 }
-lvim.colorscheme = vim.g.colors_name
+
+-- TREESITTER
 lvim.builtin.treesitter.autotag.enable = true
 lvim.builtin.treesitter.rainbow.enable = true
-lvim.builtin.cmp.sources[20] = { name = "ultisnips" }
 
-lvim.autocommands._markdown = {}
+-- AUTOCOMMANDS
+-- || To set up autocommands use lvim.autocommands.custom_groups.
+-- || Autocommands are defined in the form { Event, filetype, command }.
+-- || This will run a command at a given event for the given filetype.
+-- || To view help on autocommands: :h autocmd
+
+lvim.autocommands._markdown = {} -- disable markdown lvim default autocommands
+lvim.autocommands.custom_groups = {
+	-- On entering a lua file, set the tab spacing and shift width to 8
+	{ "BufWinEnter", "*.lua", "setlocal ts=8 sw=8" },
+	-- { "InsertEnter", "*", ":normal zz" }, -- On entering insert mode in any file, scroll the window so the cursor line is centered
+}
