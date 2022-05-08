@@ -1,5 +1,8 @@
 -- MAPPINGS
 
+-- TOGGLE BACKGROUND COLOR
+lvim.keys.normal_mode["<Space>bg"] = ":let &bg=(&bg=='light'?'dark':'light')<CR>"
+
 -- VENN.NVIM
 require("plugin.configs.venn")
 lvim.keys.normal_mode["v"] = "<C-v>"

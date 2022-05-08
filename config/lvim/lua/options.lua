@@ -1,7 +1,7 @@
 -- OPTIONS
 
 function DefaultState()
-	lvim.colorscheme = "gruvbox-material"
+	vim.cmd("colo gruvbox-material")
 	vim.o.background = "light"
 	vim.o.virtualedit = ""
 	vim.o.relativenumber = false
@@ -12,6 +12,7 @@ end
 
 DefaultState()
 
+lvim.colorscheme = vim.g.colors_name
 vim.o.guicursor = ""
 vim.o.cmdheight = 1
 vim.o.timeoutlen = 250
