@@ -8,8 +8,10 @@ local M = function()
 		"neogitstatus",
 		"NvimTree",
 		"Trouble",
-		"vimwiki",
-		"markdown",
+		-- "vimwiki",
+		"csv",
+		"norg",
+		-- "markdown",
 	}
 	vim.g.indentLine_enabled = 1
 	vim.g.indent_blankline_char = "▏"

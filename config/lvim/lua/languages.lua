@@ -11,6 +11,7 @@ formatters.setup({
 	{ command = "black" },
 	{ command = "isort" },
 	{ command = "prettier" },
+	{ command = "prettier", filetypes = { "markdown", "vimwiki" } },
 	{ command = "stylua" },
 	{ command = "shellharden" },
 	{ command = "shfmt" },

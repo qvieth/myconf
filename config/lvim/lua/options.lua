@@ -42,6 +42,8 @@ lvim.builtin.alpha.dashboard.section.header.val = {
 -- TREESITTER
 lvim.builtin.treesitter.autotag.enable = true
 lvim.builtin.treesitter.rainbow.enable = true
+lvim.builtin.treesitter.ensure_installed = { "norg" }
+lvim.builtin.treesitter.highlight = { enable = "true" }
 
 -- AUTOCOMMANDS
 -- || To set up autocommands use lvim.autocommands.custom_groups.
@@ -49,9 +51,15 @@ lvim.builtin.treesitter.rainbow.enable = true
 -- || This will run a command at a given event for the given filetype.
 -- || To view help on autocommands: :h autocmd
 
-lvim.autocommands._markdown = {} -- disable markdown lvim default autocommands
-lvim.autocommands.custom_groups = {
-	-- On entering a lua file, set the tab spacing and shift width to 8
-	{ "BufWinEnter", "*.lua", "setlocal ts=8 sw=8" },
-	-- { "InsertEnter", "*", ":normal zz" }, -- On entering insert mode in any file, scroll the window so the cursor line is centered
-}
+-- lvim.autocommands._markdown = {} -- disable markdown lvim default autocommands
+-- lvim.autocommands.custom_groups = {
+-- 	-- On entering a lua file, set the tab spacing and shift width to 8
+-- 	{ "BufWinEnter", "*.lua", "setlocal ts=8 sw=8" },
+-- 	{ "BufWinEnter", "*.md", "setlocal ts=8 sw=8" },
+-- 	-- { "InsertEnter", "*", ":normal zz" }, -- On entering insert mode in any file, scroll the window so the cursor line is centered
+-- }
+
+vim.api.nvim_create_autocmd("BufEnter", {
+	pattern = { "*.lua" },
+	command = "setlocal ts=8 sw=8",
+})
