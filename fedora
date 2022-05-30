@@ -40,6 +40,7 @@ S dnf -y install \
 	neovim \
 	pandoc \
 	poetry \
+	python3-pip \
 	ripgrep \
 	task \
 	timew \
