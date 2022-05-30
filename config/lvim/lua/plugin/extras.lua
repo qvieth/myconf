@@ -10,7 +10,7 @@ lvim.plugins = {
 	"cideM/yui",
 	--ESSENTIALS=====================================================================================================
 	{ "chentoast/marks.nvim", config = require("plugin.configs.marks") },
-	{ "nvim-neorg/neorg", config = require("plugin.configs.neorg"), requires = "nvim-neorg/neorg-telescope" },
+	-- { "nvim-neorg/neorg", config = require("plugin.configs.neorg"), requires = "nvim-neorg/neorg-telescope" },
 	{ "rlue/vim-barbaric" },
 	{ "arthurxavierx/vim-caser", keys = "g" },
 	{ "junegunn/vim-easy-align", config = require("plugin.configs.vim-easy-align") },
@@ -32,14 +32,29 @@ lvim.plugins = {
 	--CODING-GENERAL=================================================================================================
 	"p00f/nvim-ts-rainbow",
 	{ "folke/trouble.nvim", cmd = "TroubleToggle" },
-	{ "rmagatti/goto-preview", config = require("goto-preview").setup({ default_mappings = true }) },
-	{ "ray-x/lsp_signature.nvim", config = require("lsp_signature").setup() },
+	{
+		"rmagatti/goto-preview",
+		config = function()
+			require("goto-preview").setup({ default_mappings = true })
+		end,
+	},
+	{
+		"ray-x/lsp_signature.nvim",
+		config = function()
+			require("lsp_signature").setup()
+		end,
+	},
 	{ "SirVer/ultisnips", config = require("plugin.configs.ultisnips") },
 	{ "quangnguyen30192/cmp-nvim-ultisnips", after = "nvim-cmp" },
 	{ "tzachar/cmp-tabnine", run = "./install.sh", config = require("plugin.configs.cmp-tabnine") },
 	{ "honza/vim-snippets", event = "InsertEnter" },
 	{ "simrat39/symbols-outline.nvim" },
-	{ "stevearc/aerial.nvim", config = require("aerial").setup() },
+	{
+		"stevearc/aerial.nvim",
+		config = function()
+			require("aerial").setup()
+		end,
+	},
 	{ "michaelb/sniprun", run = "bash install.sh", config = require("plugin.configs.sniprun") },
 	{ "lukas-reineke/indent-blankline.nvim", event = "BufRead", setup = require("plugin.configs.indent-blankline") },
 	--CODING-FE======================================================================================================
