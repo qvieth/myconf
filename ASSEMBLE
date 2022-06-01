@@ -26,7 +26,7 @@ cp -f -r -t $HOME/myconf/home/ \
 	$HOME/.zprofile \
 	$HOME/.zsh_history \
 	$HOME/.zshrc \
-	$HOME/v
+	$HOME/MyVocab
 
 # others
 cp -f -r -t $HOME/myconf/home/.w3m/ \
