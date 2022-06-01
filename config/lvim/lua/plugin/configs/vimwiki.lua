@@ -3,7 +3,7 @@ local M = function()
 	vim.g.vimwiki_global_ext = 0
 	vim.g.vimwiki_list = {
 		{
-			path = "~/mynote",
+			path = "~/MyFolder/mynote",
 			template_path = "~/vimwiki/templates/",
 			template_default = "default",
 			syntax = "markdown",
@@ -13,7 +13,7 @@ local M = function()
 			template_ext = ".tpl",
 		},
 		{
-			path = "~/myarchive",
+			path = "~/MyFolder/myarchive",
 			template_path = "~/vimwiki/templates/",
 			template_default = "default",
 			syntax = "markdown",
@@ -23,7 +23,7 @@ local M = function()
 			template_ext = ".tpl",
 		},
 		{
-			path = "~/myblog",
+			path = "~/MyFolder/myblog",
 			template_path = "~/vimwiki/templates/",
 			template_default = "default",
 			syntax = "markdown",
@@ -32,9 +32,9 @@ local M = function()
 			custom_wiki2html = "vimwiki_markdown",
 			template_ext = ".tpl",
 		},
-		{ path = "~/mydraft/" },
-		{ path = "~/mysecret/" },
-		{ path = "~/mywiki/" },
+		{ path = "~/MyFolder/mydraft/" },
+		{ path = "~/MyFolder/mysecret/" },
+		{ path = "~/MyFolder/mywiki/" },
 	}
 end
 return M

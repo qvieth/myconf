@@ -3,11 +3,10 @@ conda activate
 alias rick= ricksay -c $(shuf -n1 -e Rick Rick Rick Morty Beth Jerry Summer)
 
 # random vocab at shell start
-alias v='shuf -n1 "$HOME/v/$(shuf -n1 -e \
-		vTOCFL_lv1 \
+alias v='shuf -n1 "$HOME/MyVocab/$(shuf -n1 -e \
+		TOCFL_lv1 \
 )" | trans zh: :en -sp'
-alias vv='shuf -n1 "$HOME/mynote/v/$(shuf -n1 -e \
-		vMyTOCFL.md \
+alias vv='shuf -n1 "$HOME/MyFolder/mynote/v/$(shuf -n1 -e \
 		vMyVocab.md \
 )" | trans zh: :en -sp'
 

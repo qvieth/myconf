@@ -107,7 +107,6 @@ plugins=(
 	zsh-autosuggestions
 	zsh-syntax-highlighting
 )
-FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 ZSH_AUTOSUGGEST_STRATEGY=(match_prev_cmd completion)
 : ${ZSH_TMUX_AUTOSTART:=true}
 : ${ZSH_TMUX_AUTOCONNECT:=false}
@@ -150,7 +149,7 @@ alias p='git add .;git commit -m "quick push -> $(date)";git push'
 alias wa='sh $HOME/.wa'
 alias wi='wikit'
 alias updatezsh='git -C ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k pull && omz update'
-alias dnf='cat $HOME/sudopassword | sudo -S dnf -y'
+alias dnf='cat $HOME/.sudopassword | sudo -S dnf -y'
 
 timezsh() {
 	# MEASURE-ZSH-LOADTIME===============================
@@ -179,7 +178,6 @@ fi
 KEYTIMEOUT=1 # KEYSEQUENCES-SET-TO-10MS
 
 # ==========ADD-YOUR-CONFIG-ABOVE-THIS-LINE=============================================
-# shuf -n 1 $HOME/TOCFL.txt | t
 # ======================================================================================
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
