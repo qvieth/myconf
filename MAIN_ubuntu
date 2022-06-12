@@ -1,0 +1,50 @@
+#!/bin/bash -i
+#        _                 _         
+#  _   _| |__  _   _ _ __ | |_ _   _ 
+# | | | | '_ \| | | | '_ \| __| | | |
+# | |_| | |_) | |_| | | | | |_| |_| |
+#  \__,_|_.__/ \__,_|_| |_|\__|\__,_|
+                                   
+read -s -p "Enter Password for sudo: " sudoPW
+echo "$sudoPW" >"$HOME"/sudopassword
+
+# apt install
+echo $sudoPW | sudo -S apt -y install \
+	dictd \
+	direnv \
+	ffmpeg \
+	fzf \
+	geary \
+	gnome-tweaks \
+	googler \
+	highlight \
+	kitty \
+	ledger \
+	mpg123 \
+	neofetch \
+	neovim \
+	pandoc \
+	python3-pip \
+	ripgrep \
+	taskwarrior \
+	timewarrior \
+	tldr \
+	tmux \
+	translate-shell \
+	util-linux \
+	youtube-dl \
+	vlc \
+	zsh \
+	shellcheck
+
+# source
+source "$HOME"/myconf/extra-pip
+source "$HOME"/myconf/bootstrap # place after extra-pip
+source "$HOME"/myconf/extra-npm
+source "$HOME"/myconf/CHARGE
+source "$HOME"/myconf/gnome_dconf
+source "$HOME"/myconf/zcomp
+
+echo $sudoPW | sudo -S apt -y upgrade
+echo $sudoPW | sudo -S apt -y autoremove
+echo $sudoPW | sudo -S apt -y autoclean

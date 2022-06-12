@@ -8,7 +8,6 @@
 read -s -p "Enter Password for sudo: " sudoPW
 alias S='echo $sudoPW | sudo -S'
 
-# create sudopassword file
 echo "$sudoPW" >"$HOME"/sudopassword
 
 # rpm fusion
@@ -63,7 +62,8 @@ source "$HOME"/myconf/extra-pip
 source "$HOME"/myconf/bootstrap # place after extra-pip
 source "$HOME"/myconf/extra-npm
 source "$HOME"/myconf/CHARGE
-source "$HOME"/myconf/dconf
+source "$HOME"/myconf/gnome_dconf
+source "$HOME"/myconf/zcomp
 
 S dnf -y upgrade
 S dnf -y autoremove
