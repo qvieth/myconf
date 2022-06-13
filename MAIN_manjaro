@@ -9,7 +9,7 @@
 read -s -p "Enter Password for sudo: " sudoPW
 alias S='echo $sudoPW | sudo -S'
 
-echo $sudoPW >$HOME/sudopassword
+echo $sudoPW >$HOME/.sudopassword
 
 # full system upgrade
 S pacman -Syu --noconfirm
@@ -37,6 +37,8 @@ S pacman -S --noconfirm \
 	translate-shell \
 	vlc \
 	w3m \
+	xclip \
+	xsel \
 	yay
 
 # currently missing packages

@@ -1,12 +1,12 @@
 #!/bin/bash -i
-#        _                 _         
-#  _   _| |__  _   _ _ __ | |_ _   _ 
+#        _                 _
+#  _   _| |__  _   _ _ __ | |_ _   _
 # | | | | '_ \| | | | '_ \| __| | | |
 # | |_| | |_) | |_| | | | | |_| |_| |
 #  \__,_|_.__/ \__,_|_| |_|\__|\__,_|
-                                   
+
 read -s -p "Enter Password for sudo: " sudoPW
-echo "$sudoPW" >"$HOME"/sudopassword
+echo "$sudoPW" >"$HOME"/.sudopassword
 
 # apt install
 echo $sudoPW | sudo -S apt -y install \
@@ -35,6 +35,8 @@ echo $sudoPW | sudo -S apt -y install \
 	youtube-dl \
 	vlc \
 	zsh \
+	xclip \
+	xsel \
 	shellcheck
 
 # source
