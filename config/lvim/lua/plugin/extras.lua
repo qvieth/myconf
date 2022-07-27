@@ -11,7 +11,7 @@ lvim.plugins = {
 	--ESSENTIALS=====================================================================================================
 	{ "chentoast/marks.nvim", config = require("plugin.configs.marks") },
 	-- { "nvim-neorg/neorg", config = require("plugin.configs.neorg"), requires = "nvim-neorg/neorg-telescope" },
-	{ "rlue/vim-barbaric" },
+	-- { "rlue/vim-barbaric" },
 	{ "arthurxavierx/vim-caser", keys = "g" },
 	{ "junegunn/vim-easy-align", config = require("plugin.configs.vim-easy-align") },
 	{ "kevinhwang91/rnvimr", cmd = "RnvimrToggle", config = require("plugin.configs.rnvimr") },

@@ -7,4 +7,5 @@ brew install \
 	gh \
 	hugo \
 	shfmt \
+	topgrade \
 	stylua

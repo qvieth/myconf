@@ -39,6 +39,7 @@ S pacman -S --noconfirm \
 	w3m \
 	xclip \
 	xsel \
+	shellcheck \
 	yay
 
 # currently missing packages

@@ -1,4 +1,4 @@
-conda activate
+# conda activate
 
 alias rick= ricksay -c $(shuf -n1 -e Rick Rick Rick Morty Beth Jerry Summer)
 
