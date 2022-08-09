@@ -3,6 +3,7 @@
 # pip install \
 pip install --upgrade \
 	black \
+	howdoi \
 	mycli \
 	pynvim \
 	pytube \
