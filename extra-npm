@@ -1,7 +1,10 @@
 #!/bin/sh
 
 # fnm
-if ! command -v fnm &>/dev/null; then
+if
+	! command -v fnm &
+	>/dev/null
+then
 	curl -fsSL https://fnm.vercel.app/install | bash
 	if [ -n "$ZSH_VERSION" ]; then
 		source $HOME/.zshrc
@@ -12,7 +15,7 @@ if ! command -v fnm &>/dev/null; then
 fi
 
 # npm
-npm install -g \
+npm install --force -g \
 	@bitwarden/cli \
 	alacritty-themes \
 	fast-cli \
