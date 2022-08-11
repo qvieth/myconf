@@ -1,10 +1,13 @@
 #!/bin/sh
 
 # pip install \
-pip install --upgrade \
+pip install \
 	black \
+	flake8 \
 	howdoi \
 	mycli \
+	proselint \
+	pylint \
 	pynvim \
 	pytube \
 	ranger-fm \
