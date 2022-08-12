@@ -44,10 +44,6 @@ lvim.plugins = {
 			require("lsp_signature").setup()
 		end,
 	},
-	{ "SirVer/ultisnips", config = require("plugin.configs.ultisnips") },
-	{ "quangnguyen30192/cmp-nvim-ultisnips", after = "nvim-cmp" },
-	{ "tzachar/cmp-tabnine", run = "./install.sh", config = require("plugin.configs.cmp-tabnine") },
-	{ "honza/vim-snippets", event = "InsertEnter" },
 	{ "simrat39/symbols-outline.nvim" },
 	{
 		"stevearc/aerial.nvim",
@@ -57,6 +53,19 @@ lvim.plugins = {
 	},
 	{ "michaelb/sniprun", run = "bash install.sh", config = require("plugin.configs.sniprun") },
 	{ "lukas-reineke/indent-blankline.nvim", event = "BufRead", setup = require("plugin.configs.indent-blankline") },
+	--SNIPPET-ENGINES================================================================================================
+	{ "hrsh7th/cmp-vsnip" },
+	{ "hrsh7th/vim-vsnip" },
+	{
+		"dsznajder/vscode-es7-javascript-react-snippets",
+		run = "yarn install --frozen-lockfile && yarn compile",
+		event = "InsertEnter",
+		ft = { "html", "javascript", "javascriptreact" },
+	},
+	{ "SirVer/ultisnips", config = require("plugin.configs.ultisnips") },
+	{ "quangnguyen30192/cmp-nvim-ultisnips", after = "nvim-cmp" },
+	{ "tzachar/cmp-tabnine", run = "./install.sh", config = require("plugin.configs.cmp-tabnine") },
+	{ "honza/vim-snippets", event = "InsertEnter" },
 	--CODING-FE======================================================================================================
 	{ "mattn/emmet-vim", event = "InsertEnter", ft = { "html", "javascript", "javascriptreact" } },
 	{ "windwp/nvim-ts-autotag", ft = { "html", "javascript", "javascriptreact" } },
@@ -66,7 +75,6 @@ lvim.plugins = {
 		ft = { "html", "css", "javascript" },
 		config = require("plugin.configs.colorizer"),
 	},
-	-- { "dsznajder/vscode-es7-javascript-react-snippets", run = "yarn install --frozen-lockfile && yarn compile", event = "InsertEnter", ft = { "html", "javascript", "javascriptreact" }, },
 	--WRITING========================================================================================================
 	{ "prettier/vim-prettier", run = "yarn install", ft = "markdown" },
 	{ "vimwiki/vimwiki", config = require("plugin.configs.vimwiki") },

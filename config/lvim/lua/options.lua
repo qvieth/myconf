@@ -19,6 +19,10 @@ vim.o.timeoutlen = 250
 
 -- LVIM-CORE-PLUGINS
 
+-- CMP
+table.insert(lvim.builtin.cmp.sources, { name = "ultisnips" })
+table.insert(lvim.builtin.cmp.sources, { name = "vsnip" })
+
 -- DAP
 lvim.builtin.dap.active = true
 
