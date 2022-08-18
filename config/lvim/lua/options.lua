@@ -41,7 +41,8 @@ lvim.builtin.alpha.dashboard.section.header.val = {
 	"⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠻⣿⣿⣿⣿⠿⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀",
 	"⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀",
 }
--- lvim.builtin.alpha.dashboard.section.footer.val = { "NEOVIM" }
+local lvim_version = require("lvim.utils.git").get_lvim_version()
+lvim.builtin.alpha.dashboard.section.footer.val = { "", "qvieth 🦇 LVIM", lvim_version }
 
 -- CMP
 table.insert(lvim.builtin.cmp.sources, { name = "ultisnips" })
