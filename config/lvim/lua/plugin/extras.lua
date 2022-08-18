@@ -23,7 +23,6 @@ lvim.plugins = {
 	-- 	"wfxr/minimap.vim",
 	-- 	run = "brew install code-minimap",
 	-- 	config = require("plugin.configs.minimap"),
-	-- 	branch = "GH-153_test_fix",
 	-- },
 	--DATASCIENCE====================================================================================================
 	"chrisbra/csv.vim",
@@ -56,19 +55,20 @@ lvim.plugins = {
 	--SNIPPET-ENGINES================================================================================================
 	{ "hrsh7th/cmp-vsnip" },
 	{ "hrsh7th/vim-vsnip" },
+	{ "SirVer/ultisnips", config = require("plugin.configs.ultisnips") },
+	{ "quangnguyen30192/cmp-nvim-ultisnips", after = "nvim-cmp" },
+	{ "tzachar/cmp-tabnine", run = "./install.sh", config = require("plugin.configs.cmp-tabnine") },
+	--SNIPPETS-ARE-SEPARATED-FROM-THE-ENGINE =========================================================================
+	{ "honza/vim-snippets", event = "InsertEnter" }, -- for ultisnips
 	{
 		"dsznajder/vscode-es7-javascript-react-snippets",
 		run = "yarn install --frozen-lockfile && yarn compile",
 		event = "InsertEnter",
 		ft = { "html", "javascript", "javascriptreact" },
 	},
-	{ "SirVer/ultisnips", config = require("plugin.configs.ultisnips") },
-	{ "quangnguyen30192/cmp-nvim-ultisnips", after = "nvim-cmp" },
-	{ "tzachar/cmp-tabnine", run = "./install.sh", config = require("plugin.configs.cmp-tabnine") },
-	{ "honza/vim-snippets", event = "InsertEnter" },
 	--CODING-FE======================================================================================================
 	{ "mattn/emmet-vim", event = "InsertEnter", ft = { "html", "javascript", "javascriptreact" } },
-	{ "windwp/nvim-ts-autotag", ft = { "html", "javascript", "javascriptreact" } },
+	-- { "windwp/nvim-ts-autotag", ft = { "html", "javascript", "javascriptreact" } },
 	{ "turbio/bracey.vim", run = "npm install --prefix server", cmd = "Bracey" },
 	{
 		"norcalli/nvim-colorizer.lua",

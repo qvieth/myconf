@@ -1,0 +1,77 @@
+# A valid snippet should starts with:
+#
+#		snippet trigger_word [ "description" [ options ] ]
+#
+# and end with:
+#
+#		endsnippet
+#
+# Snippet options:
+#
+#		b - Beginning of line.
+#		i - In-word expansion.
+#		w - Word boundary.
+#		r - Regular expression
+#		e - Custom context snippet
+#		A - Snippet will be triggered automatically, when condition matches.
+#
+# Basic example:
+#
+#		snippet emitter "emitter properties" b
+#		private readonly  = new Emitter<>()
+#		public readonly : Event<> = this..event
+#		endsnippet
+#
+# Online reference: https://github.com/SirVer/ultisnips/blob/master/doc/UltiSnips.txt
+
+snippet replaceid "replace for id - convert string to lower case then replace space with dashes"
+string.toLowerCase().replace(/ /g, "-")
+endsnippet
+
+snippet mapReact "return a list of React elements for each object in the array"
+<ul className="component">
+  {array.map((objectInArray, i) => (
+    <li key={i}>{objectInArray.objectKey}</li>
+  ))}
+</ul>;
+endsnippet
+
+snippet loginFormReact "login form component in React"
+function App({ onSubmit }) {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  return (
+    <form>
+      <input
+        onChange={(e) => setUsername(e.target.value)}
+        type="password"
+        name="username"
+        id="username-input"
+      />
+      <input
+        onChange={(e) => setPassword(e.target.value)}
+        type="password"
+        name="password"
+        id="password-input"
+      />
+      <button
+        disabled={username === "" || password === ""}
+        onClick={onSubmit}
+        id="login-button"
+        type="submit"
+      >
+        Submit
+      </button>
+    </form>
+  );
+}
+endsnippet
+
+snippet node "create a node"
+class Node {
+  constructor(val) {
+    this.val = val;
+    this.next = null;
+  }
+}
+endsnippet

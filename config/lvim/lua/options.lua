@@ -19,6 +19,29 @@ vim.o.timeoutlen = 250
 
 -- LVIM-CORE-PLUGINS
 
+-- ALPHA.NVIM
+lvim.builtin.alpha.mode = "dashboard"
+lvim.builtin.alpha.dashboard.section.header.val = {
+	-- "     ▄▄▄▄▄███████████████████▄▄▄▄▄         ",
+	-- "   ▄██████████▀▀▀▀▀▀▀▀▀▀██████▀████▄       ",
+	-- "  █▀████████▄             ▀▀████ ▀██▄      ",
+	-- " █▄▄██████████████████▄▄▄         ▄██▀     ",
+	-- "  ▀█████████████████████████▄    ▄██▀      ",
+	-- "    ▀████▀▀▀▀▀▀▀▀▀▀▀▀█████████▄▄██▀        ",
+	-- "      ▀███▄              ▀██████▀          ",
+	-- "        ▀██████▄        ▄████▀             ",
+	-- "           ▀█████▄▄▄▄▄▄▄███▀               ",
+	-- "             ▀████▀▀▀████▀                 ",
+	-- "               ▀███▄███▀                   ",
+	-- "                  ▀█▀                      ",
+	" ⠀⠀⠀⠀⣀⣤⣤⣶⣾⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣶⣶⣦⣤⣀⠀⠀⠀⠀",
+	"⣀⣴⣶⣿⣿⣿⣿⣿⣿⣷⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣴⣿⣿⣿⣿⣿⣿⣷⣦⣄⡀",
+	"⠁⠀⠀⠈⠉⠛⣿⣿⣿⣿⣿⣷⣦⣀⢠⣆⣸⡆⢀⣤⣾⣿⣿⣿⣿⣿⠟⠋⠉⠀⠀⠀⠀",
+	"⠀⠀⠀⠀⠀⠀⠸⠿⠿⠿⠿⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠿⠿⠿⠏⠀⠀⠀⠀⠀⠀⠀",
+	"⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠻⣿⣿⣿⣿⠿⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀",
+	"⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀",
+}
+
 -- CMP
 table.insert(lvim.builtin.cmp.sources, { name = "ultisnips" })
 table.insert(lvim.builtin.cmp.sources, { name = "vsnip" })
@@ -26,25 +49,19 @@ table.insert(lvim.builtin.cmp.sources, { name = "vsnip" })
 -- DAP
 lvim.builtin.dap.active = true
 
--- ALPHA.NVIM
-lvim.builtin.alpha.mode = "dashboard"
-lvim.builtin.alpha.dashboard.section.header.val = {
-	"     ▄▄▄▄▄███████████████████▄▄▄▄▄         ",
-	"   ▄██████████▀▀▀▀▀▀▀▀▀▀██████▀████▄       ",
-	"  █▀████████▄             ▀▀████ ▀██▄      ",
-	" █▄▄██████████████████▄▄▄         ▄██▀     ",
-	"  ▀█████████████████████████▄    ▄██▀      ",
-	"    ▀████▀▀▀▀▀▀▀▀▀▀▀▀█████████▄▄██▀        ",
-	"      ▀███▄              ▀██████▀          ",
-	"        ▀██████▄        ▄████▀             ",
-	"           ▀█████▄▄▄▄▄▄▄███▀               ",
-	"             ▀████▀▀▀████▀                 ",
-	"               ▀███▄███▀                   ",
-	"                  ▀█▀                      ",
+-- NOTIFY
+lvim.builtin.notify.active = true
+lvim.builtin.notify.opts = {
+	timeout = 100,
+	max_width = 50,
+	max_height = 1000,
+	fps = 60,
+	render = "minimal",
+	stages = "fade_in_slide_out",
 }
 
 -- TREESITTER
-lvim.builtin.treesitter.autotag.enable = true
+-- lvim.builtin.treesitter.autotag.enable = true
 lvim.builtin.treesitter.rainbow.enable = true
 lvim.builtin.treesitter.ensure_installed = { "norg" }
 lvim.builtin.treesitter.highlight = { enable = "true" }
