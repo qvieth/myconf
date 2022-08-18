@@ -9,6 +9,7 @@ lvim.plugins = {
 	"pbrisbin/vim-colors-off",
 	"cideM/yui",
 	--ESSENTIALS=====================================================================================================
+	{ "samodostal/image.nvim", config = require("plugin.configs.image") },
 	{ "chentoast/marks.nvim", config = require("plugin.configs.marks") },
 	-- { "nvim-neorg/neorg", config = require("plugin.configs.neorg"), requires = "nvim-neorg/neorg-telescope" },
 	-- { "rlue/vim-barbaric" },

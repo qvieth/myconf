@@ -2,8 +2,8 @@
 
 # /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-# fomatters
 brew install \
+	TheZoraiz/ascii-image-converter/ascii-image-converter \
 	gh \
 	hugo \
 	shfmt \
