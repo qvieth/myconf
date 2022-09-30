@@ -1,8 +1,6 @@
 -- OPTIONS
 
 function DefaultState()
-	vim.cmd("colo gruvbox-material")
-	vim.o.background = "dark"
 	vim.o.virtualedit = ""
 	vim.o.relativenumber = false
 	vim.o.cursorcolumn = false
@@ -12,7 +10,8 @@ end
 
 DefaultState()
 
-lvim.colorscheme = vim.g.colors_name
+lvim.colorscheme = "kanagawa"
+lvim.builtin.lualine.options.theme = "auto"
 vim.o.guicursor = ""
 vim.o.cmdheight = 1
 vim.o.timeoutlen = 250

@@ -25,7 +25,9 @@ lvim.keys.insert_mode["<F1>"] = "<Esc>:NvimTreeToggle<CR>"
 lvim.keys.term_mode["<F1>"] = "<C-\\><C-n>:NvimTreeToggle<CR>"
 
 -- TOGGLETERM
-lvim.builtin.terminal.open_mapping = "<F2>"
+lvim.keys.normal_mode["<F2>"] = ":ToggleTerm<CR>"
+lvim.keys.insert_mode["<F2>"] = "<Esc>:ToggleTerm<CR>"
+lvim.keys.term_mode["<F2>"] = "<C-\\><C-n>:ToggleTerm<CR>"
 
 -- RNVIMR
 lvim.keys.normal_mode["<F3>"] = ":RnvimrToggle<CR>"

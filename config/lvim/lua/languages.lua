@@ -3,7 +3,7 @@
 -- generic LSP settings
 
 -- ---@usage disable automatic installation of servers
-lvim.lsp.automatic_servers_installation = true
+lvim.lsp.installer.setup.automatic_installation = true
 
 -- -- make sure server will always be installed even if the server is in skipped_servers list
 lvim.lsp.installer.setup.ensure_installed = {

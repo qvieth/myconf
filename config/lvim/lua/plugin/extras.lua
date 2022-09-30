@@ -52,7 +52,6 @@ lvim.plugins = {
 		end,
 	},
 	{ "michaelb/sniprun", run = "bash install.sh", config = require("plugin.configs.sniprun") },
-	{ "lukas-reineke/indent-blankline.nvim", event = "BufRead", setup = require("plugin.configs.indent-blankline") },
 	--SNIPPET-ENGINES================================================================================================
 	{ "hrsh7th/cmp-vsnip" },
 	{ "hrsh7th/vim-vsnip" },

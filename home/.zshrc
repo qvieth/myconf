@@ -183,3 +183,7 @@ KEYTIMEOUT=1 # KEYSEQUENCES-SET-TO-10MS
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 # ======================================================================================
 # ==========BELOW-ARE-SCRIPT-GENERATED==================================================
+# pnpm
+export PNPM_HOME="/home/qvieth/.local/share/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+# pnpm end
