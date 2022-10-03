@@ -4,6 +4,15 @@
   - second solution works
   - best solution : use fnm
 
+## magic mouse
+
+```
+echo 50 | sudo tee /sys/module/hid_magicmouse/parameters/scroll_speed
+echo N | sudo tee /sys/module/hid_magicmouse/parameters/scroll_acceleration
+```
+
+[adjusting scroll speed of an magic mouse](https://neilzone.co.uk/2021/09/adjusting-the-scroll-speed-of-an-apple-magic-mouse-on-debian-11)
+
 ## wa - wolfram alpha
 
 ```bash

@@ -151,6 +151,10 @@ alias wi='wikit'
 alias updatezsh='git -C ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k pull && omz update'
 alias dnf='cat $HOME/.sudopassword | sudo -S dnf -y'
 
+magic_mouse(){
+  echo "$1" | sudo tee /sys/module/hid_magicmouse/parameters/scroll_speed 
+}
+
 timezsh() {
 	# MEASURE-ZSH-LOADTIME===============================
 	shell=${1-$SHELL}

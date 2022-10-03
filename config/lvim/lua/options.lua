@@ -11,6 +11,7 @@ end
 DefaultState()
 
 lvim.colorscheme = "kanagawa"
+lvim.transparent_window = true
 lvim.builtin.lualine.options.theme = "auto"
 vim.o.guicursor = ""
 vim.o.cmdheight = 1
