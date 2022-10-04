@@ -10,7 +10,7 @@ end
 
 DefaultState()
 
-lvim.colorscheme = "kanagawa"
+lvim.colorscheme = "gruvbox-material"
 lvim.transparent_window = true
 lvim.builtin.lualine.options.theme = "auto"
 vim.o.guicursor = ""

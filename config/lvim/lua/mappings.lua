@@ -25,8 +25,7 @@ lvim.keys.insert_mode["<F1>"] = "<Esc>:NvimTreeToggle<CR>"
 lvim.keys.term_mode["<F1>"] = "<C-\\><C-n>:NvimTreeToggle<CR>"
 
 -- TOGGLETERM
-lvim.keys.normal_mode["<F2>"] = ":ToggleTerm<CR>"
-lvim.keys.insert_mode["<F2>"] = "<Esc>:ToggleTerm<CR>"
+lvim.keys.normal_mode["<F2>"] = ":ToggleTerm<CR>" lvim.keys.insert_mode["<F2>"] = "<Esc>:ToggleTerm<CR>"
 lvim.keys.term_mode["<F2>"] = "<C-\\><C-n>:ToggleTerm<CR>"
 
 -- RNVIMR
@@ -58,6 +57,15 @@ lvim.keys.normal_mode["<C-w>z"] = "<C-w>|<C-w>_"
 lvim.keys.normal_mode["<Space>x"] = "<Plug>JupyterExecute"
 lvim.keys.normal_mode["<Space>X"] = "<Plug>JupyterExecuteAll"
 
+
+-- MARKS.NVIM
+lvim.builtin.which_key.mappings["m"] = {
+	name = "marks.nvim",
+	a = { "<cmd>MarksListAll<cr>", "MarksListAll" },
+	w = { "<cmd>MarksListBuf<cr>", "MarksListBuf" },
+	g = { "<cmd>MarksListGlobal<cr>", "MarksListGlobal" },
+	t = { "<cmd>MarksToggleSigns<cr>", "quickfix" },
+}
 -- GOTO.PREVIEW
 -- in the config set default_mappings = true
 -- gp -> gpi, gpd, gpr, gP
@@ -71,4 +79,18 @@ lvim.builtin.which_key.mappings["t"] = {
 	q = { "<cmd>TroubleToggle quickfix<cr>", "quickfix" },
 	l = { "<cmd>TroubleToggle loclist<cr>", "loclist" },
 	r = { "<cmd>TroubleToggle lsp_references<cr>", "references" },
+}
+
+-- VIM-CASER
+lvim.builtin.which_key.vmappings["c"]= {
+	name = "vim-caser",
+	m = { "<Plug>CaserVMixedCase", "MixedCase or PascalCase" },
+	c = { "<Plug>CaserVCamelCase", "camelCase" },
+	_ = { "<Plug>CaserVSnakeCase", "snake_case" },
+	t = { "<Plug>CaserVTitleCase", "Title Case" },
+	s = { "<Plug>CaserVSentenceCase", "Sentence case" },
+	S = { "<Plug>CaserVSpaceCase", "space case" },
+	k = { "<Plug>CaserVKebabCase", "dash-case or kebab-case" },
+	K = { "<Plug>CaserVTitleKebabCase", "Title-Dash-Case or Title-Kebab-Case" },
+	d = { "<Plug>CaserVDotCase", "dot.case" },
 }
