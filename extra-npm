@@ -20,6 +20,7 @@ npm install --force -g \
 	alacritty-themes \
 	fast-cli \
 	how-2 \
+	live-server \
 	npm \
 	prettier \
 	wikit \
