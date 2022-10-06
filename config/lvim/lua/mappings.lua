@@ -1,8 +1,5 @@
 -- MAPPINGS
 
--- SELECT_ALL
-lvim.keys.normal_mode["<Space>a"] = "ggVG"
-
 -- SNIPRUN
 lvim.keys.normal_mode["<Space>o"] = "V:SnipRun<CR>"
 lvim.keys.visual_mode["<Space>o"] = ":SnipRun<CR>"
@@ -25,7 +22,8 @@ lvim.keys.insert_mode["<F1>"] = "<Esc>:NvimTreeToggle<CR>"
 lvim.keys.term_mode["<F1>"] = "<C-\\><C-n>:NvimTreeToggle<CR>"
 
 -- TOGGLETERM
-lvim.keys.normal_mode["<F2>"] = ":ToggleTerm<CR>" lvim.keys.insert_mode["<F2>"] = "<Esc>:ToggleTerm<CR>"
+lvim.keys.normal_mode["<F2>"] = ":ToggleTerm<CR>"
+lvim.keys.insert_mode["<F2>"] = "<Esc>:ToggleTerm<CR>"
 lvim.keys.term_mode["<F2>"] = "<C-\\><C-n>:ToggleTerm<CR>"
 
 -- RNVIMR
@@ -57,7 +55,6 @@ lvim.keys.normal_mode["<C-w>z"] = "<C-w>|<C-w>_"
 lvim.keys.normal_mode["<Space>x"] = "<Plug>JupyterExecute"
 lvim.keys.normal_mode["<Space>X"] = "<Plug>JupyterExecuteAll"
 
-
 -- MARKS.NVIM
 lvim.builtin.which_key.mappings["m"] = {
 	name = "marks.nvim",
@@ -82,15 +79,15 @@ lvim.builtin.which_key.mappings["t"] = {
 }
 
 -- VIM-CASER
-lvim.builtin.which_key.vmappings["c"]= {
+lvim.builtin.which_key.vmappings["c"] = {
 	name = "vim-caser",
 	m = { "<Plug>CaserVMixedCase", "MixedCase or PascalCase" },
 	c = { "<Plug>CaserVCamelCase", "camelCase" },
 	_ = { "<Plug>CaserVSnakeCase", "snake_case" },
 	t = { "<Plug>CaserVTitleCase", "Title Case" },
 	s = { "<Plug>CaserVSentenceCase", "Sentence case" },
-	S = { "<Plug>CaserVSpaceCase", "space case" },
-	k = { "<Plug>CaserVKebabCase", "dash-case or kebab-case" },
 	K = { "<Plug>CaserVTitleKebabCase", "Title-Dash-Case or Title-Kebab-Case" },
-	d = { "<Plug>CaserVDotCase", "dot.case" },
 }
+lvim.builtin.which_key.vmappings["c<Space>"] = { "<Plug>CaserVSpaceCase", "space case" }
+lvim.builtin.which_key.vmappings["c-"] = { "<Plug>CaserVKebabCase", "dash-case or kebab-case" }
+lvim.builtin.which_key.vmappings["c."] = { "<Plug>CaserVDotCase", "dot.case" }

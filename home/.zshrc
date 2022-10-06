@@ -150,6 +150,8 @@ alias wa='sh $HOME/.wa'
 alias wi='wikit'
 alias updatezsh='git -C ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k pull && omz update'
 alias dnf='cat $HOME/.sudopassword | sudo -S dnf -y'
+alias lunarvim_install='LV_BRANCH=rolling bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/rolling/utils/installer/install.sh)'
+alias lunarvim_remove='bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/uninstall.sh)'
 
 magic_mouse(){
   echo "$1" | sudo tee /sys/module/hid_magicmouse/parameters/scroll_speed 
