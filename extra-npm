@@ -18,6 +18,7 @@ fi
 npm install --force -g \
 	@bitwarden/cli \
 	alacritty-themes \
+	browser-sync \
 	fast-cli \
 	how-2 \
 	live-server \
