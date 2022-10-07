@@ -9,22 +9,15 @@ lvim.plugins = {
 	"pbrisbin/vim-colors-off",
 	"cideM/yui",
 	--ESSENTIALS=====================================================================================================
+	-- { "rlue/vim-barbaric" },
 	{ "samodostal/image.nvim", config = require("plugin.configs.image") },
 	{ "chentoast/marks.nvim", config = require("plugin.configs.marks") },
-	-- { "nvim-neorg/neorg", config = require("plugin.configs.neorg"), requires = "nvim-neorg/neorg-telescope" },
-	-- { "rlue/vim-barbaric" },
-	{ "arthurxavierx/vim-caser"},
-	-- { "junegunn/vim-easy-align", config = require("plugin.configs.vim-easy-align") },
+	{ "arthurxavierx/vim-caser" },
 	{ "kevinhwang91/rnvimr", cmd = "RnvimrToggle", config = require("plugin.configs.rnvimr") },
 	{ "tpope/vim-surround", keys = { "c", "d", "y" } },
 	{ "tpope/vim-repeat" },
 	{ "karb94/neoscroll.nvim", event = "WinScrolled", config = require("plugin.configs.neoscroll") },
 	{ "folke/zen-mode.nvim", cmd = "ZenMode", config = require("plugin.configs.zen-mode") },
-	-- {
-	-- 	"wfxr/minimap.vim",
-	-- 	run = "brew install code-minimap",
-	-- 	config = require("plugin.configs.minimap"),
-	-- },
 	--DATASCIENCE====================================================================================================
 	"chrisbra/csv.vim",
 	{ "goerz/jupytext.vim", run = "pip install jupytext", config = vim.cmd("let g:jupytext_fmt = 'py:percent'") },
@@ -32,6 +25,8 @@ lvim.plugins = {
 	--CODING-GENERAL=================================================================================================
 	"p00f/nvim-ts-rainbow",
 	{ "folke/trouble.nvim", cmd = "TroubleToggle" },
+	{ "wfxr/minimap.vim", run = "brew install code-minimap" },
+	{ "michaelb/sniprun", run = "bash install.sh", config = require("plugin.configs.sniprun") },
 	{
 		"rmagatti/goto-preview",
 		config = function()
@@ -44,37 +39,24 @@ lvim.plugins = {
 			require("lsp_signature").setup()
 		end,
 	},
-	{ "simrat39/symbols-outline.nvim" },
 	{
 		"stevearc/aerial.nvim",
 		config = function()
 			require("aerial").setup()
 		end,
 	},
-	{ "michaelb/sniprun", run = "bash install.sh", config = require("plugin.configs.sniprun") },
-	--SNIPPET-ENGINES================================================================================================
+	{
+		"simrat39/symbols-outline.nvim",
+		config = function()
+			require("symbols-outline").setup()
+		end,
+	},
+	--SNIPPETS================================================================================================
 	{ "tzachar/cmp-tabnine", run = "./install.sh", config = require("plugin.configs.cmp-tabnine") },
-	{ "hrsh7th/vim-vsnip" },
-	{ "hrsh7th/cmp-vsnip" },
-	{ "SirVer/ultisnips", config = require("plugin.configs.ultisnips") },
-	{ "quangnguyen30192/cmp-nvim-ultisnips", after = "nvim-cmp" },
-	--SNIPPETS-ARE-SEPARATED-FROM-THE-ENGINE =========================================================================
-	{ "honza/vim-snippets", event = "InsertEnter" }, -- for ultisnips
-	{
-		"dsznajder/vscode-es7-javascript-react-snippets",
-		run = "yarn install --frozen-lockfile && yarn compile",
-		event = "InsertEnter",
-		ft = { "html", "javascript", "javascriptreact" },
-	},
+	{ "honza/vim-snippets" },
 	--CODING-FE======================================================================================================
-	{ "mattn/emmet-vim", event = "InsertEnter", ft = { "html", "javascript", "javascriptreact" } },
-	-- { "windwp/nvim-ts-autotag", ft = { "html", "javascript", "javascriptreact" } },
-	{ "turbio/bracey.vim", run = "npm install --prefix server", cmd = "Bracey" },
-	{
-		"norcalli/nvim-colorizer.lua",
-		ft = { "html", "css", "javascript" },
-		config = require("plugin.configs.colorizer"),
-	},
+	{ "mattn/emmet-vim" },
+	{ "norcalli/nvim-colorizer.lua", config = require("plugin.configs.colorizer") },
 	--WRITING========================================================================================================
 	{ "prettier/vim-prettier", run = "yarn install", ft = "markdown" },
 	{ "vimwiki/vimwiki", config = require("plugin.configs.vimwiki") },

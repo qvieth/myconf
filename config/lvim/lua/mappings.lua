@@ -38,6 +38,11 @@ lvim.keys.insert_mode["<F4>"] = "<Esc>:AerialToggle<CR>"
 -- SYMBOLSOUTLINE
 lvim.keys.normal_mode["<F5>"] = ":SymbolsOutline<CR>"
 lvim.keys.insert_mode["<F5>"] = "<Esc>:SymbolsOutline<CR>"
+lvim.keys.term_mode["<F6>"] = "<C-\\><C-n>:SymbolsOutline<CR>"
+
+-- SYMBOLSOUTLINE
+lvim.keys.normal_mode["<F6>"] = ":MinimapToggle<CR>"
+lvim.keys.insert_mode["<F6>"] = "<Esc>:MinimapToggle<CR>"
 
 -- M FOR MACROS && Q FOR QUERY
 lvim.keys.normal_mode["M"] = "q"
@@ -91,11 +96,3 @@ lvim.builtin.which_key.vmappings["c"] = {
 lvim.builtin.which_key.vmappings["c<Space>"] = { "<Plug>CaserVSpaceCase", "space case" }
 lvim.builtin.which_key.vmappings["c-"] = { "<Plug>CaserVKebabCase", "dash-case or kebab-case" }
 lvim.builtin.which_key.vmappings["c."] = { "<Plug>CaserVDotCase", "dot.case" }
-
-local cmp = require'cmp'
-cmp.setup({
-  mapping = {
-    ['<C-k>'] = cmp.mapping.scroll_docs(-4),
-    ['<C-j>'] = cmp.mapping.scroll_docs(4),
-  },
-})

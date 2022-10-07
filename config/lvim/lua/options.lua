@@ -10,6 +10,7 @@ end
 
 DefaultState()
 
+lvim.format_on_save = true
 lvim.colorscheme = "gruvbox-material"
 lvim.transparent_window = true
 lvim.builtin.lualine.options.theme = "auto"
@@ -45,8 +46,8 @@ local lvim_version = require("lvim.utils.git").get_lvim_version()
 lvim.builtin.alpha.dashboard.section.footer.val = { "", "qvieth 🦇 LVIM", lvim_version }
 
 -- CMP
-table.insert(lvim.builtin.cmp.sources, { name = "ultisnips" })
-table.insert(lvim.builtin.cmp.sources, { name = "vsnip" })
+-- table.insert(lvim.builtin.cmp.sources, { name = "ultisnips" })
+-- table.insert(lvim.builtin.cmp.sources, { name = "vsnip" })
 
 -- DAP
 lvim.builtin.dap.active = true
