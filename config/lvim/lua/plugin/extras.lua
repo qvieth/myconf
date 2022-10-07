@@ -53,11 +53,11 @@ lvim.plugins = {
 	},
 	{ "michaelb/sniprun", run = "bash install.sh", config = require("plugin.configs.sniprun") },
 	--SNIPPET-ENGINES================================================================================================
-	{ "hrsh7th/cmp-vsnip" },
+	{ "tzachar/cmp-tabnine", run = "./install.sh", config = require("plugin.configs.cmp-tabnine") },
 	{ "hrsh7th/vim-vsnip" },
+	{ "hrsh7th/cmp-vsnip" },
 	{ "SirVer/ultisnips", config = require("plugin.configs.ultisnips") },
 	{ "quangnguyen30192/cmp-nvim-ultisnips", after = "nvim-cmp" },
-	{ "tzachar/cmp-tabnine", run = "./install.sh", config = require("plugin.configs.cmp-tabnine") },
 	--SNIPPETS-ARE-SEPARATED-FROM-THE-ENGINE =========================================================================
 	{ "honza/vim-snippets", event = "InsertEnter" }, -- for ultisnips
 	{

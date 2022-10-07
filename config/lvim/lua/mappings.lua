@@ -91,3 +91,11 @@ lvim.builtin.which_key.vmappings["c"] = {
 lvim.builtin.which_key.vmappings["c<Space>"] = { "<Plug>CaserVSpaceCase", "space case" }
 lvim.builtin.which_key.vmappings["c-"] = { "<Plug>CaserVKebabCase", "dash-case or kebab-case" }
 lvim.builtin.which_key.vmappings["c."] = { "<Plug>CaserVDotCase", "dot.case" }
+
+local cmp = require'cmp'
+cmp.setup({
+  mapping = {
+    ['<C-k>'] = cmp.mapping.scroll_docs(-4),
+    ['<C-j>'] = cmp.mapping.scroll_docs(4),
+  },
+})
