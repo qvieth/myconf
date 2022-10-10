@@ -3,7 +3,7 @@
     "prefix": ["smacss", "bem"],
     "body": [
       "/* SMACSS: Scalable and Modular Architecture for CSS */",
-      "/* BEM:  Block__Element--Modifier-value */",
+      "/* BEM:  Block__Element--Modifier-value              */",
       "",
       "",
       "/* 1. Base: the defaults, resets: include attribute, pseudo-class, child or sibling selectors. It doesn’t include any class or ID selectors */",
@@ -23,5 +23,23 @@
       ""
     ],
     "description": "smacss methodology"
+  },
+  "box-model": {
+    "prefix": "box-model",
+    "body": [
+      "/*      ┌───────────────────────┐   size by:                                */",
+      "/*      │  margin(transparent)──┼──► `margin` and related properties.       */",
+      "/*      │  ┌─────border──────┬──┼──► `border` and related properties.       */",
+      "/*      │  │     padding─────┼──┼──► `padding` and related properties.      */",
+      "/*      │  │   ┌─────────┐   │  │                                           */",
+      "/*      │  │   │ content─┼───┼──┼──► `inline-size`,.                        */",
+      "/*      │  │   └─────────┘   │  │    `block-size`,                          */",
+      "/*      │  │                 │  │    `width`,                               */",
+      "/*      │  └─────────────────┘  │    `height`                               */",
+      "/*      │                       │                                           */",
+      "/*      └───────────────────────┘                                           */",
+      "$1"
+    ],
+    "description": "css box model"
   }
 }

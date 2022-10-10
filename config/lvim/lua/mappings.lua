@@ -1,5 +1,8 @@
 -- MAPPINGS
 
+-- SHOW COMPLETION SIGNATURE IN INSERT MODE
+lvim.keys.insert_mode["<C-s>"] = "<cmd>lua vim.lsp.buf.signature_help()<cr>"
+
 -- SNIPRUN
 lvim.keys.normal_mode["<Space>o"] = "V:SnipRun<CR>"
 lvim.keys.visual_mode["<Space>o"] = ":SnipRun<CR>"
