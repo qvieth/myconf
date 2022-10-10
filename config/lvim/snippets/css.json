@@ -1,0 +1,27 @@
+{
+  "smacss": {
+    "prefix": ["smacss", "bem"],
+    "body": [
+      "/* SMACSS: Scalable and Modular Architecture for CSS */",
+      "/* BEM:  Block__Element--Modifier-value */",
+      "",
+      "",
+      "/* 1. Base: the defaults, resets: include attribute, pseudo-class, child or sibling selectors. It doesn’t include any class or ID selectors */",
+      "$1",
+      "",
+      "/* 2. Layout: divide the page into sections, hold one or more modules together. */",
+      "",
+      "",
+      "/* 3. Module: the reusable, modular parts */",
+      "",
+      "",
+      "/* 4. State: represented in pseudo class, mediaquery */",
+      "",
+      "",
+      "/* 5. Theme */",
+      "",
+      ""
+    ],
+    "description": "smacss methodology"
+  }
+}

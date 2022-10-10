@@ -87,3 +87,8 @@ vim.api.nvim_create_autocmd("BufEnter", {
 	pattern = { "*.lua" },
 	command = "setlocal ts=8 sw=8",
 })
+
+vim.api.nvim_create_autocmd("BufEnter", {
+	pattern = { "*.json" },
+	command = "se syntax=",
+})
