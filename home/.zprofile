@@ -1,6 +1,7 @@
 # conda activate
 
 # random vocab at shell start
+
 alias v='shuf -n1 "$HOME/MyVocab/$(shuf -n1 -e \
 		Remember-Tradional-Hanzi-1 \
 )" | cat'
