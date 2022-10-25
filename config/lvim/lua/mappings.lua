@@ -1,5 +1,7 @@
 -- MAPPINGS
 
+lvim.keys.normal_mode["q"] = "@"
+
 -- SHOW COMPLETION SIGNATURE IN INSERT MODE
 lvim.keys.insert_mode["<C-s>"] = "<cmd>lua vim.lsp.buf.signature_help()<cr>"
 
@@ -49,7 +51,7 @@ lvim.keys.insert_mode["<F6>"] = "<Esc>:MinimapToggle<CR>"
 
 -- M FOR MACROS && Q FOR QUERY
 lvim.keys.normal_mode["M"] = "q"
-lvim.keys.normal_mode["q"] = "<Nop>"
+-- lvim.keys.normal_mode["q"] = "<Nop>"
 lvim.keys.normal_mode["qv"] = ":e ~/MyFolder/mynote/v<CR>"
 lvim.keys.normal_mode["qb"] = ":e ~/MyFolder/myblog/content/posts/<CR>"
 

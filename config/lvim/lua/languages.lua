@@ -20,7 +20,7 @@ lvim.lsp.installer.setup.ensure_installed = {
 local formatters = require("lvim.lsp.null-ls.formatters")
 formatters.setup({
 	{ command = "black" },
-	{ command = "isort" },
+	-- { command = "isort" },
 	{ command = "prettier" },
 	{ command = "prettier", filetypes = { "markdown", "vimwiki" } },
 	{ command = "stylua" },
@@ -33,7 +33,7 @@ local linters = require("lvim.lsp.null-ls.linters")
 linters.setup({
 	{ command = "flake8" },
 	{ command = "eslint" },
-	{ command = "pylint" },
+	-- { command = "pylint" },
 	{ command = "shellcheck", filetypes = { "zsh", "sh" } },
 	{ command = "zsh" },
 	{ command = "proselint", filetypes = { "markdown", "vimwiki" } },

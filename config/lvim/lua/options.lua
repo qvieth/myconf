@@ -7,7 +7,6 @@ function DefaultState()
 	vim.o.cursorline = false
 	vim.cmd("noh")
 end
-
 DefaultState()
 
 lvim.format_on_save = true
@@ -61,6 +60,7 @@ lvim.builtin.notify.opts = {
 	fps = 60,
 	render = "minimal",
 	stages = "fade_in_slide_out",
+	background_colour = "#000000",
 }
 
 -- TREESITTER
