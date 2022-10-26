@@ -51,18 +51,6 @@ lvim.builtin.alpha.dashboard.section.footer.val = { "", "qvieth 🦇 LVIM", lvim
 -- DAP
 lvim.builtin.dap.active = true
 
--- NOTIFY
-lvim.builtin.notify.active = true
-lvim.builtin.notify.opts = {
-	timeout = 100,
-	max_width = 50,
-	max_height = 1000,
-	fps = 60,
-	render = "minimal",
-	stages = "fade_in_slide_out",
-	background_colour = "#000000",
-}
-
 -- TREESITTER
 -- lvim.builtin.treesitter.autotag.enable = true
 lvim.builtin.treesitter.rainbow.enable = true

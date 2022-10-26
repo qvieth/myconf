@@ -1,6 +1,8 @@
 -- MAPPINGS
 
-lvim.keys.normal_mode["q"] = "@"
+-- VIM-EASY-ALIGN
+lvim.keys.normal_mode["ga"] = "<Plug>(EasyAlign)"
+lvim.keys.visual_mode["ga"] = "<Plug>(EasyAlign)"
 
 -- SHOW COMPLETION SIGNATURE IN INSERT MODE
 lvim.keys.insert_mode["<C-s>"] = "<cmd>lua vim.lsp.buf.signature_help()<cr>"
@@ -49,11 +51,11 @@ lvim.keys.term_mode["<F6>"] = "<C-\\><C-n>:SymbolsOutline<CR>"
 lvim.keys.normal_mode["<F6>"] = ":MinimapToggle<CR>"
 lvim.keys.insert_mode["<F6>"] = "<Esc>:MinimapToggle<CR>"
 
--- M FOR MACROS && Q FOR QUERY
+-- M FOR MACROS && Q FOR @
 lvim.keys.normal_mode["M"] = "q"
--- lvim.keys.normal_mode["q"] = "<Nop>"
-lvim.keys.normal_mode["qv"] = ":e ~/MyFolder/mynote/v<CR>"
-lvim.keys.normal_mode["qb"] = ":e ~/MyFolder/myblog/content/posts/<CR>"
+lvim.keys.normal_mode["q"] = "@"
+-- lvim.keys.normal_mode["qv"] = ":e ~/MyFolder/mynote/v<CR>"
+-- lvim.keys.normal_mode["qb"] = ":e ~/MyFolder/myblog/content/posts/<CR>"
 
 -- ZENMODE
 lvim.keys.normal_mode["<Space><Space>"] = ":ZenMode<CR>"

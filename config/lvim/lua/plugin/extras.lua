@@ -13,6 +13,7 @@ lvim.plugins = {
 	{ "samodostal/image.nvim", config = require("plugin.configs.image") },
 	{ "chentoast/marks.nvim", config = require("plugin.configs.marks") },
 	{ "arthurxavierx/vim-caser" },
+	{ "junegunn/vim-easy-align" },
 	{ "kevinhwang91/rnvimr", cmd = "RnvimrToggle", config = require("plugin.configs.rnvimr") },
 	{ "tpope/vim-surround", keys = { "c", "d", "y" } },
 	{ "tpope/vim-repeat" },

@@ -163,6 +163,16 @@ timezsh() {
 	for i in $(seq 1 10); do time $shell -i -c exit; done
 }
 
+random-block() {
+  shuf -n 1 $1 | grep -f - -A $(($2>0?$2-1:0)) $1
+}
+
+v() {
+random-block "$HOME/MyVocab/Remember-Tradional-Hanzi-1" 10
+}
+
+v
+
 # DEFAULTS===========================================
 if command -v lvim &>/dev/null; then
 	export EDITOR='lvim'
