@@ -20,7 +20,7 @@ lvim.plugins = {
 	{ "karb94/neoscroll.nvim", event = "WinScrolled", config = require("plugin.configs.neoscroll") },
 	{ "folke/zen-mode.nvim", cmd = "ZenMode", config = require("plugin.configs.zen-mode") },
 	--DATASCIENCE====================================================================================================
-	{ "luk400/vim-jukit", config = require("plugin.configs.vim-jukit") },
+	{ "luk400/vim-jukit", config = require("plugin.configs.vim-jukit"), cmd = "JukitOut" },
 	"chrisbra/csv.vim",
 	-- { "goerz/jupytext.vim", run = "pip install jupytext", config = vim.cmd("let g:jupytext_fmt = 'py:percent'") },
 	-- { "untitled-ai/jupyter_ascending.vim" },

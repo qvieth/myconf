@@ -150,7 +150,7 @@ alias wa='sh $HOME/.wa'
 alias wi='wikit'
 alias updatezsh='git -C ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k pull && omz update'
 alias dnf='cat $HOME/.sudopassword | sudo -S dnf -y'
-alias lunarvim_install='LV_BRANCH=rolling bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/rolling/utils/installer/install.sh)'
+alias lunarvim_install='bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh)'
 alias lunarvim_remove='bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/uninstall.sh)'
 
 magic_mouse(){
@@ -193,6 +193,9 @@ fi
 
 KEYTIMEOUT=1 # KEYSEQUENCES-SET-TO-10MS
 
+# guide can be found at https://ask.fedoraproject.org/t/rbenv-f36-unable-to-install-any-ruby-version/22301
+export RUBY_CONFIGURE_OPTS="--with-openssl-dir=/opt/openssl-1.1.1q/"
+eval "$(rbenv init - zsh)"
 # ==========ADD-YOUR-CONFIG-ABOVE-THIS-LINE=============================================
 # ======================================================================================
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
@@ -203,3 +206,4 @@ KEYTIMEOUT=1 # KEYSEQUENCES-SET-TO-10MS
 export PNPM_HOME="/home/qvieth/.local/share/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 # pnpm end
+
