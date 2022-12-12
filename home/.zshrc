@@ -169,13 +169,13 @@ random-block() {
 }
 
 v() {
-random-block "$HOME/MyVocab/Remember-Tradional-Hanzi-1" 10
+  random-block "$HOME/MyVocab/Remember-Tradional-Hanzi-1" 10
+  echo "==============================="
+  shuf -n 1 "$HOME/MyVocab/1000_common_chinese_words_zh_TW.csv"
 }
 
 v
 # SHUF 10 RANDOM CHINESE WORDS END
-echo "==============================="
-shuf -n 1 "$HOME/MyVocab/1000_common_chinese_words_zh_TW.csv"
 
 # DEFAULTS===========================================
 if command -v lvim &>/dev/null; then
