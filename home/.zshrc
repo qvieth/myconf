@@ -163,6 +163,7 @@ timezsh() {
 	for i in $(seq 1 10); do time $shell -i -c exit; done
 }
 
+# SHUF 10 RANDOM CHINESE WORDS START
 random-block() {
   shuf -n 1 $1 | grep -f - -A $(($2>0?$2-1:0)) $1
 }
@@ -172,6 +173,9 @@ random-block "$HOME/MyVocab/Remember-Tradional-Hanzi-1" 10
 }
 
 v
+# SHUF 10 RANDOM CHINESE WORDS END
+echo "==============================="
+shuf -n 1 "$HOME/MyVocab/1000_common_chinese_words_zh_TW.csv"
 
 # DEFAULTS===========================================
 if command -v lvim &>/dev/null; then
