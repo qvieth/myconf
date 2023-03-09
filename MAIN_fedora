@@ -36,6 +36,7 @@ S dnf -y install \
 	kitty \
 	ledger \
 	mpg123 \
+	mpv \
 	neofetch \
 	neovim \
 	pandoc \
