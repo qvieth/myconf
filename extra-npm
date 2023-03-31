@@ -16,7 +16,6 @@ fi
 
 # npm
 npm install --force -g \
-	@bitwarden/cli \
 	alacritty-themes \
 	browser-sync \
 	fast-cli \

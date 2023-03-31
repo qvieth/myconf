@@ -90,7 +90,6 @@ COMPLETION_WAITING_DOTS="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-	bw
 	cht
 	conda-zsh-completion
 	direnv
