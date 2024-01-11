@@ -21,7 +21,7 @@ export PATH=$HOME/bin:$HOME/.local/bin:$HOME/go/bin:$HOME/.cargo/bin:$PATH
 export PATH=$HOME/.rbenv/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/qvieth/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -98,7 +98,6 @@ plugins=(
 	hugo
 	pip
 	taskwarrior
-	tmux
 	vi-mode
 	web-search
 	npm
@@ -106,6 +105,7 @@ plugins=(
 	zsh-autosuggestions
 	zsh-syntax-highlighting
 )
+  # tmux
 ZSH_AUTOSUGGEST_STRATEGY=(match_prev_cmd completion)
 : ${ZSH_TMUX_AUTOSTART:=true}
 : ${ZSH_TMUX_AUTOCONNECT:=false}
