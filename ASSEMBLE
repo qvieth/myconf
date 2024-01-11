@@ -6,28 +6,24 @@
 # /_/   \_\____/____/|_____|_|  |_|____/|_____|_____| (_) (_)
 
 # .config/
-cp -f -r -t $HOME/myconf/config/ \
-	$HOME/.config/bottom/ \
-	$HOME/.config/kitty/ \
-	$HOME/.config/lvim/
-# $HOME/.config/nvim/   \
+cp -f -r $HOME/.config/bottom $HOME/myconf/config/
+cp -f -r $HOME/.config/kitty $HOME/myconf/config/
+cp -f -r $HOME/.config/lvim $HOME/myconf/config/
 
 # home
-cp -f -r -t $HOME/myconf/home/ \
-	$HOME/.alacritty.yml \
-	$HOME/.cht.sh \
-	$HOME/.editrc \
-	$HOME/.inputrc \
-	$HOME/.myclirc \
-	$HOME/.p10k.zsh \
-	$HOME/.tmux-powerline \
-	$HOME/.tmux.conf \
-	$HOME/.wa \
-	$HOME/.zprofile \
-	$HOME/.zsh_history \
-	$HOME/.zshrc \
-	$HOME/MyVocab
-
+cp -f -r $HOME/.alacritty.yml $HOME/myconf/home/
+cp -f -r $HOME/.cht.sh $HOME/myconf/home/
+cp -f -r $HOME/.editrc $HOME/myconf/home/
+cp -f -r $HOME/.inputrc $HOME/myconf/home/
+cp -f -r $HOME/.myclirc $HOME/myconf/home/
+cp -f -r $HOME/.p10k.zsh $HOME/myconf/home/
+cp -f -r $HOME/.tmux-powerline $HOME/myconf/home/
+cp -f -r $HOME/.tmux.conf $HOME/myconf/home/
+cp -f -r $HOME/.wa $HOME/myconf/home/
+cp -f -r $HOME/.zprofile $HOME/myconf/home/
+cp -f -r $HOME/.zsh_history $HOME/myconf/home/
+cp -f -r $HOME/.zshrc $HOME/myconf/home/
+cp -f -r $HOME/MyVocab $HOME/myconf/home/
+#
 # others
-cp -f -r -t $HOME/myconf/home/.w3m/ \
-	$HOME/.w3m/keymap
+cp -f -r $HOME/.w3m/keymap $HOME/myconf/home/.w3m/

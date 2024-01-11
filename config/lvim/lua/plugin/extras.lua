@@ -22,13 +22,13 @@ lvim.plugins = {
 	--DATASCIENCE====================================================================================================
 	{ "luk400/vim-jukit", config = require("plugin.configs.vim-jukit"), cmd = "JukitOut" },
 	"chrisbra/csv.vim",
-	-- { "goerz/jupytext.vim", run = "pip install jupytext", config = vim.cmd("let g:jupytext_fmt = 'py:percent'") },
+	-- { "goerz/jupytext.vim", build = "pip install jupytext", config = vim.cmd("let g:jupytext_fmt = 'py:percent'") },
 	-- { "untitled-ai/jupyter_ascending.vim" },
 	--CODING-GENERAL=================================================================================================
 	"p00f/nvim-ts-rainbow",
 	{ "folke/trouble.nvim", cmd = "TroubleToggle" },
-	{ "wfxr/minimap.vim", run = "brew install code-minimap" },
-	{ "michaelb/sniprun", run = "bash install.sh", config = require("plugin.configs.sniprun") },
+	{ "wfxr/minimap.vim", build = "brew install code-minimap" },
+	{ "michaelb/sniprun", build = "bash install.sh", config = require("plugin.configs.sniprun") },
 	{
 		"rmagatti/goto-preview",
 		config = function()
@@ -48,17 +48,17 @@ lvim.plugins = {
 		end,
 	},
 	--SNIPPETS================================================================================================
-	{ "tzachar/cmp-tabnine", run = "./install.sh", config = require("plugin.configs.cmp-tabnine") },
+	{ "tzachar/cmp-tabnine", build = "./install.sh", config = require("plugin.configs.cmp-tabnine") },
 	{ "honza/vim-snippets" },
 	--CODING-FE======================================================================================================
 	{ "mattn/emmet-vim" },
 	{ "norcalli/nvim-colorizer.lua", config = require("plugin.configs.colorizer") },
 	--WRITING========================================================================================================
-	{ "prettier/vim-prettier", run = "yarn install", ft = "markdown" },
+	{ "prettier/vim-prettier", build = "yarn install", ft = "markdown" },
 	{ "vimwiki/vimwiki", config = require("plugin.configs.vimwiki") },
 	{ "preservim/vim-pencil", ft = "markdown", config = require("plugin.configs.vim-pencil"), cmd = "Pencil" },
 	{ "reedes/vim-litecorrect", ft = "markdown", config = require("plugin.configs.vim-litecorrect") },
-	{ "iamcco/markdown-preview.nvim", run = "cd app && yarn install" },
+	{ "iamcco/markdown-preview.nvim", build = "cd app && yarn install" },
 	{ "jbyuki/venn.nvim", cmd = "VBox" },
 	{ "rhysd/vim-grammarous", cmd = "GrammarousCheck" },
 	{ "reedes/vim-wordy", ft = "markdown", cmd = "WordyWordy" },

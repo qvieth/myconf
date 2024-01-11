@@ -4,7 +4,7 @@
 
 -- ---@usage disable automatic installation of servers
 -- lvim.lsp.installer.setup.automatic_installation = true
-lvim.lsp.automatic_servers_installation = true
+lvim.lsp.installer.setup.automatic_installation = true
 
 --accepts a list of options identical to:
 --https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md
