@@ -9,6 +9,7 @@
 cp -f -r $HOME/.config/bottom $HOME/myconf/config/
 cp -f -r $HOME/.config/kitty $HOME/myconf/config/
 cp -f -r $HOME/.config/lvim $HOME/myconf/config/
+cp -f -r $HOME/.config/nvim $HOME/myconf/config/
 
 # home
 cp -f -r $HOME/.alacritty.yml $HOME/myconf/home/
