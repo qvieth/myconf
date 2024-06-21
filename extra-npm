@@ -16,7 +16,6 @@ fi
 
 # npm
 npm install --force -g \
-	alacritty-themes \
 	browser-sync \
 	fast-cli \
 	how-2 \
@@ -24,5 +23,6 @@ npm install --force -g \
 	npm \
 	prettier \
 	wikit \
-	write-good \
 	yarn
+	# alacritty-themes \
+	# write-good \

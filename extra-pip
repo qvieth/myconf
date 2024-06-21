@@ -8,10 +8,10 @@ pip install \
 	mycli \
 	proselint \
 	pylint \
-	pynvim \
 	pytube \
 	ranger-fm \
 	ricksay \
-	speedtest-cli \
-	vimwiki-markdown \
 	wisdom-tree
+# pynvim \
+# vimwiki-markdown \
+# speedtest-cli \

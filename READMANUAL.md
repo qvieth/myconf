@@ -1,4 +1,9 @@
 # manual stuffs
+## On window download
+- MS powertoy
+- WSl - Ubuntu
+
+
 - run bash config file name as ubuntu sh filename in ranger doesn't work
 - [How to speed up shell load while using NVM](https://www.ioannispoulakas.com/2020/02/22/how-to-speed-up-shell-load-while-using-nvm/)
   - second solution works
