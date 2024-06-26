@@ -51,6 +51,7 @@ return {
       }
     end,
   },
+  {"michal-h21/vimwiki-sync", lazy = false},
   {
     "preservim/vim-pencil",
     lazy = false,

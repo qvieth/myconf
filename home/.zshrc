@@ -16,7 +16,8 @@
 
 # PATHS==============================================
 export PATH=$HOME/bin:$HOME/.local/bin:$HOME/go/bin:$HOME/.cargo/bin:$PATH
-
+export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
+export AUDIO_PLAYER="mpg123"
 # RBENV-PATH=========================================
 export PATH=$HOME/.rbenv/bin:$PATH
 
